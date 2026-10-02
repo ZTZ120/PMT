@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #26</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number44').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #26</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'Xception' from 'D:\\exp\\RQ1\\Xception\\Xception.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_Xception.XceptionTest)</code></li>
+    
+    <li>duration - 1.588 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\Xception\test_Xception.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "Xception", line 264, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 4 objects could not be loaded. Example error message for object <Conv2D name=block1_conv2, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(3, 3, 32, 65), Received: value.shape=(3, 3, 32, 64). Target variable: <Variable path=block1_conv2/kernel, shape=(3, 3, 32, 65), dtype=float32, value=[[[[ 0.01513155 -0.01619475  0.05157137 ... -0.02791716 -0.07439912
+     0.07383089]
+   [ 0.02334351 -0.04237854  0.05732328 ...  0.04971573 -0.06711311
+     0.03066014]
+   [ 0.06565174 -0.02387042 -0.02299429 ... -0.01035809 -0.058714
+    -0.04275098]
+   ...
+   [-0.03671616 -0.06416868  0.03295373 ...  0.0776026  -0.07276832
+    -0.01379376]
+   [ 0.07670349 -0.06079166 -0.01941023 ...  0.04032707 -0.08109715
+     0.06021035]
+   [ 0.0145672  -0.05292748  0.01383969 ... -0.04096692  0.07758144
+    -0.00937681]]
+
+  [[ 0.07984118  0.0009238  -0.00916919 ...  0.03443249 -0.04913754
+    -0.00325701]
+   [ 0.00181343 -0.03920411  0.0007942  ...  0.04294051 -0.03245218
+     0.07293123]
+   [ 0.02083874 -0.05658023  0.0537232  ... -0.07819922  0.04764901
+    -0.03463098]
+   ...
+   [ 0.01989095 -0.00758997  0.0683175  ... -0.06605826 -0.01528499
+     0.06958637]
+   [ 0.03308555  0.05741753  0.02111497 ...  0.03370103  0.00623295
+    -0.00768306]
+   [ 0.0251149  -0.06595813  0.04977497 ... -0.04398372 -0.04440359
+    -0.01740865]]
+
+  [[ 0.02370588  0.07551083  0.06097215 ... -0.05549277 -0.0290099
+    -0.03801524]
+   [-0.0151289  -0.0081181  -0.00856034 ...  0.01722942 -0.08042018
+     0.0684059 ]
+   [ 0.0172933  -0.06155915 -0.07689243 ... -0.07526321  0.02156865
+     0.0638081 ]
+   ...
+   [-0.00540306  0.0268814  -0.02768788 ... -0.03341388 -0.0446557
+    -0.08114692]
+   [ 0.06629393 -0.00819597  0.05152152 ... -0.05101446 -0.05134962
+    -0.07539418]
+   [ 0.0536788  -0.02782023  0.02987709 ...  0.04159011 -0.05307418
+     0.03543398]]]
+
+
+ [[[-0.06010488  0.03701356 -0.06207541 ...  0.01465589 -0.05951668
+     0.01085549]
+   [-0.05664406  0.04084914  0.01922046 ... -0.05350298 -0.01519329
+    -0.06757357]
+   [ 0.05532919 -0.05091383 -0.04550774 ... -0.05957548  0.00170431
+    -0.04523086]
+   ...
+   [-0.061643   -0.02458287  0.01911776 ...  0.06826738  0.03951398
+    -0.00682221]
+   [ 0.01520102  0.07980399  0.01660056 ... -0.0093409   0.02969041
+     0.07661237]
+   [-0.01218994  0.05956361  0.06532013 ...  0.01799733 -0.07165219
+     0.0148642 ]]
+
+  [[ 0.02459086  0.00902318  0.02692278 ... -0.07856627 -0.01527951
+    -0.06383612]
+   [-0.00819345  0.06780474 -0.05270056 ... -0.07263762  0.03960379
+    -0.06719176]
+   [ 0.06961586 -0.04252093  0.02593163 ... -0.05767046 -0.0548948
+     0.02960968]
+   ...
+   [-0.0096797  -0.06947056 -0.0442661  ... -0.02166868 -0.0587747
+    -0.02211058]
+   [ 0.04997119  0.06732386  0.03389855 ... -0.01087844 -0.0769747
+     0.01944449]
+   [ 0.0153949   0.01231363  0.05907628 ... -0.04400317 -0.03750216
+    -0.04193751]]
+
+  [[-0.06883558  0.03992198  0.03372054 ... -0.07419767 -0.06462631
+     0.03325909]
+   [-0.05490763  0.0361191   0.06516723 ... -0.05461228 -0.04601808
+     0.07909982]
+   [-0.06678738  0.02670372 -0.06827028 ...  0.04077525 -0.0275814
+     0.0785569 ]
+   ...
+   [-0.05452377  0.04040451  0.06138819 ... -0.0300604   0.02134923
+     0.03394338]
+   [ 0.06407145  0.02555567 -0.05075956 ...  0.00207771 -0.02908449
+    -0.05165505]
+   [-0.05401943  0.00151208  0.07865751 ...  0.02580804  0.01079157
+     0.04053216]]]
+
+
+ [[[ 0.04370447  0.06189393 -0.07889811 ... -0.08205257 -0.02570281
+     0.00446521]
+   [-0.01617002 -0.05858307 -0.04821625 ...  0.04580434  0.00866256
+    -0.0632461 ]
+   [-0.05636356 -0.07882192  0.07906213 ...  0.02967637  0.05999753
+    -0.0509699 ]
+   ...
+   [ 0.0074623  -0.06964039  0.06808944 ...  0.02305418  0.01981645
+    -0.03317497]
+   [-0.00788356 -0.02009524  0.07371339 ...  0.01658947  0.03304203
+     0.01196924]
+   [-0.00290723  0.01739012 -0.07641683 ...  0.05210771  0.04737878
+     0.01640662]]
+
+  [[ 0.05254237  0.0332692  -0.00621648 ...  0.03712169 -0.01493589
+    -0.06345329]
+   [-0.04238632 -0.07404761  0.04280423 ... -0.0081654  -0.01995349
+    -0.04925012]
+   [-0.02800187 -0.07633861  0.03539318 ...  0.07436657  0.04019913
+     0.03386309]
+   ...
+   [-0.07461536 -0.01301375 -0.07546221 ...  0.07147542  0.04587288
+     0.06517947]
+   [-0.06967012 -0.07482374 -0.01528011 ...  0.0060563   0.04951626
+    -0.01227161]
+   [ 0.06515533  0.012848    0.02284208 ...  0.04714964  0.03051923
+    -0.0420087 ]]
+
+  [[-0.0028713   0.08166023  0.00272468 ...  0.05484523 -0.04683224
+    -0.05912076]
+   [ 0.04495768 -0.01907967 -0.05688458 ...  0.05852073  0.07446717
+    -0.03209453]
+   [ 0.00420814  0.08215962 -0.07534075 ...  0.00011875  0.01161358
+    -0.01556657]
+   ...
+   [ 0.02852789 -0.05773161 -0.06477568 ... -0.04569023 -0.02838839
+    -0.01800921]
+   [-0.02718174 -0.03059644 -0.01408485 ... -0.07537615  0.04267247
+     0.07858783]
+   [ 0.0119827  -0.00980819 -0.03631415 ... -0.01924987 -0.02085535
+    -0.06500557]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=block1_conv2, built=True>, <BatchNormalization name=batch_normalization_1, built=True>, <SeparableConv2D name=block2_sepconv1, built=True>, <Conv2D name=conv2d, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 44</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [44]; toolbar: false;">import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+
+
+
+
+
+
+@keras_export(['keras.applications.xception.Xception', 'keras.applications.Xception'])
+def Xception(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(71, 71, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='xception'):
+    
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    channel_axis = 1 if backend.image_data_format() == 'channels_first' else -1
+    
+    x = layers.Conv2D(
+        32, (3, 3), strides=2, use_bias=False, name='block1_conv1')(
+        img_input)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    x = layers.Conv2D(65, (3, 3), use_bias=False, name='block1_conv2')(x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    
+    residual = layers.Conv2D(
+        128, (1, 1), strides=2, padding='same', use_bias=False)(
+        x)
+    residual = layers.BatchNormalization(axis=channel_axis)(residual)
+    
+    x = layers.SeparableConv2D(
+        128, (3, 3), padding='same', use_bias=False, name='block2_sepconv1')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        128, (3, 3), padding='same', use_bias=False, name='block2_sepconv2')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    
+    x = layers.MaxPooling2D(
+        (3, 3), strides=2, padding='same')(
+        x)
+    x = layers.add([x, residual])
+    
+    residual = layers.Conv2D(
+        256, (1, 1), strides=2, padding='same', use_bias=False)(
+        x)
+    residual = layers.BatchNormalization(axis=channel_axis)(residual)
+    
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        256, (3, 3), padding='same', use_bias=False, name='block3_sepconv1')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        256, (3, 3), padding='same', use_bias=False, name='block3_sepconv2')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    
+    x = layers.MaxPooling2D(
+        (3, 3), strides=2, padding='same')(
+        x)
+    x = layers.add([x, residual])
+    
+    residual = layers.Conv2D(
+        728, (1, 1), strides=2, padding='same', use_bias=False)(
+        x)
+    residual = layers.BatchNormalization(axis=channel_axis)(residual)
+    
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        728, (3, 3), padding='same', use_bias=False, name='block4_sepconv1')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        728, (3, 3), padding='same', use_bias=False, name='block4_sepconv2')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    
+    x = layers.MaxPooling2D(
+        (3, 3), strides=2, padding='same')(
+        x)
+    x = layers.add([x, residual])
+    
+    for i in range(8):
+        residual = x
+        prefix = f'block{i + 5}'
+        
+        x = layers.Activation('relu')(x)
+        x = layers.SeparableConv2D(
+            728, 
+            (3, 3), 
+            padding='same', 
+            use_bias=False, 
+            name=f'{prefix}_sepconv1')(
+            x)
+        x = layers.BatchNormalization(
+            axis=channel_axis)(
+            x)
+        x = layers.Activation('relu')(x)
+        x = layers.SeparableConv2D(
+            728, 
+            (3, 3), 
+            padding='same', 
+            use_bias=False, 
+            name=f'{prefix}_sepconv2')(
+            x)
+        x = layers.BatchNormalization(
+            axis=channel_axis)(
+            x)
+        x = layers.Activation('relu')(x)
+        x = layers.SeparableConv2D(
+            728, 
+            (3, 3), 
+            padding='same', 
+            use_bias=False, 
+            name=f'{prefix}_sepconv3')(
+            x)
+        x = layers.BatchNormalization(
+            axis=channel_axis)(
+            x)
+        
+        x = layers.add([x, residual])
+    
+    residual = layers.Conv2D(
+        1024, (1, 1), strides=2, padding='same', use_bias=False)(
+        x)
+    residual = layers.BatchNormalization(axis=channel_axis)(residual)
+    
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        728, (3, 3), padding='same', use_bias=False, name='block13_sepconv1')(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        1024, (3, 3), padding='same', use_bias=False, name='block13_sepconv2')(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    
+    x = layers.MaxPooling2D(
+        (3, 3), strides=2, padding='same')(
+        x)
+    x = layers.add([x, residual])
+    
+    x = layers.SeparableConv2D(
+        1536, (3, 3), padding='same', use_bias=False, name='block14_sepconv1')(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    x = layers.Activation('relu')(x)
+    
+    x = layers.SeparableConv2D(
+        2048, (3, 3), padding='same', use_bias=False, name='block14_sepconv2')(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    x = layers.Activation('relu')(x)
+    
+    x = layers.GlobalAveragePooling2D()(x)
+    imagenet_utils.validate_activation(classifier_activation, weights)
+    x = layers.Dense(
+        classes, activation=classifier_activation, name='predictions')(
+        x)
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(71, 71), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([71, 71, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = Xception(input_shape=(71, 71, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 1
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointXception'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'Xception_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(71, 71), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model(batch_imgs, training=False).numpy()
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

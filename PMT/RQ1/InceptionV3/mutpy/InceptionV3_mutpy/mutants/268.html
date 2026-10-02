@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #268</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number182').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #268</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'InceptionV3' from 'D:\\exp\\RQ1\\InceptionV3\\InceptionV3.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_InceptionV3.DemoTest)</code></li>
+    
+    <li>duration - 2.197 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\InceptionV3\test_InceptionV3.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "InceptionV3", line 341, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 1 objects could not be loaded. Example error message for object <Conv2D name=conv2d_67, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(7, 2, 192, 192), Received: value.shape=(7, 1, 192, 192). Target variable: <Variable path=conv2d_67/kernel, shape=(7, 2, 192, 192), dtype=float32, value=[[[[ 2.52594054e-02 -2.31381431e-02  1.46430954e-02 ...  1.12656876e-02
+     2.17465200e-02  2.44582854e-02]
+   [ 2.63249390e-02  3.29471342e-02  3.04976068e-02 ... -1.91170722e-02
+     1.16744041e-02 -1.29813980e-02]
+   [ 1.71261728e-02 -1.63357407e-02  1.82683393e-02 ... -2.67329887e-02
+    -1.24389492e-02 -2.72753090e-02]
+   ...
+   [-2.32804529e-02  7.34094903e-03  6.03917241e-03 ...  1.40958466e-02
+     2.19822600e-02 -1.72526482e-02]
+   [ 3.21507119e-02 -2.04304382e-02  3.47831845e-03 ...  3.10236476e-02
+     3.82096320e-03 -3.14213894e-03]
+   [ 1.12806223e-02 -1.43258106e-02 -2.35580094e-02 ... -2.65537761e-02
+    -3.14913690e-02 -1.17261931e-02]]
+
+  [[-4.76886332e-03  2.53530666e-02  4.61162627e-03 ...  3.36394086e-03
+     2.35080384e-02 -2.27202736e-02]
+   [-1.08156968e-02  9.82806832e-03 -2.81421561e-02 ... -5.18512353e-03
+     3.06198485e-02 -1.46085601e-02]
+   [-3.28625627e-02 -3.24571170e-02 -7.46054202e-03 ... -7.35306181e-03
+    -2.59099230e-02  9.86472145e-03]
+   ...
+   [ 1.32604763e-02  1.16575137e-03 -2.61206627e-02 ... -1.62506849e-03
+     4.51913849e-03  1.43487751e-02]
+   [-2.39110664e-02 -1.65731609e-02  3.08657326e-02 ...  5.78420237e-03
+     2.39591971e-02  3.31966393e-02]
+   [ 2.41915919e-02  1.18168965e-02 -1.99453309e-02 ... -3.31475176e-02
+     1.13701820e-02  1.35314465e-02]]]
+
+
+ [[[ 3.19649614e-02  1.41865201e-02  2.56824680e-02 ...  6.24057278e-03
+     9.78112221e-04 -3.01250853e-02]
+   [-1.65174697e-02 -2.01097839e-02 -3.18342559e-02 ... -8.57292674e-03
+     2.43035741e-02 -5.72595745e-04]
+   [-6.98976219e-03 -2.68328376e-03 -3.81215475e-03 ...  3.13855000e-02
+     2.83095799e-02 -2.54360940e-02]
+   ...
+   [ 1.09388903e-02  1.75961293e-02  1.81684643e-02 ...  7.69311935e-03
+     5.30489162e-03 -6.01724349e-03]
+   [ 1.55311935e-02  2.54341029e-02  3.02757211e-02 ...  9.27954912e-03
+     3.32598276e-02  2.36338377e-02]
+   [ 2.11372972e-05  9.38003510e-03 -1.84678137e-02 ... -2.97833793e-03
+    -1.55145004e-02 -9.68512893e-03]]
+
+  [[-3.18816155e-02  2.14810669e-03  8.68738443e-03 ... -1.64657533e-02
+    -1.04966424e-02 -3.32410522e-02]
+   [ 8.92679766e-03 -1.72941536e-02 -2.87707075e-02 ...  1.94238275e-02
+     8.53839889e-03 -2.61649564e-02]
+   [ 2.24920735e-03 -5.08885086e-03  9.18368250e-03 ...  2.17272043e-02
+     1.61627643e-02  3.32197510e-02]
+   ...
+   [ 4.51060757e-03 -2.87252516e-02 -2.39974391e-02 ...  1.57818571e-03
+     2.56463625e-02 -1.27944350e-03]
+   [-2.58769095e-02  2.77307332e-02 -3.23597081e-02 ... -1.01763457e-02
+    -2.94616148e-02  2.83153094e-02]
+   [ 2.93362625e-02  9.86656919e-03 -2.56532207e-02 ...  2.74789818e-02
+    -2.65199486e-02  1.14014931e-02]]]
+
+
+ [[[-9.87283140e-03  1.60246268e-02 -3.02918963e-02 ... -1.76725909e-03
+     2.81558000e-02  1.02108009e-02]
+   [ 3.08003016e-02 -1.01584941e-04  1.08691677e-02 ... -1.41152721e-02
+     2.21825726e-02 -3.01171280e-02]
+   [-2.20114123e-02 -6.65339269e-03 -2.47330964e-03 ... -2.20404118e-02
+     2.28227191e-02 -5.58014773e-03]
+   ...
+   [ 3.13825496e-02 -1.86766312e-02  3.92604619e-04 ... -8.29574466e-03
+     2.64582336e-02 -1.37077030e-02]
+   [ 1.66586339e-02 -1.66085809e-02 -1.74194351e-02 ... -2.27979571e-02
+     1.54926442e-02 -1.94069259e-02]
+   [ 9.79871675e-03 -1.41680557e-02 -3.24899815e-02 ... -6.36520237e-03
+     2.08557062e-02  1.61918923e-02]]
+
+  [[ 3.24562900e-02 -8.89494456e-03  2.51515433e-02 ...  4.19992208e-03
+     2.90624797e-03 -2.43730210e-02]
+   [-4.92712855e-03 -1.26899667e-02 -1.35158505e-02 ...  2.01581307e-02
+    -1.27155501e-02 -3.32063474e-02]
+   [ 2.12326571e-02  1.53669342e-02 -7.67528638e-03 ... -4.92347218e-03
+    -2.82640532e-02  2.20967084e-02]
+   ...
+   [-2.77065821e-02 -2.52649896e-02 -2.47836001e-02 ... -1.23683549e-02
+     8.94189626e-03 -1.77578051e-02]
+   [-6.96045160e-03  3.54981050e-03 -2.49069780e-02 ... -2.54189130e-02
+    -3.01191825e-02 -3.24881971e-02]
+   [-1.70668568e-02  2.51412690e-02 -1.00403652e-03 ... -6.21139072e-03
+     5.37168235e-04 -1.55443382e-02]]]
+
+
+ ...
+
+
+ [[[ 2.49646455e-02  1.59631781e-02 -1.40761957e-02 ... -1.29959341e-02
+    -7.90582597e-03  1.24838315e-02]
+   [ 1.70838870e-02  2.79001556e-02 -1.94695238e-02 ... -7.22492114e-03
+    -1.72633771e-02 -1.16978213e-02]
+   [ 1.63840875e-03 -2.10129749e-02 -1.15675293e-02 ... -6.31043501e-03
+    -2.71305628e-03 -1.46591235e-02]
+   ...
+   [ 5.59246168e-03  3.30903046e-02  1.84717253e-02 ... -7.44089298e-03
+    -2.70133317e-02 -2.39744186e-02]
+   [ 1.39882863e-02  1.62379555e-02  3.29650827e-02 ... -1.10429544e-02
+     1.04215480e-02  1.85713097e-02]
+   [-3.15415114e-02 -6.76290318e-03 -3.16511728e-02 ...  3.09610181e-02
+     1.50092803e-02 -1.87589973e-02]]
+
+  [[ 7.06662610e-03 -5.99652529e-03  1.25546753e-03 ...  1.65829100e-02
+     8.29342753e-03 -1.76015496e-03]
+   [-1.95708126e-03  1.78333297e-02 -3.33474874e-02 ... -1.10111348e-02
+     2.39275210e-02 -2.87457518e-02]
+   [-9.54628177e-03  2.56316513e-02  3.09223495e-02 ... -3.20603885e-02
+     2.24754140e-02 -1.25090256e-02]
+   ...
+   [ 1.24624856e-02  2.75380537e-03  1.81328841e-02 ...  3.06151025e-02
+     1.61420554e-04 -1.63238887e-02]
+   [-2.87766494e-02  2.03867741e-02  2.49748863e-02 ...  1.86599605e-02
+     2.57832967e-02  3.52508202e-03]
+   [ 2.81445049e-02 -1.85798891e-02  3.27383913e-02 ... -1.66160129e-02
+     2.78792381e-02  3.06467377e-02]]]
+
+
+ [[[ 1.15330406e-02 -3.09025496e-03 -1.05752330e-02 ...  2.21080668e-02
+    -1.77204572e-02  2.57285051e-02]
+   [ 1.35694854e-02 -1.82746612e-02  3.07495631e-02 ... -2.17000842e-02
+    -1.51771661e-02  2.09867768e-02]
+   [ 2.69817114e-02 -3.11137326e-02  3.78798321e-03 ...  9.39420611e-03
+     1.08060353e-02  1.95033662e-02]
+   ...
+   [-3.32778506e-02 -1.63448118e-02 -2.72378735e-02 ...  1.42149143e-02
+    -4.12972085e-03 -2.27448065e-02]
+   [-1.09169092e-02  2.20643468e-02  1.36931352e-02 ...  1.11907385e-02
+     2.15831734e-02 -1.24181528e-02]
+   [-1.54527966e-02  3.11573483e-02 -3.11768483e-02 ... -3.32839191e-02
+    -1.30267423e-02  2.82448828e-02]]
+
+  [[-3.29065137e-02 -1.92546360e-02 -2.36962922e-03 ...  2.75617950e-02
+     2.24373974e-02  1.71444267e-02]
+   [-7.87255540e-03 -1.90856587e-02 -9.34099220e-03 ...  6.41133636e-04
+     2.92716436e-02 -1.75742581e-02]
+   [ 1.72312297e-02 -1.15531124e-02  2.37575248e-02 ... -2.94080507e-02
+     2.79308781e-02 -5.53725660e-03]
+   ...
+   [-3.32558267e-02 -1.07502639e-02 -2.04589143e-02 ...  4.95909899e-03
+    -2.58641094e-02 -4.93577123e-03]
+   [ 2.32544243e-02  1.28989853e-02 -2.41716169e-02 ... -5.43446839e-03
+     1.02793016e-02  1.19129159e-02]
+   [-3.28575112e-02 -3.11104842e-02  1.63879432e-02 ...  9.37978178e-03
+     3.29180844e-02  2.19409056e-02]]]
+
+
+ [[[-1.27827898e-02 -3.08228265e-02 -2.39479914e-03 ...  2.77104042e-02
+     1.59417354e-02 -2.39584893e-02]
+   [ 1.67729408e-02  1.20546781e-02  1.86284371e-02 ...  2.38271616e-02
+     5.08022308e-03 -9.55466181e-04]
+   [-9.85099189e-03  5.77352941e-04  4.63630259e-03 ... -7.13561662e-03
+     2.03850046e-02  3.29773687e-02]
+   ...
+   [ 2.09631622e-02 -3.19248326e-02  5.56296855e-03 ...  2.27464326e-02
+    -2.68469751e-02 -2.84831934e-02]
+   [-2.89308522e-02 -1.47239026e-02 -1.42827686e-02 ... -2.84555238e-02
+     1.82641223e-02  4.87638265e-03]
+   [-2.02896651e-02  2.35818885e-02  9.75897908e-03 ... -3.02599482e-02
+     1.68156549e-02 -2.17830949e-03]]
+
+  [[-1.16943158e-02 -3.67658213e-03  1.06519535e-02 ...  2.71070711e-02
+    -9.81256738e-03  3.39204073e-03]
+   [ 1.72607638e-02 -2.45447792e-02 -9.39485058e-03 ...  1.06620528e-02
+    -9.06001031e-03  3.06163318e-02]
+   [-1.47194024e-02  2.29247287e-02  4.72877547e-03 ... -2.31911093e-02
+    -3.07021327e-02  2.38933526e-02]
+   ...
+   [-2.15417966e-02  1.47702731e-02 -1.93314999e-02 ... -2.31734663e-03
+    -1.00734867e-02  1.35087222e-02]
+   [ 2.12841034e-02  2.13894174e-02 -4.86467406e-03 ...  3.66169587e-03
+    -7.52888247e-03  5.15294448e-03]
+   [ 9.14919376e-03 -3.07345036e-02  1.31673105e-02 ...  1.39946118e-03
+    -2.84052175e-02  1.38066113e-02]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=conv2d_67, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 182</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [182]; toolbar: false;">import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+
+
+
+
+
+
+@keras_export(['keras.applications.inception_v3.InceptionV3', 'keras.applications.InceptionV3'])
+def InceptionV3(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(75, 75, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='inception_v3'):
+    
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    if backend.image_data_format() == 'channels_first':
+        channel_axis = 1
+    else:
+        channel_axis = 3
+    
+    x = conv2d_bn(img_input, 32, 3, 3, strides=(2, 2), padding='valid')
+    x = conv2d_bn(x, 32, 3, 3, padding='valid')
+    x = conv2d_bn(x, 64, 3, 3)
+    x = layers.MaxPooling2D((3, 3), strides=(2, 2))(x)
+    
+    x = conv2d_bn(x, 80, 1, 1, padding='valid')
+    x = conv2d_bn(x, 192, 3, 3, padding='valid')
+    x = layers.MaxPooling2D((3, 3), strides=(2, 2))(x)
+    
+    
+    branch1x1 = conv2d_bn(x, 64, 1, 1)
+    
+    branch5x5 = conv2d_bn(x, 48, 1, 1)
+    branch5x5 = conv2d_bn(branch5x5, 64, 5, 5)
+    
+    branch3x3dbl = conv2d_bn(x, 64, 1, 1)
+    branch3x3dbl = conv2d_bn(branch3x3dbl, 96, 3, 3)
+    branch3x3dbl = conv2d_bn(branch3x3dbl, 96, 3, 3)
+    
+    branch_pool = layers.AveragePooling2D(
+        (3, 3), strides=(1, 1), padding='same')(
+        x)
+    branch_pool = conv2d_bn(branch_pool, 32, 1, 1)
+    x = layers.concatenate(
+        [branch1x1, branch5x5, branch3x3dbl, branch_pool], 
+        axis=channel_axis, 
+        name='mixed0')
+    
+    
+    
+    branch1x1 = conv2d_bn(x, 64, 1, 1)
+    
+    branch5x5 = conv2d_bn(x, 48, 1, 1)
+    branch5x5 = conv2d_bn(branch5x5, 64, 5, 5)
+    
+    branch3x3dbl = conv2d_bn(x, 64, 1, 1)
+    branch3x3dbl = conv2d_bn(branch3x3dbl, 96, 3, 3)
+    branch3x3dbl = conv2d_bn(branch3x3dbl, 96, 3, 3)
+    
+    branch_pool = layers.AveragePooling2D(
+        (3, 3), strides=(1, 1), padding='same')(
+        x)
+    branch_pool = conv2d_bn(branch_pool, 64, 1, 1)
+    x = layers.concatenate(
+        [branch1x1, branch5x5, branch3x3dbl, branch_pool], 
+        axis=channel_axis, 
+        name='mixed1')
+    
+    
+    
+    branch1x1 = conv2d_bn(x, 64, 1, 1)
+    
+    branch5x5 = conv2d_bn(x, 48, 1, 1)
+    branch5x5 = conv2d_bn(branch5x5, 64, 5, 5)
+    
+    branch3x3dbl = conv2d_bn(x, 64, 1, 1)
+    branch3x3dbl = conv2d_bn(branch3x3dbl, 96, 3, 3)
+    branch3x3dbl = conv2d_bn(branch3x3dbl, 96, 3, 3)
+    
+    branch_pool = layers.AveragePooling2D(
+        (3, 3), strides=(1, 1), padding='same')(
+        x)
+    branch_pool = conv2d_bn(branch_pool, 64, 1, 1)
+    x = layers.concatenate(
+        [branch1x1, branch5x5, branch3x3dbl, branch_pool], 
+        axis=channel_axis, 
+        name='mixed2')
+    
+    
+    
+    branch3x3 = conv2d_bn(x, 384, 3, 3, strides=(2, 2), padding='valid')
+    
+    branch3x3dbl = conv2d_bn(x, 64, 1, 1)
+    branch3x3dbl = conv2d_bn(branch3x3dbl, 96, 3, 3)
+    branch3x3dbl = conv2d_bn(
+        branch3x3dbl, 96, 3, 3, strides=(2, 2), padding='valid')
+    
+    
+    branch_pool = layers.MaxPooling2D((3, 3), strides=(2, 2))(x)
+    x = layers.concatenate(
+        [branch3x3, branch3x3dbl, branch_pool], axis=channel_axis, name='mixed3')
+    
+    
+    
+    branch1x1 = conv2d_bn(x, 192, 1, 1)
+    
+    branch7x7 = conv2d_bn(x, 128, 1, 1)
+    branch7x7 = conv2d_bn(branch7x7, 128, 1, 7)
+    branch7x7 = conv2d_bn(branch7x7, 192, 7, 1)
+    
+    branch7x7dbl = conv2d_bn(x, 128, 1, 1)
+    branch7x7dbl = conv2d_bn(branch7x7dbl, 128, 7, 1)
+    branch7x7dbl = conv2d_bn(branch7x7dbl, 128, 1, 7)
+    branch7x7dbl = conv2d_bn(branch7x7dbl, 128, 7, 1)
+    branch7x7dbl = conv2d_bn(branch7x7dbl, 192, 1, 7)
+    
+    branch_pool = layers.AveragePooling2D(
+        (3, 3), strides=(1, 1), padding='same')(
+        x)
+    branch_pool = conv2d_bn(branch_pool, 192, 1, 1)
+    x = layers.concatenate(
+        [branch1x1, branch7x7, branch7x7dbl, branch_pool], 
+        axis=channel_axis, 
+        name='mixed4')
+    
+    
+    
+    for i in range(2):
+        branch1x1 = conv2d_bn(x, 192, 1, 1)
+        
+        branch7x7 = conv2d_bn(x, 160, 1, 1)
+        branch7x7 = conv2d_bn(branch7x7, 160, 1, 7)
+        branch7x7 = conv2d_bn(branch7x7, 192, 7, 1)
+        
+        branch7x7dbl = conv2d_bn(x, 160, 1, 1)
+        branch7x7dbl = conv2d_bn(branch7x7dbl, 160, 7, 1)
+        branch7x7dbl = conv2d_bn(branch7x7dbl, 160, 1, 7)
+        branch7x7dbl = conv2d_bn(branch7x7dbl, 160, 7, 1)
+        branch7x7dbl = conv2d_bn(branch7x7dbl, 192, 1, 7)
+        
+        branch_pool = layers.AveragePooling2D(
+            (3, 3), strides=(1, 1), padding='same')(
+            x)
+        branch_pool = conv2d_bn(branch_pool, 192, 1, 1)
+        x = layers.concatenate(
+            [branch1x1, branch7x7, branch7x7dbl, branch_pool], 
+            axis=channel_axis, 
+            name='mixed{0}'.format(5 + i))
+    
+    
+    
+    branch1x1 = conv2d_bn(x, 192, 1, 1)
+    
+    branch7x7 = conv2d_bn(x, 192, 1, 1)
+    branch7x7 = conv2d_bn(branch7x7, 192, 1, 7)
+    branch7x7 = conv2d_bn(branch7x7, 192, 7, 1)
+    
+    branch7x7dbl = conv2d_bn(x, 192, 1, 1)
+    branch7x7dbl = conv2d_bn(branch7x7dbl, 192, 7, 1)
+    branch7x7dbl = conv2d_bn(branch7x7dbl, 192, 1, 7)
+    branch7x7dbl = conv2d_bn(branch7x7dbl, 192, 7, 2)
+    branch7x7dbl = conv2d_bn(branch7x7dbl, 192, 1, 7)
+    
+    branch_pool = layers.AveragePooling2D(
+        (3, 3), strides=(1, 1), padding='same')(
+        x)
+    branch_pool = conv2d_bn(branch_pool, 192, 1, 1)
+    x = layers.concatenate(
+        [branch1x1, branch7x7, branch7x7dbl, branch_pool], 
+        axis=channel_axis, 
+        name='mixed7')
+    
+    
+    
+    branch3x3 = conv2d_bn(x, 192, 1, 1)
+    branch3x3 = conv2d_bn(branch3x3, 320, 3, 3, strides=(2, 2), padding='valid')
+    
+    branch7x7x3 = conv2d_bn(x, 192, 1, 1)
+    branch7x7x3 = conv2d_bn(branch7x7x3, 192, 1, 7)
+    branch7x7x3 = conv2d_bn(branch7x7x3, 192, 7, 1)
+    branch7x7x3 = conv2d_bn(
+        branch7x7x3, 192, 3, 3, strides=(2, 2), padding='valid')
+    
+    
+    branch_pool = layers.MaxPooling2D((3, 3), strides=(2, 2))(x)
+    x = layers.concatenate(
+        [branch3x3, branch7x7x3, branch_pool], axis=channel_axis, name='mixed8')
+    
+    
+    
+    for i in range(2):
+        branch1x1 = conv2d_bn(x, 320, 1, 1)
+        
+        branch3x3 = conv2d_bn(x, 384, 1, 1)
+        branch3x3_1 = conv2d_bn(branch3x3, 384, 1, 3)
+        branch3x3_2 = conv2d_bn(branch3x3, 384, 3, 1)
+        branch3x3 = layers.concatenate(
+            [branch3x3_1, branch3x3_2], 
+            axis=channel_axis, 
+            name=f'mixed9_{i}')
+        
+        
+        branch3x3dbl = conv2d_bn(x, 448, 1, 1)
+        branch3x3dbl = conv2d_bn(branch3x3dbl, 384, 3, 3)
+        branch3x3dbl_1 = conv2d_bn(branch3x3dbl, 384, 1, 3)
+        branch3x3dbl_2 = conv2d_bn(branch3x3dbl, 384, 3, 1)
+        branch3x3dbl = layers.concatenate(
+            [branch3x3dbl_1, branch3x3dbl_2], axis=channel_axis)
+        
+        
+        branch_pool = layers.AveragePooling2D(
+            (3, 3), strides=(1, 1), padding='same')(
+            x)
+        branch_pool = conv2d_bn(branch_pool, 192, 1, 1)
+        x = layers.concatenate(
+            [branch1x1, branch3x3, branch3x3dbl, branch_pool], 
+            axis=channel_axis, 
+            name=f'mixed{9 + i}')
+    
+    
+    x = layers.GlobalAveragePooling2D(name='avg_pool')(x)
+    imagenet_utils.validate_activation(classifier_activation, weights)
+    x = layers.Dense(
+        classes, activation=classifier_activation, name='predictions')(
+        x)
+    
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def conv2d_bn(\
+    x, filters, num_row, num_col, padding='same', strides=(1, 1), name=None):
+    
+    
+    if name is not None:
+        bn_name = f'{name}_bn'
+        conv_name = f'{name}_conv'
+    else:
+        bn_name = None
+        conv_name = None
+    if backend.image_data_format() == 'channels_first':
+        bn_axis = 1
+    else:
+        bn_axis = 3
+    x = layers.Conv2D(
+        filters, 
+        (num_row, num_col), 
+        strides=strides, 
+        padding=padding, 
+        use_bias=False, 
+        name=conv_name)(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis, scale=False, name=bn_name)(x)
+    x = layers.Activation('relu', name=name)(x)
+    return x
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(75, 75), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([75, 75, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = InceptionV3(input_shape=(75, 75, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 1
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointInceptionV3'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'InceptionV3_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(75, 75), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model.predict(batch_imgs, batch_size=300)
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #99</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number71').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #99</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'VGG16' from 'D:\\exp\\RQ1\\VGG16\\VGG16.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_VGG16.VGG16Test)</code></li>
+    
+    <li>duration - 1.196 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\VGG16\test_VGG16.py", line 14, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "VGG16", line 164, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 2 objects could not be loaded. Example error message for object <Conv2D name=block4_conv3, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(3, 3, 512, 513), Received: value.shape=(3, 3, 512, 512). Target variable: <Variable path=block4_conv3/kernel, shape=(3, 3, 512, 513), dtype=float32, value=[[[[ 0.00722116  0.0063435  -0.01781625 ... -0.01781922  0.015845
+     0.0242542 ]
+   [ 0.00836624  0.00619143  0.01222066 ... -0.02047718  0.01722111
+    -0.00183987]
+   [-0.00379959  0.00692309 -0.01934896 ... -0.00483076 -0.01990846
+     0.02203055]
+   ...
+   [ 0.01624747 -0.00275605  0.02287748 ... -0.00301588  0.00587799
+     0.01500375]
+   [ 0.01363153 -0.02306575  0.00920033 ...  0.01406087  0.00040556
+     0.00160239]
+   [-0.00233635 -0.00070394  0.02103473 ...  0.00207858 -0.00428599
+    -0.00050786]]
+
+  [[ 0.01477393 -0.0092728  -0.01809929 ... -0.00737111  0.01724253
+     0.00090186]
+   [ 0.0095876   0.01842409 -0.01607906 ... -0.00331582  0.00886373
+     0.01068565]
+   [-0.0046121  -0.00278654 -0.01744384 ...  0.01198914  0.02327878
+    -0.00121088]
+   ...
+   [-0.00064741  0.02208249  0.01437662 ...  0.00664478 -0.01436192
+    -0.00672025]
+   [-0.01065915  0.01970012 -0.02372575 ... -0.02396945 -0.01489269
+     0.01451335]
+   [-0.00690805 -0.01850922 -0.014225   ...  0.00624166  0.02204604
+     0.00504606]]
+
+  [[-0.01350229 -0.01488854  0.01162465 ... -0.02025465  0.00451932
+    -0.00961788]
+   [ 0.02284256  0.01323617 -0.00695983 ...  0.01780547 -0.00959654
+    -0.02220839]
+   [ 0.00719472  0.00535211 -0.02508787 ... -0.00768149  0.00806842
+    -0.00472353]
+   ...
+   [ 0.01942647  0.00938573 -0.01897718 ... -0.00540264 -0.00714706
+    -0.00207487]
+   [-0.01242174  0.01883452 -0.00713834 ...  0.01317049  0.01058657
+    -0.0213357 ]
+   [ 0.01558785 -0.01503965  0.00938907 ... -0.00247679  0.01785558
+    -0.01674353]]]
+
+
+ [[[ 0.02094737  0.02436028 -0.01207693 ...  0.023729    0.01502661
+    -0.00872632]
+   [ 0.00335052  0.01328598 -0.02059058 ... -0.0194689  -0.02365129
+     0.0028134 ]
+   [-0.00249299  0.00691265 -0.01063307 ... -0.00418852  0.00152155
+    -0.01170176]
+   ...
+   [-0.00448444  0.0140109   0.01156115 ...  0.00461341  0.01464399
+     0.02376899]
+   [ 0.00094362 -0.01198058  0.01746277 ...  0.01928247  0.0052335
+     0.00124028]
+   [ 0.00189012  0.01278469  0.00882497 ...  0.00261555  0.02338919
+    -0.00930215]]
+
+  [[-0.00680484 -0.00800262 -0.00799989 ...  0.02218701  0.02188128
+     0.02046143]
+   [ 0.00384982 -0.00713263  0.0103453  ...  0.01651897  0.01598113
+    -0.00738178]
+   [ 0.00422802 -0.0143152  -0.01522501 ... -0.00571185 -0.00833439
+     0.02159584]
+   ...
+   [-0.01431013  0.01633244 -0.01825374 ... -0.02475384  0.00527085
+    -0.00756324]
+   [-0.01019026 -0.01682151 -0.01917664 ...  0.0036167   0.00223399
+     0.00462356]
+   [ 0.02466969  0.02468937 -0.00914403 ...  0.0151702   0.01984558
+     0.00162886]]
+
+  [[-0.02187892 -0.01897188  0.00700591 ... -0.00667564  0.02176777
+    -0.02075149]
+   [ 0.01769714 -0.02147491 -0.01388276 ...  0.00268731  0.00318472
+    -0.01061093]
+   [ 0.01525746 -0.01549672 -0.00758477 ... -0.0123661   0.00208892
+     0.00286889]
+   ...
+   [-0.02398192  0.00849371 -0.01792736 ...  0.00336359 -0.00229184
+    -0.00723116]
+   [-0.01524243 -0.00873937  0.02267963 ... -0.00883521  0.01368055
+     0.00870094]
+   [ 0.00396686 -0.00249587 -0.00874294 ...  0.01253107 -0.01075443
+     0.00836494]]]
+
+
+ [[[-0.01380169  0.01957735 -0.00026162 ... -0.0119247   0.00740049
+    -0.00675922]
+   [-0.01945904  0.02164515  0.02351042 ...  0.00623739  0.00779378
+    -0.01497502]
+   [ 0.02103719  0.00820805  0.01288218 ... -0.01411578  0.00553785
+     0.00334222]
+   ...
+   [-0.00740585  0.0030066   0.01001874 ...  0.01922613  0.00286689
+     0.02353016]
+   [-0.01640484 -0.02139609  0.01092949 ...  0.00662015 -0.02030851
+    -0.02106737]
+   [-0.00700835  0.00294054 -0.014598   ... -0.00573203 -0.01770018
+    -0.01633852]]
+
+  [[ 0.02441513 -0.00946267 -0.01739142 ... -0.01499895  0.00818583
+    -0.00952997]
+   [-0.02450512  0.02432852 -0.02141483 ... -0.00289269  0.01788789
+     0.01477339]
+   [-0.01820604  0.00240872 -0.02290244 ...  0.01513125  0.01423198
+     0.01112222]
+   ...
+   [ 0.01440514 -0.00066518  0.00846912 ... -0.0075466  -0.02198774
+    -0.00783035]
+   [-0.00387947 -0.02184204  0.02082805 ... -0.00295179 -0.01682406
+    -0.00262151]
+   [-0.013552    0.00881233  0.01607899 ... -0.01923526  0.000946
+     0.00767346]]
+
+  [[-0.00434674 -0.0187491  -0.01721296 ...  0.00924521 -0.01528997
+    -0.0041014 ]
+   [ 0.01270552 -0.00466048 -0.00635148 ...  0.01615277  0.01293702
+     0.01085303]
+   [-0.0058665   0.02100947  0.01011009 ...  0.00397048 -0.02246037
+     0.02283577]
+   ...
+   [-0.02178578  0.02137142 -0.00055191 ... -0.0038197  -0.01906028
+     0.02107172]
+   [ 0.01096983  0.02273254  0.01994613 ...  0.00462497  0.01143011
+     0.01298607]
+   [ 0.00070808 -0.0156233   0.00341932 ...  0.00200487  0.0220025
+    -0.01319254]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=block4_conv3, built=True>, <Conv2D name=block5_conv1, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 71</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [71]; toolbar: false;">import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+
+@keras_export(['keras.applications.vgg16.VGG16', 'keras.applications.VGG16'])
+def VGG16(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(32, 32, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='vgg16'):
+    
+    
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    
+    x = layers.Conv2D(
+        64, (3, 3), activation='relu', padding='same', name='block1_conv1')(
+        img_input)
+    x = layers.Conv2D(
+        64, (3, 3), activation='relu', padding='same', name='block1_conv2')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Conv2D(
+        128, (3, 3), activation='relu', padding='same', name='block2_conv1')(
+        x)
+    x = layers.Conv2D(
+        128, (3, 3), activation='relu', padding='same', name='block2_conv2')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Conv2D(
+        256, (3, 3), activation='relu', padding='same', name='block3_conv1')(
+        x)
+    x = layers.Conv2D(
+        256, (3, 3), activation='relu', padding='same', name='block3_conv2')(
+        x)
+    x = layers.Conv2D(
+        256, (3, 3), activation='relu', padding='same', name='block3_conv3')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block4_conv1')(
+        x)
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block4_conv2')(
+        x)
+    x = layers.Conv2D(
+        513, (3, 3), activation='relu', padding='same', name='block4_conv3')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block5_conv1')(
+        x)
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block5_conv2')(
+        x)
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block5_conv3')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Flatten()(x)
+    x = layers.Dense(4096, activation='relu')(x)
+    x = layers.Dense(4096, activation='relu')(x)
+    
+    imagenet_utils.validate_activation(classifier_activation, weights)
+    x = layers.Dense(
+        classes, activation=classifier_activation, name='predictions')(
+        x)
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(32, 32), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([32, 32, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = VGG16(input_shape=(32, 32, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 1
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointVGG16'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'VGG16_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(32, 32), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model(batch_imgs, training=False).numpy()
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

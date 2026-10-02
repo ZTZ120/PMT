@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #22</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number33').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #22</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'DenseNet121' from 'D:\\exp\\RQ1\\DenseNet121\\DenseNet121.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_DenseNet121.DemoTest)</code></li>
+    
+    <li>duration - 2.785 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\DenseNet121\test_DenseNet121.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "DenseNet121", line 203, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 3 objects could not be loaded. Example error message for object <Conv2D name=pool2_conv, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(2, 2, 256, 128), Received: value.shape=(1, 1, 256, 128). Target variable: <Variable path=pool2_conv/kernel, shape=(2, 2, 256, 128), dtype=float32, value=[[[[-0.04733777  0.01243663 -0.01725066 ...  0.01428844  0.06125671
+    -0.04978028]
+   [-0.05081964 -0.00151366 -0.04449336 ... -0.04320247  0.01347813
+    -0.00348312]
+   [-0.01372558 -0.04761727 -0.01953079 ...  0.0338919   0.01144518
+     0.01860863]
+   ...
+   [ 0.06008139  0.0451607   0.05700335 ...  0.02454259  0.05254629
+     0.03609812]
+   [ 0.00053379 -0.0186467  -0.00626899 ... -0.01694414 -0.03543596
+    -0.05524826]
+   [ 0.02538313 -0.04055092 -0.03432077 ... -0.02462822 -0.02223279
+    -0.00165303]]
+
+  [[-0.02510257  0.03822052 -0.04429412 ... -0.02825636  0.0245617
+     0.01268424]
+   [ 0.02010648 -0.01918399 -0.0089312  ... -0.00716485  0.01232381
+    -0.04937601]
+   [ 0.003235    0.01530743  0.00447603 ... -0.062291   -0.04655261
+    -0.0155319 ]
+   ...
+   [ 0.0245699  -0.0258861   0.03165497 ... -0.05998483 -0.01319206
+    -0.00821064]
+   [ 0.02084988 -0.06069599 -0.02738303 ...  0.06018284  0.038642
+    -0.05067515]
+   [ 0.01398695  0.06189212 -0.0158167  ...  0.06187917  0.02640599
+     0.05738091]]]
+
+
+ [[[-0.05878165 -0.01717539  0.00913538 ... -0.02262592 -0.04873127
+    -0.01028593]
+   [ 0.03023517 -0.01992376 -0.0558062  ...  0.04665495  0.01933391
+    -0.05488366]
+   [-0.05205587  0.02197467 -0.03962028 ...  0.03492276 -0.03356108
+     0.02127935]
+   ...
+   [ 0.0308394   0.00090617 -0.02203774 ...  0.00232807 -0.03115255
+    -0.04079071]
+   [-0.03203614  0.01204652 -0.04874057 ...  0.04888014  0.01155168
+     0.00016636]
+   [ 0.04386166  0.00818728 -0.05502875 ... -0.06170951  0.00167257
+     0.01739874]]
+
+  [[-0.04233462  0.0611918   0.00870091 ...  0.01556295  0.01939368
+     0.0114014 ]
+   [-0.00250269  0.01124239 -0.01570582 ...  0.00988196  0.02737679
+    -0.04461579]
+   [ 0.04244514 -0.02230564  0.00366569 ...  0.0053058   0.02880724
+    -0.04344952]
+   ...
+   [-0.0498776  -0.04913872  0.02394231 ... -0.05032039 -0.01139612
+     0.03056277]
+   [-0.0445386   0.05279028 -0.06196843 ...  0.00105166  0.05885087
+    -0.02425963]
+   [ 0.01418811 -0.05757493 -0.04992986 ...  0.00713775  0.0283303
+     0.00203787]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=pool2_conv, built=True>, <Conv2D name=pool3_conv, built=True>, <Conv2D name=pool4_conv, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 33</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [33]; toolbar: false;">import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+def dense_block(x, blocks, name):
+    
+    for i in range(blocks):
+        x = conv_block(x, 32, name=f'{name}_block{i + 1}')
+    return x
+
+def transition_block(x, reduction, name):
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    x = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x)
+    x = layers.Activation('relu')(x)
+    x = layers.Conv2D(
+        int(x.shape[bn_axis] * reduction), 
+        2, 
+        use_bias=False, 
+        name=f'{name}_conv')(
+        x)
+    x = layers.AveragePooling2D(2, strides=2)(x)
+    return x
+
+def conv_block(x, growth_rate, name):
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    x1 = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x)
+    x1 = layers.Activation('relu')(x1)
+    x1 = layers.Conv2D(
+        4 * growth_rate, 1, use_bias=False, name=f'{name}_1_conv')(
+        x1)
+    x1 = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x1)
+    x1 = layers.Activation('relu')(x1)
+    x1 = layers.Conv2D(
+        growth_rate, 3, padding='same', use_bias=False, name=f'{name}_2_conv')(
+        x1)
+    x = layers.Concatenate(axis=bn_axis)([x, x1])
+    return x
+
+def DenseNet(\
+    blocks, \
+    include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(32, 32, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='densenet'):
+    
+    
+    
+    input_shape = imagenet_utils.obtain_input_shape(
+        input_shape, 
+        default_size=224, 
+        min_size=32, 
+        data_format=backend.image_data_format(), 
+        require_flatten=include_top, 
+        weights=weights)
+    
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    
+    x = layers.ZeroPadding2D(padding=((3, 3), (3, 3)))(img_input)
+    x = layers.Conv2D(64, 7, strides=2, use_bias=False, name='conv1_conv')(x)
+    x = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x)
+    x = layers.Activation('relu')(x)
+    x = layers.ZeroPadding2D(padding=((1, 1), (1, 1)))(x)
+    x = layers.MaxPooling2D(3, strides=2, name='pool1')(x)
+    
+    x = dense_block(x, blocks[0], name='conv2')
+    x = transition_block(x, 0.5, name='pool2')
+    x = dense_block(x, blocks[1], name='conv3')
+    x = transition_block(x, 0.5, name='pool3')
+    x = dense_block(x, blocks[2], name='conv4')
+    x = transition_block(x, 0.5, name='pool4')
+    x = dense_block(x, blocks[3], name='conv5')
+    
+    x = layers.BatchNormalization(axis=bn_axis, epsilon=1.001e-05)(x)
+    x = layers.Activation('relu')(x)
+    
+    x = layers.GlobalAveragePooling2D()(x)
+    
+    imagenet_utils.validate_activation(classifier_activation, weights)
+    x = layers.Dense(
+        classes, activation=classifier_activation, name='predictions')(
+        x)
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+
+@keras_export(['keras.applications.densenet.DenseNet121', 'keras.applications.DenseNet121'])
+def DenseNet121(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=None, \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='densenet121'):
+    
+    '''Instantiates the Densenet121 architecture.'''
+    return DenseNet(
+        [6, 12, 24, 16], 
+        include_top, 
+        weights, 
+        input_tensor, 
+        input_shape, 
+        pooling, 
+        classes, 
+        classifier_activation, 
+        name=name)
+
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(32, 32), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([32, 32, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = DenseNet121(input_shape=(32, 32, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 1
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointDenseNet121'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'DenseNet121_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(32, 32), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model(batch_imgs, training=False).numpy()
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #90</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number67').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #90</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'VGG19' from 'D:\\exp\\RQ1\\VGG19\\VGG19.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_VGG19.VGG19Test)</code></li>
+    
+    <li>duration - 1.233 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\VGG19\test_VGG19.py", line 14, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "VGG19", line 172, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 2 objects could not be loaded. Example error message for object <Conv2D name=block4_conv1, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(3, 3, 256, 513), Received: value.shape=(3, 3, 256, 512). Target variable: <Variable path=block4_conv1/kernel, shape=(3, 3, 256, 513), dtype=float32, value=[[[[-1.32913422e-02 -1.19338613e-02  2.91269924e-02 ...  9.28344764e-03
+     1.95549037e-02 -2.91832164e-03]
+   [ 6.56979717e-03 -1.49848107e-02  4.62354161e-03 ...  3.52961011e-03
+    -2.30181813e-02 -6.64724037e-03]
+   [ 3.70314345e-04 -2.43513454e-02 -2.37144157e-02 ... -2.75459997e-02
+    -1.93348788e-02 -1.62202865e-02]
+   ...
+   [ 1.79633629e-02 -2.16714107e-02 -2.42357329e-03 ... -1.20522864e-02
+    -7.98493251e-03  2.18412858e-02]
+   [-9.18784924e-03 -2.64766142e-02  1.75242890e-02 ...  2.17505265e-02
+     8.08840618e-04 -5.45459986e-03]
+   [-6.22219965e-03  2.12914813e-02 -6.25520013e-03 ... -2.44261064e-02
+    -1.02547277e-02  2.91774031e-02]]
+
+  [[ 1.89250987e-02  2.88579334e-02 -8.85253586e-03 ...  1.48854796e-02
+    -2.16019284e-02  2.03421135e-02]
+   [-4.52468172e-04  4.27820347e-03 -1.76973026e-02 ...  2.59310920e-02
+     1.12385880e-02  1.19131748e-02]
+   [-2.06610579e-02 -1.65046137e-02 -9.75670107e-03 ...  9.18971561e-03
+    -1.45221567e-02 -4.92100976e-03]
+   ...
+   [-4.80603427e-04 -2.34212205e-02 -2.69741789e-02 ...  8.17466713e-03
+    -1.63566694e-02 -2.48053633e-02]
+   [ 1.13402773e-02  2.81657781e-02  1.69095788e-02 ... -3.14891897e-03
+     2.49698889e-02  1.01839583e-02]
+   [ 2.12892760e-02 -1.32005550e-02  1.98938306e-02 ... -5.01271151e-03
+     8.68665613e-03 -1.40621075e-02]]
+
+  [[-1.93515234e-02 -5.53932413e-03 -4.74928319e-03 ...  9.61516052e-05
+    -1.13058947e-02  1.71974692e-02]
+   [-6.09485060e-03 -1.68945417e-02  1.11398045e-02 ... -2.38170531e-02
+     2.78484505e-02 -2.03458592e-04]
+   [-1.43904909e-02  2.08433215e-02 -1.20843742e-02 ... -1.81473270e-02
+     1.29808877e-02 -2.34240368e-02]
+   ...
+   [-1.54358046e-02  2.55244616e-02  1.85141806e-02 ... -2.62171719e-02
+    -9.93840396e-03  1.77617315e-02]
+   [ 1.02917720e-02 -1.11060254e-02  2.43061651e-02 ... -2.19784193e-02
+     2.22313534e-02 -1.53600946e-02]
+   [ 2.05899458e-02  7.53162242e-03  2.79076956e-03 ... -2.87508182e-02
+    -2.84878239e-02  1.86448898e-02]]]
+
+
+ [[[ 2.81750467e-02  2.47720052e-02  2.15279255e-02 ...  2.52411235e-02
+     2.50207614e-02 -1.57196820e-03]
+   [ 1.02367271e-02 -1.93872191e-02  1.26447249e-02 ...  9.47407074e-03
+     2.90918592e-02 -3.73850763e-03]
+   [-1.59784071e-02 -1.55322254e-04  2.82675456e-02 ...  1.33406725e-02
+     3.93117405e-03  8.63210298e-03]
+   ...
+   [ 2.42362600e-02  2.53849085e-02 -2.31278110e-02 ...  5.55188395e-03
+     5.19199856e-03  1.57331396e-02]
+   [ 1.77466739e-02 -3.43195535e-03 -7.80417770e-03 ... -2.55924575e-02
+    -1.30937118e-02 -7.51513988e-03]
+   [-1.44111440e-02 -1.65532045e-02  8.44722800e-03 ...  7.58698769e-03
+     1.18487719e-02  1.56663042e-02]]
+
+  [[-1.66211929e-02  2.48000305e-02  2.88321432e-02 ...  1.96172539e-02
+    -1.24072619e-02 -1.74395591e-02]
+   [ 2.28738599e-03  2.51227412e-02  2.79648211e-02 ...  2.26099230e-03
+    -2.74977721e-02 -2.71972492e-02]
+   [-7.97643885e-03  2.60321405e-02 -1.40375020e-02 ...  2.01094542e-02
+     2.92066354e-02  1.95531826e-02]
+   ...
+   [-1.35411881e-03  3.49826552e-03 -2.38140896e-02 ... -5.46086207e-03
+     1.34809706e-02  7.35375844e-03]
+   [ 1.61146913e-02  1.06906500e-02  4.77086939e-03 ... -1.32342502e-02
+     2.28615869e-02  2.53366120e-03]
+   [-2.39977874e-02  2.59650033e-02  2.84251925e-02 ...  6.45225681e-03
+    -2.19466202e-02  1.63432341e-02]]
+
+  [[ 2.37903502e-02 -5.16422838e-03  3.89582850e-03 ...  2.27449927e-02
+    -2.80929189e-02 -2.54999343e-02]
+   [ 1.83179174e-02  5.35343029e-03  2.12178938e-03 ...  1.03947055e-02
+     9.75346379e-03 -2.01202929e-02]
+   [ 1.19771305e-02  1.60359163e-02  7.05264695e-03 ... -9.91575792e-03
+     2.07845103e-02  2.20086556e-02]
+   ...
+   [ 1.10783596e-02  1.82973277e-02 -1.84536539e-02 ... -1.52826868e-03
+     2.07744446e-02 -2.62086298e-02]
+   [ 2.08543055e-03 -2.05582567e-02 -2.45903656e-02 ...  2.30281409e-02
+    -2.90070102e-02 -2.15326287e-02]
+   [-1.03925988e-02 -1.16233714e-02 -2.37003826e-02 ... -1.27328113e-02
+    -1.53908003e-02  2.63213422e-02]]]
+
+
+ [[[-2.54162848e-02 -7.48430006e-03 -2.37894505e-02 ... -2.72989459e-03
+     2.44470555e-02 -2.33613774e-02]
+   [-6.52331859e-03  1.07653346e-02  2.60070954e-02 ... -1.83024034e-02
+    -2.85785068e-02 -2.56054308e-02]
+   [ 2.54348237e-02  1.51480790e-02 -1.22712106e-02 ...  2.83863079e-02
+    -3.45274806e-04 -1.57935470e-02]
+   ...
+   [-2.93761492e-04 -2.79345922e-02 -1.37852002e-02 ... -1.16368774e-02
+    -8.71550292e-04 -1.62589364e-03]
+   [ 2.07056422e-02  4.19357978e-03 -1.77204534e-02 ...  2.05218103e-02
+     5.55018894e-03 -2.61575039e-02]
+   [-2.70550624e-02 -9.90442000e-03 -2.82935984e-03 ...  8.39684717e-03
+    -4.46651317e-03 -1.90580059e-02]]
+
+  [[-2.43066419e-02  1.31994244e-02  7.30424561e-03 ...  2.75225434e-02
+    -6.40484318e-03  5.07959165e-03]
+   [-6.73715211e-03 -7.26989098e-03  1.00905802e-02 ...  2.28179526e-02
+    -7.51845911e-03 -1.06503833e-02]
+   [-2.57869009e-02  7.52540119e-03  1.87150892e-02 ... -1.58098750e-02
+     2.32092105e-03  2.28281599e-02]
+   ...
+   [-2.34367009e-02 -2.48724893e-02 -2.87059676e-02 ...  1.71800051e-02
+    -1.58012677e-02  1.15210619e-02]
+   [ 7.47669488e-04 -7.65470788e-04  1.13896150e-02 ...  8.87745060e-03
+    -2.01313775e-02 -2.59791277e-02]
+   [ 1.97060499e-02  1.25934090e-02  2.93058399e-02 ...  9.50425863e-04
+     2.39565019e-02 -1.62484869e-03]]
+
+  [[ 2.22299080e-02 -8.27239826e-04 -1.49154263e-02 ...  2.06927229e-02
+     2.09860075e-02  4.60349210e-03]
+   [ 2.83036437e-02 -2.47781537e-03  4.17502038e-03 ... -7.57961720e-03
+    -2.31189579e-02  4.20763157e-03]
+   [-1.02836918e-02 -2.09215451e-02  2.89673526e-02 ...  2.56752502e-02
+     2.09781546e-02 -1.07388198e-02]
+   ...
+   [-2.65652407e-02  1.56806242e-02 -1.15356650e-02 ... -8.60538706e-03
+     2.43382584e-02 -1.33004468e-02]
+   [ 5.70500083e-03  2.90930402e-02  1.21297687e-03 ...  8.86758603e-03
+    -1.72408298e-04  2.18911264e-02]
+   [ 2.79932637e-02 -2.38038562e-02  2.81347875e-02 ...  2.63050180e-02
+     1.38405655e-02 -1.07171647e-02]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=block4_conv1, built=True>, <Conv2D name=block4_conv2, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 67</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [67]; toolbar: false;">import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+
+@keras_export(['keras.applications.vgg19.VGG19', 'keras.applications.VGG19'])
+def VGG19(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(32, 32, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='vgg19'):
+    
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    
+    x = layers.Conv2D(
+        64, (3, 3), activation='relu', padding='same', name='block1_conv1')(
+        img_input)
+    x = layers.Conv2D(
+        64, (3, 3), activation='relu', padding='same', name='block1_conv2')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Conv2D(
+        128, (3, 3), activation='relu', padding='same', name='block2_conv1')(
+        x)
+    x = layers.Conv2D(
+        128, (3, 3), activation='relu', padding='same', name='block2_conv2')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Conv2D(
+        256, (3, 3), activation='relu', padding='same', name='block3_conv1')(
+        x)
+    x = layers.Conv2D(
+        256, (3, 3), activation='relu', padding='same', name='block3_conv2')(
+        x)
+    x = layers.Conv2D(
+        256, (3, 3), activation='relu', padding='same', name='block3_conv3')(
+        x)
+    x = layers.Conv2D(
+        256, (3, 3), activation='relu', padding='same', name='block3_conv4')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Conv2D(
+        513, (3, 3), activation='relu', padding='same', name='block4_conv1')(
+        x)
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block4_conv2')(
+        x)
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block4_conv3')(
+        x)
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block4_conv4')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block5_conv1')(
+        x)
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block5_conv2')(
+        x)
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block5_conv3')(
+        x)
+    x = layers.Conv2D(
+        512, (3, 3), activation='relu', padding='same', name='block5_conv4')(
+        x)
+    x = layers.MaxPooling2D(2, strides=2)(x)
+    
+    
+    x = layers.Flatten()(x)
+    x = layers.Dense(4096, activation='relu')(x)
+    x = layers.Dense(4096, activation='relu')(x)
+    
+    imagenet_utils.validate_activation(classifier_activation, weights)
+    x = layers.Dense(
+        classes, activation=classifier_activation, name='predictions')(
+        x)
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(32, 32), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([32, 32, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = VGG19(input_shape=(32, 32, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 1
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointVGG19'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'VGG19_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(32, 32), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model(batch_imgs, training=False).numpy()
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

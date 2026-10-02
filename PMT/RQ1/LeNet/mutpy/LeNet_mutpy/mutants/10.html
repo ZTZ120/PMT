@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number15').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #10</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'LeNet' from 'D:\\exp\\RQ1\\LeNet\\LeNet.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_LeNet.LeNetTest)</code></li>
+    
+    <li>duration - 1.084 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\LeNet\test_LeNet.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "LeNet", line 87, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 2 objects could not be loaded. Example error message for object <Conv2D name=conv2d, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(6, 5, 1, 6), Received: value.shape=(5, 5, 1, 6). Target variable: <Variable path=conv2d/kernel, shape=(6, 5, 1, 6), dtype=float32, value=[[[[ 0.12795237 -0.01352915  0.03390463 -0.03630862 -0.0834359
+    -0.0188303 ]]
+
+  [[-0.05310497  0.0934647  -0.15377572  0.10729578 -0.16888057
+    -0.00689566]]
+
+  [[-0.00106062 -0.09269082  0.14210993 -0.03821944 -0.13109761
+    -0.05826833]]
+
+  [[-0.15636791 -0.04592571 -0.02767004 -0.05294783  0.04480515
+    -0.01661931]]
+
+  [[-0.00830142  0.0584137   0.00387932 -0.04693095  0.00390951
+     0.03849864]]]
+
+
+ [[[-0.00270478  0.0732594   0.0980314  -0.13544217  0.04755697
+     0.11450619]]
+
+  [[-0.12030171 -0.16071904  0.08733156 -0.04329778  0.14424932
+     0.08535656]]
+
+  [[ 0.09239623 -0.02857986 -0.07454736  0.16210833  0.14379305
+     0.08609667]]
+
+  [[ 0.03085427  0.15797985  0.06207834  0.14768243 -0.07145622
+     0.08991805]]
+
+  [[ 0.05171639 -0.1434716  -0.03582194 -0.01091999  0.1496928
+    -0.11747099]]]
+
+
+ [[[ 0.02328607 -0.0656038   0.16728672  0.06005903  0.05263612
+    -0.07220265]]
+
+  [[ 0.0108221   0.1436925   0.03213054  0.10507074  0.12694192
+     0.09534836]]
+
+  [[-0.07392492  0.10125136  0.04843958 -0.03003599 -0.07168166
+     0.06743991]]
+
+  [[-0.12464622  0.07499598  0.10576722 -0.01149556 -0.15406346
+    -0.15705326]]
+
+  [[ 0.03805067 -0.09843665  0.1442537   0.01282841 -0.08827558
+     0.01875176]]]
+
+
+ [[[ 0.02693276 -0.02830538 -0.03620943 -0.01559484  0.02315322
+    -0.07106897]]
+
+  [[-0.08432867  0.1296562   0.08702451 -0.0308772  -0.09040008
+    -0.14711489]]
+
+  [[-0.10958374  0.0142495   0.14889535  0.1124157   0.05744642
+     0.01103541]]
+
+  [[ 0.12833065  0.10791862  0.01816668  0.03958969  0.06950609
+     0.01834738]]
+
+  [[ 0.04905142 -0.03052591 -0.1404023  -0.12970485  0.05817492
+     0.06653626]]]
+
+
+ [[[ 0.04941832 -0.14052832 -0.10998525 -0.1279763  -0.02103148
+     0.13995183]]
+
+  [[ 0.09236705 -0.12311767 -0.06680478  0.03987287 -0.06025174
+     0.04482749]]
+
+  [[ 0.06151234  0.14453423  0.00232472  0.07563606 -0.07814575
+    -0.10649888]]
+
+  [[-0.1293689  -0.08328744  0.12514666  0.08977163 -0.16180657
+    -0.04488108]]
+
+  [[ 0.05152892  0.00314014  0.09013686  0.09901181  0.10969105
+    -0.10383496]]]
+
+
+ [[[-0.06726094 -0.11351888  0.11148232 -0.05120812  0.07825379
+    -0.04325961]]
+
+  [[-0.02464134 -0.11919503 -0.00289916 -0.02679698 -0.09545235
+     0.07276525]]
+
+  [[ 0.11981043  0.0562842   0.04114841  0.01001143 -0.14174494
+    -0.11088071]]
+
+  [[ 0.00783587 -0.06653292 -0.02848129  0.06431323 -0.11792888
+    -0.0043063 ]]
+
+  [[ 0.10632485 -0.06205299 -0.07523488 -0.05576199  0.14675766
+    -0.10852316]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=conv2d, built=True>, <Dense name=dense, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 15</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [15]; toolbar: false;">import os
+import math
+import glob
+import random
+from pathlib import Path
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras import layers, models, backend as K
+
+def lenet(input_shape=(28, 28, 1), n_classes=10):
+    inputs = layers.Input(shape=input_shape)
+    
+    x = layers.Conv2D(6, (6, 5), activation='relu', padding='valid', 
+        kernel_initializer=tf.keras.initializers.GlorotUniform(seed=1))(inputs)
+    x = layers.AveragePooling2D(pool_size=(2, 2), strides=2)(x)
+    
+    x = layers.Conv2D(16, (5, 5), activation='relu', padding='valid', 
+        kernel_initializer=tf.keras.initializers.GlorotUniform(seed=1))(x)
+    x = layers.AveragePooling2D(pool_size=(2, 2), strides=2)(x)
+    
+    x = layers.Flatten()(x)
+    x = layers.Dense(120, activation='relu', 
+        kernel_initializer=tf.keras.initializers.GlorotUniform(seed=1))(x)
+    x = layers.Dense(84, activation='relu', 
+        kernel_initializer=tf.keras.initializers.GlorotUniform(seed=1))(x)
+    outputs = layers.Dense(n_classes, activation='softmax', 
+        kernel_initializer=tf.keras.initializers.GlorotUniform(seed=1))(x)
+    return models.Model(inputs, outputs, name='lenet')
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(28, 28), color_mode='grayscale')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.array(img, dtype=np.float32)
+            arr = np.expand_dims(arr, axis=-1)
+            return arr
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([28, 28, 1])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = lenet(input_shape=(28, 28, 1), n_classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 1
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointLeNet'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'LeNet_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(28, 28), color_mode='grayscale')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.array(img_test, dtype=np.float32)
+        image_test = np.expand_dims(image_test, axis=-1)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs, dtype=np.float32)
+    
+    preds = model(batch_imgs, training=False).numpy()
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

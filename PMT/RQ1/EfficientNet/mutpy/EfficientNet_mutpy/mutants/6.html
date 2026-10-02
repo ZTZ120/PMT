@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number143').attr('title', 'AOR');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #6</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'EfficientNet' from 'D:\\exp\\RQ1\\EfficientNet\\EfficientNet.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_EfficientNet.DemoTest)</code></li>
+    
+    <li>duration - 2.011 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\EfficientNet\test_EfficientNet.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "EfficientNet", line 414, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 131 objects could not be loaded. Example error message for object <Conv2D name=stem_conv, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(3, 3, 3, 36), Received: value.shape=(3, 3, 3, 32). Target variable: <Variable path=stem_conv/kernel, shape=(3, 3, 3, 36), dtype=float32, value=[[[[-1.11672148e-01  9.53126326e-02  2.65393388e-02 -1.76098775e-02
+    -5.50468601e-02 -6.14707321e-02 -4.41856384e-02 -4.70551811e-02
+     3.08601949e-02 -1.01693749e-01 -7.18825087e-02  1.01444744e-01
+    -5.13012223e-02 -1.34322032e-01  4.47360761e-02 -3.64569761e-03
+     5.95926344e-02  2.87056547e-02 -4.12108824e-02  1.40553089e-02
+    -5.80003078e-04 -8.43963325e-02  2.85313418e-03  1.36426941e-01
+     1.50331724e-02 -5.63066676e-02 -3.29770260e-02  6.51012361e-02
+    -6.64457008e-02  8.91510118e-03 -2.55018324e-02 -4.97316802e-03
+     2.57841889e-02 -7.34916031e-02 -1.12938173e-01  2.63177063e-02]
+   [ 4.05391194e-02 -3.38157490e-02  8.01238269e-02  8.16376656e-02
+    -9.47250202e-02  2.93142758e-02  5.17236069e-02 -1.82745345e-02
+    -6.25735298e-02 -9.59068164e-02 -7.28868768e-02 -1.27088666e-01
+    -8.71459171e-02 -1.71074662e-02 -3.79730649e-02  4.73879799e-02
+    -8.09063613e-02 -6.99173585e-02 -1.14340976e-01  1.88889913e-02
+     5.01282439e-02 -1.13181397e-02 -1.67474285e-01  1.97112914e-02
+    -7.55334496e-02 -4.42038663e-02 -1.44457659e-02 -2.20690127e-02
+    -1.49373606e-01 -6.02673888e-02  4.28226637e-03  1.57803535e-01
+    -6.91518793e-03 -1.05701216e-01  6.85189962e-02  2.07469091e-02]
+   [ 9.49716717e-02 -8.69393274e-02 -1.01987503e-01  2.12917328e-02
+     5.57413418e-03 -3.59306820e-02  1.68740004e-01 -6.86985999e-02
+     1.12364002e-01  1.38359979e-01 -7.54754841e-02 -6.25766963e-02
+    -9.53955874e-02  2.60955803e-02 -2.63567753e-02 -2.83720400e-02
+     2.11574249e-02  3.69745567e-02  7.09994733e-02 -1.57213944e-03
+    -4.58560325e-03  7.56663457e-03  8.77436176e-02  1.52173098e-02
+    -3.73390317e-02 -2.41365954e-02  1.49019333e-02  6.58817217e-02
+    -9.27814767e-02  3.41079906e-02  1.08898297e-01  6.27524778e-02
+     5.01602292e-02 -1.47276953e-01 -1.13292314e-01  3.41972411e-02]]
+
+  [[ 2.43501309e-02  8.91386196e-02  5.52230105e-02 -1.47473574e-01
+    -1.35478228e-01 -3.50144436e-03  4.19572368e-02 -7.48763187e-03
+    -1.11840451e-02  5.61181866e-02  5.67107573e-02 -1.72305331e-02
+    -4.48471345e-02 -4.46395539e-02 -1.19282462e-01 -5.22649437e-02
+    -2.18486544e-02 -1.55792713e-01 -9.58853513e-02 -3.24819908e-02
+     7.96982180e-03 -2.93627419e-02  3.92697155e-02 -9.09231752e-02
+     2.96508763e-02  9.31109115e-02  5.10078259e-02 -6.77815825e-02
+     1.30637869e-01 -2.28296332e-02 -1.30887598e-01 -3.87690812e-02
+    -7.89430588e-02  7.55589455e-02 -9.26943198e-02 -1.22235000e-01]
+   [ 1.17220156e-01  2.40770634e-02  5.70831262e-02 -2.36248728e-02
+     5.21135554e-02  9.08071995e-02  9.20360461e-02 -3.94968987e-02
+    -2.75353100e-02  1.42515734e-01  6.22339025e-02  5.50487675e-02
+    -7.91861340e-02 -1.16708837e-01 -6.98001161e-02 -1.81941763e-02
+     3.26532647e-02 -1.40683681e-01  1.19163819e-01 -7.22382292e-02
+     3.94332111e-02 -9.21589509e-02 -3.64789739e-02 -3.06411553e-02
+     4.74981638e-03  4.25482728e-03 -2.25885995e-02 -1.23896420e-01
+    -2.51893867e-02 -1.02631249e-01  7.32173696e-02 -9.53479335e-02
+    -1.05795218e-02  2.01407410e-02 -3.90987769e-02  1.09907694e-01]
+   [ 7.25585967e-02  6.13401569e-02 -1.11758426e-01 -6.96388185e-02
+     1.10596582e-01  9.17476881e-03  1.03867635e-01 -2.27676295e-02
+     1.32022742e-02  1.02858961e-01  4.35233451e-02 -3.01871076e-02
+     7.10124001e-02 -1.24549635e-01 -9.69251916e-02  2.54465230e-02
+     1.43288627e-01 -1.05775505e-01 -1.67755231e-01 -5.54970512e-03
+     1.62665267e-02 -1.12036444e-01 -1.06197454e-01  4.99674380e-02
+    -6.69433847e-02  1.44350538e-02 -1.11859357e-02  7.58272856e-02
+     2.37345807e-02  7.89017081e-02 -1.79666430e-02  1.36945471e-01
+    -1.68921463e-02 -1.03610873e-01 -8.36845860e-02 -7.23165944e-02]]
+
+  [[-7.86385015e-02 -6.79651201e-02 -2.64139455e-02  1.17687292e-01
+     5.62827860e-04 -1.08011037e-01  4.62149568e-02 -1.22521333e-01
+     2.13171653e-02  8.16472098e-02 -6.54628202e-02  1.22044265e-01
+     1.09019257e-01  1.45519674e-01  8.06017295e-02 -7.73051679e-02
+     2.04514824e-02 -1.31342530e-01  1.14209764e-01 -4.44993600e-02
+    -1.01735545e-02  8.43630210e-02 -1.66724548e-01  2.31402554e-02
+    -3.41978595e-02 -5.56207113e-02 -8.65614787e-02  1.50655240e-01
+    -7.24728703e-02 -1.52102420e-02  1.33684778e-04  8.03967789e-02
+     3.14484797e-02  4.11205925e-02  6.61962945e-03 -4.57104929e-02]
+   [-9.14742872e-02  1.07052155e-01 -1.78946168e-04 -3.43352966e-02
+     5.48731014e-02  9.59034935e-02  8.22008476e-02 -7.12739304e-02
+    -6.18298911e-02  1.54147625e-01 -6.79995343e-02 -6.31660745e-02
+     8.58060420e-02  1.76191665e-02 -5.53548336e-02  2.27167308e-02
+    -1.27308756e-01 -8.68033394e-02  5.57232872e-02  7.98952952e-02
+    -1.82958953e-02  5.86701632e-02 -9.28076431e-02  4.13195156e-02
+    -1.51978627e-01 -2.13083103e-02  1.83076691e-02 -6.32374585e-02
+     8.22744668e-02 -5.05479686e-02 -4.20878679e-02 -3.19143608e-02
+     4.78203408e-02 -1.60686135e-01  2.23841295e-02  5.83211966e-02]
+   [ 7.79703557e-02 -1.24907278e-01  2.15910338e-02  1.32803116e-02
+     1.02829084e-01 -7.14977831e-02 -1.02429092e-01 -7.05159903e-02
+     3.68411280e-02 -9.43165794e-02  1.42134458e-01 -5.47390170e-02
+    -8.06977227e-02  1.39126569e-01  3.13701704e-02 -6.31028563e-02
+     1.09486252e-01  1.21235270e-02  9.85836014e-02 -7.03798383e-02
+    -1.13822423e-01 -1.73249334e-01 -5.05400002e-02  1.17717773e-01
+    -1.72683820e-01 -8.72306619e-03  7.61568695e-02 -1.12029441e-01
+     4.50909249e-02 -5.29782996e-02  9.10885334e-02 -1.25355601e-01
+    -6.80317804e-02 -1.36757167e-02 -6.99884742e-02  9.22679231e-02]]]
+
+
+ [[[-4.64648269e-02  3.30864601e-02  7.02393055e-02 -1.92123689e-02
+     6.78851679e-02  1.01762258e-01 -5.31177409e-02  2.15283297e-02
+     3.05649173e-02  6.91685975e-02 -3.35814394e-02  2.50417273e-03
+     5.04751988e-02  7.17922207e-03  1.30823748e-02  6.77418932e-02
+     1.00783959e-01 -4.09906767e-02  5.83456904e-02 -2.64871623e-02
+    -1.00715786e-01 -1.05090765e-02 -9.21063349e-02  1.51083600e-02
+    -2.23383512e-02  1.06788613e-01 -7.26436824e-02  8.49404186e-02
+     8.20605084e-03 -1.38540536e-01 -8.60114116e-03  1.74546540e-02
+     9.18064266e-02  2.78094597e-02  6.83871359e-02  7.50809982e-02]
+   [ 1.05664715e-01 -4.99331839e-02 -9.04809088e-02  1.67160675e-01
+     5.70673589e-03 -5.17442673e-02  1.41301334e-01  1.21519312e-01
+     1.97887197e-02  4.14931998e-02 -8.53764489e-02 -1.39625326e-01
+    -4.85944785e-02 -7.89538212e-03  2.68784184e-02 -4.72220778e-02
+     8.70123506e-02 -6.21879324e-02  4.14551888e-03 -3.24135460e-03
+    -6.07131328e-03 -4.03071493e-02 -1.53182894e-02  7.36154094e-02
+     1.63390070e-01  7.50185624e-02 -7.33711421e-02  4.19338755e-02
+     5.45148663e-02  6.86036348e-02 -1.49706728e-03  1.06648453e-01
+    -1.96273886e-02  1.53943405e-01  3.30399647e-02  1.01394571e-01]
+   [ 4.51261811e-02  1.30451962e-01 -4.90955301e-02 -2.07056738e-02
+     7.58797489e-03 -1.41521960e-01  1.56871229e-01 -1.73499480e-01
+     2.73079406e-02  3.10602151e-02  3.16682458e-03  1.36199683e-01
+    -1.29001856e-01  4.34430279e-02  5.43535175e-03 -8.63222405e-02
+     4.95693460e-02  6.25419989e-02  4.40464467e-02 -5.60545102e-02
+    -9.22174081e-02  1.24473749e-02  1.16482312e-02  1.32042859e-02
+     1.07099131e-01 -3.77007052e-02  5.47126643e-02  1.60201475e-01
+    -1.32617086e-01 -8.50342885e-02  6.90347552e-02 -3.43119130e-02
+    -9.39518437e-02 -9.59370211e-02  2.44764760e-02  5.39339520e-02]]
+
+  [[-8.65477473e-02  9.15633223e-04 -5.54073900e-02  9.97963268e-03
+     3.95640172e-03 -1.20647661e-01  2.35331301e-02 -6.13961071e-02
+     5.19522652e-02  2.46427264e-02 -1.98603235e-02 -3.60333286e-02
+     3.64682563e-02 -5.43332584e-02  1.45530388e-01 -7.92841986e-02
+     3.19288746e-02 -2.60384325e-02  4.62692082e-02 -2.98628602e-02
+     1.20986328e-02  4.37597670e-02  1.43976621e-02  5.45199178e-02
+    -3.42343301e-02 -8.38636011e-02 -3.58549692e-02  1.30012110e-01
+    -2.69080121e-02 -1.67017594e-01  1.53035492e-01  5.38687687e-03
+     1.51827008e-01 -8.39270204e-02 -3.44864465e-02 -1.64286569e-01]
+   [ 1.69443518e-01 -5.48038594e-02  7.61760995e-02 -8.14479068e-02
+     5.08108959e-02 -1.17407046e-01 -1.04626983e-01 -8.39067921e-02
+     2.78098024e-02 -4.13820194e-03 -8.49427506e-02 -1.62042901e-02
+    -8.51941481e-02  1.15731046e-01  8.55800360e-02 -3.56148742e-02
+     1.18375622e-01 -4.19250913e-02  1.17193107e-02 -1.02099575e-01
+     3.03223468e-02  2.42865402e-02 -3.36385542e-03 -4.45474349e-02
+    -3.21248956e-02 -2.01163478e-02 -6.18465617e-02 -1.27730012e-01
+     1.33645371e-01 -7.14848638e-02  3.16337720e-02 -8.64469856e-02
+    -6.03038892e-02  7.47790635e-02 -8.60616714e-02 -7.58781061e-02]
+   [ 8.85829404e-02  7.97311366e-02 -8.53716433e-02  2.14489363e-02
+    -7.72410780e-02 -7.37865120e-02 -3.54236849e-02  8.67840797e-02
+     4.37625013e-02 -3.77994515e-02 -1.17968246e-02  1.06382810e-01
+     2.76382770e-02 -1.42154574e-01  1.44436592e-02 -4.32779789e-02
+    -2.96591967e-03  5.73110022e-02  6.05268925e-02 -1.15991354e-01
+    -4.93236668e-02  6.54347241e-02 -8.59880373e-02  9.45857167e-03
+    -1.20039366e-01 -5.72623499e-02  2.33561336e-03  1.84406471e-02
+    -8.63104686e-03  3.50389741e-02  2.43876409e-02 -2.81789806e-02
+     1.26511484e-01 -1.34202808e-01 -5.29851429e-02  9.00242031e-02]]
+
+  [[ 1.94913913e-02  9.93672535e-02 -8.58613010e-03 -7.89307000e-04
+    -1.14188038e-01 -2.74022147e-02  2.21076123e-02 -7.03129545e-02
+     3.04502044e-02 -3.19676511e-02 -1.49080455e-01  8.86212066e-02
+     1.11996911e-01  3.86637710e-02 -1.02689318e-01  1.25069797e-01
+    -2.87189167e-02  8.72169659e-02 -1.36628270e-01  5.26059307e-02
+    -1.13592803e-01  6.03296123e-02 -7.11424276e-02 -6.87799156e-02
+    -1.33422345e-01  1.76664477e-03 -9.34370458e-02 -1.36575624e-01
+     1.23570442e-01  4.30021510e-02  7.93270022e-02  4.31091189e-02
+    -5.66380695e-02  1.06747694e-01  8.58529191e-03  4.06163409e-02]
+   [-5.35847992e-02 -6.46325052e-02  4.88316491e-02 -3.81402671e-02
+    -1.48849130e-01  1.59639921e-02  1.13468915e-01 -1.48333818e-01
+     9.67925861e-02  4.06176150e-02  1.40624493e-01  1.22952536e-02
+     1.03991050e-02 -1.54300109e-01  6.73704818e-02 -2.30244431e-03
+     3.20139788e-02 -1.56435460e-01  1.05213769e-01 -8.49630982e-02
+     7.23991403e-03 -5.52743003e-02  9.71350074e-02  1.06828943e-01
+     1.07085064e-01 -4.64401916e-02 -1.22045383e-01 -2.56597232e-02
+     6.57925755e-02 -5.93677349e-02  2.48637833e-02  1.62248775e-01
+     9.67312530e-02  1.70384049e-02  7.99121186e-02 -4.81404066e-02]
+   [ 1.25036895e-01 -1.51333019e-01 -6.05724454e-02 -8.35289583e-02
+    -1.17311001e-01 -6.44919351e-02  7.34323710e-02 -2.70527881e-02
+    -1.83998223e-03  1.15803003e-01  9.06580985e-02  1.02608122e-01
+     1.63879339e-02 -2.37079244e-02 -1.07741930e-01 -1.80772468e-02
+     9.09552127e-02  3.88281308e-02 -2.74741538e-02  5.21838814e-02
+     6.91088438e-02 -6.68582469e-02  4.36574407e-02  9.10193548e-02
+    -2.26363959e-03  8.36060941e-02  2.24742424e-02 -6.98302910e-02
+     3.86775844e-03 -3.91623452e-02 -6.33706301e-02 -1.11823983e-01
+     7.04054832e-02 -6.86909333e-02 -4.38178098e-03  6.45933598e-02]]]
+
+
+ [[[-9.46144983e-02  1.57228097e-01  5.16591445e-02  2.75486824e-03
+    -5.75309247e-02 -3.78668457e-02 -8.88803005e-02 -1.24637093e-02
+     1.69212833e-01 -1.59749854e-02 -7.01910332e-02 -1.05115011e-01
+     6.55332729e-02 -9.22620893e-02  1.31501639e-02  9.87120196e-02
+     1.50517225e-01 -4.23755646e-02  8.36537033e-02 -3.72984596e-02
+     1.52556291e-02  5.08030914e-02  3.19888140e-03 -6.24094978e-02
+     3.89533234e-03  4.12060432e-02  1.17625698e-01 -1.34910986e-01
+     4.70555164e-02  2.12227907e-02  5.17564528e-02  4.64563444e-02
+     9.65067595e-02 -1.71209678e-01  1.51860580e-01 -1.63676366e-01]
+   [-5.44637740e-02 -2.99722739e-02  9.85122919e-02 -1.63768858e-01
+    -1.60768523e-05 -4.74744961e-02 -4.21056058e-03  4.14864682e-02
+     1.27708584e-01  4.60361205e-02  3.38427834e-02 -1.43734977e-01
+    -3.14289704e-02  3.55777256e-02 -9.13479403e-02 -1.27119326e-03
+     9.85543896e-03  6.39632344e-02 -5.39404787e-02  1.22108400e-01
+     1.01171665e-01  9.75225195e-02  1.12699717e-01  2.61932909e-02
+     7.98704177e-02  1.32779786e-02  1.06584609e-01 -1.42343208e-01
+    -1.34870842e-01 -8.18071440e-02 -1.00448951e-01 -5.12133576e-02
+     4.88919616e-02 -2.92397235e-02  5.16932011e-02 -1.66516900e-01]
+   [ 6.64277449e-02  1.01519212e-01 -3.57343704e-02 -1.16852336e-01
+    -1.55788884e-02 -1.17087150e-02  1.08106986e-01 -1.17375860e-02
+     6.23353533e-02  7.36873001e-02 -6.29831627e-02 -1.35748968e-01
+    -1.27934918e-01  7.96978846e-02 -5.86865135e-02  6.57959729e-02
+     7.19409669e-03  1.01075657e-01  1.17470473e-01 -1.41665027e-01
+    -9.01339278e-02 -6.06965870e-02 -4.07984443e-02  5.20003289e-02
+    -3.77450115e-03  1.18317604e-01 -2.11634561e-02 -3.63160595e-02
+     1.69425040e-01 -4.20696847e-02  3.04228105e-02 -1.14278130e-01
+     4.31659818e-02  2.34009679e-02 -6.42420501e-02 -8.72222856e-02]]
+
+  [[-1.73400063e-02 -1.44064501e-01 -2.99431738e-02 -3.95900831e-02
+     7.69447014e-02  7.24497763e-03 -8.85835104e-03 -2.85720080e-02
+    -1.82566829e-02  1.13923043e-01 -6.46004155e-02 -6.54499531e-02
+    -6.14821874e-02 -7.68803284e-02  8.08583722e-02 -1.05085358e-01
+     3.32996324e-02 -3.91447544e-02 -7.90830478e-02 -5.22848964e-02
+     3.33173503e-03 -7.95313045e-02  8.50073025e-02  1.20191708e-01
+     2.08544359e-02  8.01597759e-02  1.19835526e-01  6.67467341e-02
+     2.72464287e-02  4.24870886e-02  2.77773961e-02 -5.76051101e-02
+    -3.58639844e-03 -3.34230624e-02  1.10548109e-01 -1.07740141e-01]
+   [ 4.61751446e-02  7.74950311e-02 -1.58913478e-01  1.02908671e-01
+    -4.22850018e-03 -9.88292228e-03 -1.72334820e-01 -7.70028904e-02
+     1.42156824e-01  8.90313685e-02  5.61252274e-02 -1.76181570e-02
+    -3.47924717e-02  1.72684193e-02 -4.07523587e-02  1.24539666e-01
+    -1.24562763e-01  7.55540356e-02 -4.99458909e-02  4.23551947e-02
+     1.66774020e-01  1.74943492e-01 -2.75972416e-03 -5.94535060e-02
+    -1.69975355e-01 -1.44299064e-02 -2.51676757e-02  1.47216208e-02
+     8.74410048e-02 -1.40553951e-01  1.73334837e-01 -5.02512567e-02
+     6.11915477e-02 -7.75831789e-02 -3.72910202e-02 -1.72308758e-02]
+   [-2.61567831e-02 -1.69345856e-01  9.04403105e-02 -3.43456795e-03
+    -4.25894894e-02 -7.63998181e-02 -1.26567623e-02  2.78559122e-02
+    -2.27816198e-02  3.49869058e-02  4.48987186e-02 -6.34092763e-02
+     1.45941898e-01 -3.64336558e-02  8.10952708e-02 -7.18015386e-03
+     4.78527183e-03  1.00978866e-01  8.12111348e-02 -2.00788490e-02
+    -6.11870177e-02  4.52593714e-02  1.24721698e-01  1.20394275e-01
+    -6.90884888e-02  1.34727567e-01 -9.58899632e-02  4.70596328e-02
+    -1.28723323e-01  1.66357711e-01 -1.57134812e-02  7.84607828e-02
+    -1.62926257e-01  1.47365540e-01  4.22605174e-03  1.05981424e-01]]
+
+  [[-3.81847024e-02 -2.45542526e-02 -2.24439017e-02  7.29284286e-02
+    -1.06327109e-01 -5.20670786e-02  1.78972874e-02 -6.43580705e-02
+     2.47577354e-02 -6.35008663e-02 -3.61451060e-02 -7.44340196e-02
+    -7.68401399e-02  3.17645743e-02 -9.20527875e-02  7.66774714e-02
+    -5.23955096e-03 -9.35025141e-03 -1.01629302e-01  1.20065503e-01
+    -1.44399777e-02  6.07022829e-02  8.74090344e-02 -5.35513312e-02
+    -1.47956550e-01  1.22065626e-01 -2.36223340e-02  4.95987758e-03
+    -6.09482825e-02 -1.20866954e-01  1.31019875e-01  8.53661895e-02
+     5.21210767e-03 -8.40068310e-02 -5.45336120e-02 -2.79536955e-02]
+   [-1.14609860e-01  6.15331419e-02 -1.58783451e-01  1.44463452e-02
+    -1.06913507e-01  1.47302449e-02 -1.83042692e-04  1.16583884e-01
+     1.39911488e-01  1.17501587e-01 -1.44501448e-01 -8.34455639e-02
+    -1.03750065e-01 -4.07100469e-02  1.77634973e-02  7.71144703e-02
+     9.88217592e-02 -1.41484998e-02 -1.09291270e-01  4.26847450e-02
+    -1.24528930e-01 -4.98319790e-02  2.31371243e-02 -4.62065190e-02
+    -7.32829347e-02  6.38005324e-03 -6.44598231e-02 -5.43880202e-02
+     2.39370316e-02 -1.28525928e-01  7.22695515e-02 -1.57327745e-02
+     3.53050493e-02 -2.43713129e-02  7.44827166e-02 -3.39164808e-02]
+   [ 4.71693929e-03  1.12741496e-02 -1.54828444e-01  1.57425418e-01
+     2.56951607e-04 -1.21480621e-01  1.01161627e-02  7.35050589e-02
+    -1.50234103e-01  7.75323361e-02 -6.53192103e-02  5.64432628e-02
+     5.68566732e-02  2.64554247e-02 -8.83449540e-02  1.18718840e-01
+    -6.66623376e-03  1.40458032e-01 -1.99764688e-02  6.09647781e-02
+    -4.69369963e-02  1.27715468e-02  4.08875607e-02  4.42830734e-02
+     1.33208409e-01 -1.34037107e-01 -2.93387268e-02 -8.40620548e-02
+    -3.23651582e-02  9.98472515e-03 -2.64553912e-02  1.16476394e-01
+     8.20737481e-02 -3.57839689e-02  3.64801958e-02  1.08580112e-01]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=stem_conv, built=True>, <BatchNormalization name=batch_normalization, built=True>, <DepthwiseConv2D name=block1a_dwconv, built=True>, <BatchNormalization name=batch_normalization_1, built=True>, <Conv2D name=block1a_se_reduce, built=True>, <Conv2D name=block1a_se_expand, built=True>, <Conv2D name=block1a_project_conv, built=True>, <BatchNormalization name=batch_normalization_2, built=True>, <Conv2D name=block2a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_3, built=True>, <DepthwiseConv2D name=block2a_dwconv, built=True>, <BatchNormalization name=batch_normalization_4, built=True>, <Conv2D name=block2a_se_reduce, built=True>, <Conv2D name=block2a_se_expand, built=True>, <Conv2D name=block2a_project_conv, built=True>, <BatchNormalization name=batch_normalization_5, built=True>, <Conv2D name=block2b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_6, built=True>, <DepthwiseConv2D name=block2b_dwconv, built=True>, <BatchNormalization name=batch_normalization_7, built=True>, <Conv2D name=block2b_se_reduce, built=True>, <Conv2D name=block2b_se_expand, built=True>, <Conv2D name=block2b_project_conv, built=True>, <BatchNormalization name=batch_normalization_8, built=True>, <Conv2D name=block3a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_9, built=True>, <DepthwiseConv2D name=block3a_dwconv, built=True>, <BatchNormalization name=batch_normalization_10, built=True>, <Conv2D name=block3a_se_reduce, built=True>, <Conv2D name=block3a_se_expand, built=True>, <Conv2D name=block3a_project_conv, built=True>, <BatchNormalization name=batch_normalization_11, built=True>, <Conv2D name=block3b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_12, built=True>, <DepthwiseConv2D name=block3b_dwconv, built=True>, <BatchNormalization name=batch_normalization_13, built=True>, <Conv2D name=block3b_se_reduce, built=True>, <Conv2D name=block3b_se_expand, built=True>, <Conv2D name=block3b_project_conv, built=True>, <BatchNormalization name=batch_normalization_14, built=True>, <Conv2D name=block4a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_15, built=True>, <DepthwiseConv2D name=block4a_dwconv, built=True>, <BatchNormalization name=batch_normalization_16, built=True>, <Conv2D name=block4a_se_reduce, built=True>, <Conv2D name=block4a_se_expand, built=True>, <Conv2D name=block4a_project_conv, built=True>, <BatchNormalization name=batch_normalization_17, built=True>, <Conv2D name=block4b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_18, built=True>, <DepthwiseConv2D name=block4b_dwconv, built=True>, <BatchNormalization name=batch_normalization_19, built=True>, <Conv2D name=block4b_se_reduce, built=True>, <Conv2D name=block4b_se_expand, built=True>, <Conv2D name=block4b_project_conv, built=True>, <BatchNormalization name=batch_normalization_20, built=True>, <Conv2D name=block4c_expand_conv, built=True>, <BatchNormalization name=batch_normalization_21, built=True>, <DepthwiseConv2D name=block4c_dwconv, built=True>, <BatchNormalization name=batch_normalization_22, built=True>, <Conv2D name=block4c_se_reduce, built=True>, <Conv2D name=block4c_se_expand, built=True>, <Conv2D name=block4c_project_conv, built=True>, <BatchNormalization name=batch_normalization_23, built=True>, <Conv2D name=block5a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_24, built=True>, <DepthwiseConv2D name=block5a_dwconv, built=True>, <BatchNormalization name=batch_normalization_25, built=True>, <Conv2D name=block5a_se_reduce, built=True>, <Conv2D name=block5a_se_expand, built=True>, <Conv2D name=block5a_project_conv, built=True>, <BatchNormalization name=batch_normalization_26, built=True>, <Conv2D name=block5b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_27, built=True>, <DepthwiseConv2D name=block5b_dwconv, built=True>, <BatchNormalization name=batch_normalization_28, built=True>, <Conv2D name=block5b_se_reduce, built=True>, <Conv2D name=block5b_se_expand, built=True>, <Conv2D name=block5b_project_conv, built=True>, <BatchNormalization name=batch_normalization_29, built=True>, <Conv2D name=block5c_expand_conv, built=True>, <BatchNormalization name=batch_normalization_30, built=True>, <DepthwiseConv2D name=block5c_dwconv, built=True>, <BatchNormalization name=batch_normalization_31, built=True>, <Conv2D name=block5c_se_reduce, built=True>, <Conv2D name=block5c_se_expand, built=True>, <Conv2D name=block5c_project_conv, built=True>, <BatchNormalization name=batch_normalization_32, built=True>, <Conv2D name=block6a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_33, built=True>, <DepthwiseConv2D name=block6a_dwconv, built=True>, <BatchNormalization name=batch_normalization_34, built=True>, <Conv2D name=block6a_se_reduce, built=True>, <Conv2D name=block6a_se_expand, built=True>, <Conv2D name=block6a_project_conv, built=True>, <BatchNormalization name=batch_normalization_35, built=True>, <Conv2D name=block6b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_36, built=True>, <DepthwiseConv2D name=block6b_dwconv, built=True>, <BatchNormalization name=batch_normalization_37, built=True>, <Conv2D name=block6b_se_reduce, built=True>, <Conv2D name=block6b_se_expand, built=True>, <Conv2D name=block6b_project_conv, built=True>, <BatchNormalization name=batch_normalization_38, built=True>, <Conv2D name=block6c_expand_conv, built=True>, <BatchNormalization name=batch_normalization_39, built=True>, <DepthwiseConv2D name=block6c_dwconv, built=True>, <BatchNormalization name=batch_normalization_40, built=True>, <Conv2D name=block6c_se_reduce, built=True>, <Conv2D name=block6c_se_expand, built=True>, <Conv2D name=block6c_project_conv, built=True>, <BatchNormalization name=batch_normalization_41, built=True>, <Conv2D name=block6d_expand_conv, built=True>, <BatchNormalization name=batch_normalization_42, built=True>, <DepthwiseConv2D name=block6d_dwconv, built=True>, <BatchNormalization name=batch_normalization_43, built=True>, <Conv2D name=block6d_se_reduce, built=True>, <Conv2D name=block6d_se_expand, built=True>, <Conv2D name=block6d_project_conv, built=True>, <BatchNormalization name=batch_normalization_44, built=True>, <Conv2D name=block7a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_45, built=True>, <DepthwiseConv2D name=block7a_dwconv, built=True>, <BatchNormalization name=batch_normalization_46, built=True>, <Conv2D name=block7a_se_reduce, built=True>, <Conv2D name=block7a_se_expand, built=True>, <Conv2D name=block7a_project_conv, built=True>, <BatchNormalization name=batch_normalization_47, built=True>, <Conv2D name=top_conv, built=True>, <BatchNormalization name=batch_normalization_48, built=True>, <Dense name=predictions, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>AOR - line 143</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [143]; toolbar: false;">import copy
+import math
+import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+DEFAULT_BLOCKS_ARGS = [\
+    {\
+    'kernel_size': 3, \
+    'repeats': 1, \
+    'filters_in': 32, \
+    'filters_out': 16, \
+    'expand_ratio': 1, \
+    'id_skip': True, \
+    'strides': 1, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 3, \
+    'repeats': 2, \
+    'filters_in': 16, \
+    'filters_out': 24, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 5, \
+    'repeats': 2, \
+    'filters_in': 24, \
+    'filters_out': 40, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 3, \
+    'repeats': 3, \
+    'filters_in': 40, \
+    'filters_out': 80, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 5, \
+    'repeats': 3, \
+    'filters_in': 80, \
+    'filters_out': 112, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 1, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 5, \
+    'repeats': 4, \
+    'filters_in': 112, \
+    'filters_out': 192, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 3, \
+    'repeats': 1, \
+    'filters_in': 192, \
+    'filters_out': 320, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 1, \
+    'se_ratio': 0.25}]
+
+
+
+CONV_KERNEL_INITIALIZER = {\
+    'class_name': 'VarianceScaling', \
+    'config': {\
+    'scale': 2.0, \
+    'mode': 'fan_out', \
+    'distribution': 'truncated_normal'}}
+
+
+
+DENSE_KERNEL_INITIALIZER = {\
+    'class_name': 'VarianceScaling', \
+    'config': {\
+    'scale': 1.0 / 3.0, \
+    'mode': 'fan_out', \
+    'distribution': 'uniform'}}
+
+
+
+IMAGENET_STDDEV_RGB = [0.229, 0.224, 0.225]
+
+def EfficientNet(\
+    width_coefficient, \
+    depth_coefficient, \
+    default_size, \
+    dropout_rate=0.2, \
+    drop_connect_rate=0.2, \
+    depth_divisor=8, \
+    activation='swish', \
+    blocks_args='default', \
+    name='efficientnet', \
+    include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=None, \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax'):
+    
+    
+    if blocks_args == 'default':
+        blocks_args = DEFAULT_BLOCKS_ARGS
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    
+    def round_filters(filters, divisor=depth_divisor):
+        '''Round number of filters based on depth multiplier.'''
+        filters *= width_coefficient
+        new_filters = max(
+            divisor, (int(filters + (divisor / 2)) / divisor) * divisor)
+        
+        
+        if new_filters < 0.9 * filters:
+            new_filters += divisor
+        return int(new_filters)
+    
+    def round_repeats(repeats):
+        '''Round number of repeats based on depth multiplier.'''
+        return int(math.ceil(depth_coefficient * repeats))
+    
+    
+    x = img_input
+    x = layers.Rescaling(1.0 / 255.0)(x)
+    x = layers.Normalization(axis=bn_axis)(x)
+    
+    x = layers.ZeroPadding2D(
+        padding=imagenet_utils.correct_pad(x, 3), name='stem_conv_pad')(
+        x)
+    x = layers.Conv2D(
+        round_filters(32), 
+        3, 
+        strides=2, 
+        padding='valid', 
+        use_bias=False, 
+        kernel_initializer=CONV_KERNEL_INITIALIZER, 
+        name='stem_conv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    x = layers.Activation(activation)(x)
+    
+    
+    blocks_args = copy.deepcopy(blocks_args)
+    
+    b = 0
+    blocks = float(sum((round_repeats(args['repeats']) for args in blocks_args)))
+    for (i, args) in enumerate(blocks_args):
+        assert args['repeats'] > 0
+        
+        args['filters_in'] = round_filters(args['filters_in'])
+        args['filters_out'] = round_filters(args['filters_out'])
+        
+        for j in range(round_repeats(args.pop('repeats'))):
+            
+            
+            if j > 0:
+                args['strides'] = 1
+                args['filters_in'] = args['filters_out']
+            x = block(
+                x, 
+                activation, 
+                (drop_connect_rate * b) / blocks, 
+                name=f'block{i + 1}{chr(j + 97)}_', 
+                **args)
+            
+            b += 1
+    
+    
+    x = layers.Conv2D(
+        round_filters(1280), 
+        1, 
+        padding='same', 
+        use_bias=False, 
+        kernel_initializer=CONV_KERNEL_INITIALIZER, 
+        name='top_conv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    x = layers.Activation(activation)(x)
+    if include_top:
+        x = layers.GlobalAveragePooling2D(name='avg_pool')(x)
+        if dropout_rate > 0:
+            x = layers.Dropout(dropout_rate)(x)
+        imagenet_utils.validate_activation(classifier_activation, weights)
+        x = layers.Dense(
+            classes, 
+            activation=classifier_activation, 
+            kernel_initializer=DENSE_KERNEL_INITIALIZER, 
+            name='predictions')(
+            x)
+    
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def block(\
+    inputs, \
+    activation='swish', \
+    drop_rate=0.0, \
+    name='', \
+    filters_in=32, \
+    filters_out=16, \
+    kernel_size=3, \
+    strides=1, \
+    expand_ratio=1, \
+    se_ratio=0.0, \
+    id_skip=True):
+    
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    
+    
+    filters = filters_in * expand_ratio
+    if expand_ratio != 1:
+        x = layers.Conv2D(
+            filters, 
+            1, 
+            padding='same', 
+            use_bias=False, 
+            kernel_initializer=CONV_KERNEL_INITIALIZER, 
+            name=f'{name}expand_conv')(
+            inputs)
+        x = layers.BatchNormalization(axis=bn_axis)(x)
+        x = layers.Activation(activation)(x)
+    else:
+        x = inputs
+    
+    
+    if strides == 2:
+        x = layers.ZeroPadding2D(
+            padding=imagenet_utils.correct_pad(x, kernel_size), 
+            name=f'{name}dwconv_pad')(
+            x)
+        conv_pad = 'valid'
+    else:
+        conv_pad = 'same'
+    x = layers.DepthwiseConv2D(
+        kernel_size, 
+        strides=strides, 
+        padding=conv_pad, 
+        use_bias=False, 
+        depthwise_initializer=CONV_KERNEL_INITIALIZER, 
+        name=f'{name}dwconv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    x = layers.Activation(activation)(x)
+    
+    
+    if 0 < se_ratio <= 1:
+        filters_se = max(1, int(filters_in * se_ratio))
+        se = layers.GlobalAveragePooling2D(name=f'{name}se_squeeze')(x)
+        if bn_axis == 1:
+            se_shape = (filters, 1, 1)
+        else:
+            se_shape = (1, 1, filters)
+        se = layers.Reshape(se_shape, name=f'{name}se_reshape')(se)
+        se = layers.Conv2D(
+            filters_se, 
+            1, 
+            padding='same', 
+            activation=activation, 
+            kernel_initializer=CONV_KERNEL_INITIALIZER, 
+            name=f'{name}se_reduce')(
+            se)
+        se = layers.Conv2D(
+            filters, 
+            1, 
+            padding='same', 
+            activation='sigmoid', 
+            kernel_initializer=CONV_KERNEL_INITIALIZER, 
+            name=f'{name}se_expand')(
+            se)
+        x = layers.multiply([x, se], name=f'{name}se_excite')
+    
+    
+    x = layers.Conv2D(
+        filters_out, 
+        1, 
+        padding='same', 
+        use_bias=False, 
+        kernel_initializer=CONV_KERNEL_INITIALIZER, 
+        name=f'{name}project_conv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    if (id_skip and strides == 1 and filters_in == filters_out):
+        if drop_rate > 0:
+            x = layers.Dropout(
+                drop_rate, noise_shape=(None, 1, 1, 1))(
+                x)
+        x = layers.add([x, inputs], name=f'{name}add')
+    return x
+
+
+@keras_export(['keras.applications.efficientnet.EfficientNetB0', 'keras.applications.EfficientNetB0'])
+def EfficientNetB0(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(32, 32, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='efficientnetb0'):
+    
+    return EfficientNet(
+        1.0, 
+        1.0, 
+        224, 
+        0.2, 
+        name=name, 
+        include_top=include_top, 
+        weights=weights, 
+        input_tensor=input_tensor, 
+        input_shape=input_shape, 
+        pooling=pooling, 
+        classes=classes, 
+        classifier_activation=classifier_activation)
+
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(32, 32), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([32, 32, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = EfficientNetB0(input_shape=(32, 32, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 2
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointEfficientNet'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'EfficientNet_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(32, 32), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model.predict(batch_imgs, batch_size=300)
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #41</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number54').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #41</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'Xception' from 'D:\\exp\\RQ1\\Xception\\Xception.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_Xception.XceptionTest)</code></li>
+    
+    <li>duration - 1.704 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\Xception\test_Xception.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "Xception", line 264, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 1 objects could not be loaded. Example error message for object <SeparableConv2D name=block2_sepconv1, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(3, 4, 64, 1), Received: value.shape=(3, 3, 64, 1). Target variable: <Variable path=block2_sepconv1/depthwise_kernel, shape=(3, 4, 64, 1), dtype=float32, value=[[[[-2.32424587e-03]
+   [-8.64654407e-02]
+   [-4.90139723e-02]
+   [ 6.40571788e-02]
+   [-2.44493857e-02]
+   [ 3.53076607e-02]
+   [ 3.91846523e-02]
+   [ 1.12814233e-02]
+   [-6.21777326e-02]
+   [-5.59004284e-02]
+   [-4.98591810e-02]
+   [ 5.30189499e-02]
+   [ 5.27070239e-02]
+   [-5.28250933e-02]
+   [ 4.63491902e-02]
+   [ 5.11303172e-02]
+   [-3.19847427e-02]
+   [-1.26622990e-02]
+   [-1.64588690e-02]
+   [ 5.48850670e-02]
+   [-1.80205628e-02]
+   [-6.75392151e-03]
+   [-3.06684524e-03]
+   [ 7.42851421e-02]
+   [-7.35579804e-02]
+   [ 4.98688966e-03]
+   [ 1.58477351e-02]
+   [-6.77122325e-02]
+   [ 7.98771307e-02]
+   [-1.55087709e-02]
+   [ 1.87040269e-02]
+   [-1.27674863e-02]
+   [-4.19904664e-02]
+   [ 6.86703846e-02]
+   [ 7.63011947e-02]
+   [-8.20252597e-02]
+   [-7.69368559e-02]
+   [ 1.99860036e-02]
+   [ 3.00765410e-02]
+   [-8.07854682e-02]
+   [-2.02513486e-03]
+   [ 5.04946634e-02]
+   [-3.12739871e-02]
+   [-6.06659129e-02]
+   [-4.10887375e-02]
+   [ 4.44237962e-02]
+   [ 3.76829505e-03]
+   [-5.82533181e-02]
+   [ 1.02552548e-02]
+   [ 2.25394666e-02]
+   [ 9.63084400e-04]
+   [ 6.84832409e-02]
+   [ 8.55070129e-02]
+   [-1.91303343e-03]
+   [-1.35196224e-02]
+   [-6.60770088e-02]
+   [ 6.13339916e-02]
+   [-2.20726803e-02]
+   [ 1.10854208e-03]
+   [ 4.09236476e-02]
+   [-3.34222689e-02]
+   [ 2.25449875e-02]
+   [ 9.76219773e-03]
+   [-4.32148315e-02]]
+
+  [[-7.19264150e-04]
+   [ 1.86441168e-02]
+   [ 2.96157077e-02]
+   [ 4.87246290e-02]
+   [-7.16543496e-02]
+   [ 4.85993549e-02]
+   [-3.13455872e-02]
+   [ 8.25936422e-02]
+   [ 7.17905387e-02]
+   [-4.81889620e-02]
+   [-7.85906613e-02]
+   [-3.87733579e-02]
+   [-7.77694732e-02]
+   [ 7.86043778e-02]
+   [ 3.80191877e-02]
+   [ 6.22944161e-02]
+   [ 2.82849744e-02]
+   [-7.90604427e-02]
+   [-2.12602764e-02]
+   [-7.54303262e-02]
+   [ 2.19128802e-02]
+   [ 4.66369092e-04]
+   [-1.26494020e-02]
+   [-1.17120892e-03]
+   [ 5.27563766e-02]
+   [ 3.41625884e-02]
+   [-5.22941910e-02]
+   [ 6.52344152e-02]
+   [-7.07568675e-02]
+   [-4.45657037e-02]
+   [ 1.50503665e-02]
+   [-4.53396142e-03]
+   [ 1.39984712e-02]
+   [ 4.40114513e-02]
+   [ 7.42635652e-02]
+   [ 5.40897772e-02]
+   [ 4.97153625e-02]
+   [-7.67212659e-02]
+   [ 2.66895890e-02]
+   [ 3.26132178e-02]
+   [ 3.41582820e-02]
+   [ 1.92730054e-02]
+   [-4.79454994e-02]
+   [-6.22477829e-02]
+   [ 3.74097303e-02]
+   [ 6.12246171e-02]
+   [ 2.09174007e-02]
+   [ 9.86830145e-03]
+   [-7.12794662e-02]
+   [ 4.64361086e-02]
+   [ 5.60016707e-02]
+   [ 3.90150174e-02]
+   [ 6.98035285e-02]
+   [ 6.81034401e-02]
+   [ 1.12093836e-02]
+   [ 7.99713060e-02]
+   [-2.06265599e-02]
+   [-5.82892001e-02]
+   [-6.43887669e-02]
+   [-6.45095035e-02]
+   [ 1.54292881e-02]
+   [-6.78151846e-05]
+   [ 5.01658991e-02]
+   [ 5.97303435e-02]]
+
+  [[ 2.25988552e-02]
+   [-6.32949695e-02]
+   [-2.38491222e-02]
+   [-6.82460964e-02]
+   [-7.09805712e-02]
+   [-7.03498423e-02]
+   [ 1.62223652e-02]
+   [ 2.60577351e-02]
+   [-8.29963982e-02]
+   [-2.32284293e-02]
+   [-8.37265179e-02]
+   [ 8.08624849e-02]
+   [-2.10931152e-02]
+   [ 4.14211974e-02]
+   [ 3.40516791e-02]
+   [-6.80021346e-02]
+   [-3.12630534e-02]
+   [ 3.77415642e-02]
+   [-5.36839776e-02]
+   [ 5.42900786e-02]
+   [-5.45706935e-02]
+   [ 3.60427126e-02]
+   [-3.67833488e-02]
+   [-3.88018787e-04]
+   [-7.86027461e-02]
+   [-8.40874091e-02]
+   [-8.40697438e-02]
+   [-6.76410720e-02]
+   [ 5.40804788e-02]
+   [ 5.64018711e-02]
+   [ 2.86345780e-02]
+   [-5.54598793e-02]
+   [ 2.77918130e-02]
+   [-5.04156798e-02]
+   [ 6.52131438e-03]
+   [ 1.40720829e-02]
+   [-3.20369378e-02]
+   [ 2.41484791e-02]
+   [ 5.53315878e-03]
+   [-6.41020164e-02]
+   [-8.54085535e-02]
+   [-4.13720980e-02]
+   [-6.60841465e-02]
+   [-1.78888887e-02]
+   [-3.75551432e-02]
+   [-1.84735730e-02]
+   [-4.87106293e-03]
+   [-5.75415418e-02]
+   [-7.81526044e-02]
+   [-3.91674004e-02]
+   [ 6.12276569e-02]
+   [ 6.52834028e-03]
+   [ 2.01187208e-02]
+   [-7.89367557e-02]
+   [ 2.63562351e-02]
+   [-7.19810203e-02]
+   [-7.87663534e-02]
+   [-1.50518268e-02]
+   [-2.69837677e-03]
+   [-2.99254991e-02]
+   [ 8.65387544e-02]
+   [-7.89127648e-02]
+   [ 4.07536402e-02]
+   [ 7.88728073e-02]]
+
+  [[ 3.33643481e-02]
+   [ 3.67373452e-02]
+   [-6.71919063e-02]
+   [ 6.08840063e-02]
+   [-8.36269408e-02]
+   [-6.39066100e-02]
+   [ 7.13525489e-02]
+   [ 6.07947484e-02]
+   [-1.79034844e-02]
+   [ 1.60741732e-02]
+   [-8.17239583e-02]
+   [ 8.69832113e-02]
+   [-2.32058689e-02]
+   [ 6.96293637e-02]
+   [ 5.92084154e-02]
+   [-4.41205762e-02]
+   [ 2.94163674e-02]
+   [-7.02174753e-03]
+   [-8.61310586e-02]
+   [ 6.07388839e-02]
+   [ 2.60666758e-03]
+   [ 4.57970873e-02]
+   [-6.79747388e-02]
+   [ 3.54580283e-02]
+   [-8.75014141e-02]
+   [ 8.86504352e-03]
+   [-1.14529133e-02]
+   [ 3.26950774e-02]
+   [ 8.13933685e-02]
+   [ 7.30918348e-03]
+   [-3.67123783e-02]
+   [ 5.72506264e-02]
+   [-1.05998591e-02]
+   [-6.73295856e-02]
+   [-4.55019362e-02]
+   [-5.36238179e-02]
+   [ 5.99670783e-02]
+   [-1.14671066e-02]
+   [-5.58431335e-02]
+   [ 2.40757540e-02]
+   [-7.69560933e-02]
+   [ 7.60541782e-02]
+   [ 3.35932374e-02]
+   [-5.25884256e-02]
+   [ 6.38409331e-02]
+   [-8.39617997e-02]
+   [ 5.76501116e-02]
+   [-4.53749038e-02]
+   [ 4.75132465e-03]
+   [-7.26599097e-02]
+   [ 4.59247455e-02]
+   [-8.08886439e-02]
+   [ 1.40630677e-02]
+   [ 7.28021488e-02]
+   [ 6.51250109e-02]
+   [-5.53936549e-02]
+   [ 3.30524817e-02]
+   [ 2.18405724e-02]
+   [ 3.46320793e-02]
+   [ 5.48711345e-02]
+   [-7.29493797e-04]
+   [ 5.69579676e-02]
+   [-1.85612738e-02]
+   [ 1.23395771e-03]]]
+
+
+ [[[-6.67080283e-03]
+   [ 3.34521309e-02]
+   [-4.23081964e-03]
+   [ 4.85875681e-02]
+   [-4.37892266e-02]
+   [ 6.88275620e-02]
+   [ 5.84092066e-02]
+   [ 8.29372033e-02]
+   [ 3.11655030e-02]
+   [ 6.28154948e-02]
+   [ 2.45910138e-02]
+   [-7.74404854e-02]
+   [ 4.39541712e-02]
+   [ 2.89126933e-02]
+   [-3.58038321e-02]
+   [ 6.56102076e-02]
+   [-6.12275302e-03]
+   [-3.50251794e-02]
+   [-1.81120262e-02]
+   [-4.99249883e-02]
+   [ 9.55835730e-03]
+   [-3.83951887e-02]
+   [ 4.33135554e-02]
+   [-7.50192255e-03]
+   [-5.81375137e-02]
+   [ 5.41553423e-02]
+   [ 6.55888990e-02]
+   [ 7.83878937e-02]
+   [-1.88768357e-02]
+   [ 2.63445675e-02]
+   [-3.62133048e-02]
+   [ 4.76814434e-02]
+   [-3.56219709e-02]
+   [-3.71639878e-02]
+   [ 6.43502101e-02]
+   [-5.76482490e-02]
+   [-7.06066191e-03]
+   [ 8.76984000e-03]
+   [ 8.68518725e-02]
+   [ 8.11145976e-02]
+   [-1.11896694e-02]
+   [-5.17659858e-02]
+   [ 1.31961703e-02]
+   [ 4.21522334e-02]
+   [ 2.05120072e-02]
+   [-4.86299060e-02]
+   [ 7.58751109e-02]
+   [ 9.61017609e-03]
+   [ 1.63550079e-02]
+   [ 3.48698124e-02]
+   [ 5.42487726e-02]
+   [ 6.13822863e-02]
+   [ 1.62445307e-02]
+   [-2.14610621e-02]
+   [ 5.42124733e-02]
+   [-2.58936882e-02]
+   [-4.25667241e-02]
+   [ 8.88743997e-03]
+   [-1.03569999e-02]
+   [ 5.65264300e-02]
+   [-1.01120770e-02]
+   [-2.80918628e-02]
+   [-7.29111582e-03]
+   [ 1.59483105e-02]]
+
+  [[-3.94679680e-02]
+   [ 2.45920420e-02]
+   [-2.63374560e-02]
+   [-6.95242882e-02]
+   [-3.01051214e-02]
+   [-6.54599965e-02]
+   [-5.14550246e-02]
+   [-3.37755568e-02]
+   [ 1.53099746e-03]
+   [-8.31461176e-02]
+   [ 8.57268050e-02]
+   [ 7.12398663e-02]
+   [-1.85264945e-02]
+   [ 2.97221243e-02]
+   [-7.48250633e-02]
+   [ 2.89731845e-02]
+   [ 2.23506019e-02]
+   [-6.22126460e-03]
+   [ 8.61072317e-02]
+   [ 9.54110920e-03]
+   [ 4.47202697e-02]
+   [ 5.55819348e-02]
+   [ 7.96395764e-02]
+   [ 2.15041637e-03]
+   [-2.24287435e-02]
+   [-4.14246246e-02]
+   [ 5.85125908e-02]
+   [-8.05270299e-02]
+   [-6.42314553e-04]
+   [ 3.38216126e-03]
+   [ 4.33540717e-02]
+   [ 8.74333456e-02]
+   [ 3.82218733e-02]
+   [-2.82520577e-02]
+   [ 7.92852044e-03]
+   [ 7.94245377e-02]
+   [-6.87951297e-02]
+   [ 7.79837370e-03]
+   [-3.69278006e-02]
+   [ 2.57913321e-02]
+   [ 5.97849414e-02]
+   [ 7.10159764e-02]
+   [ 2.42132023e-02]
+   [-7.52903074e-02]
+   [-8.32749456e-02]
+   [ 7.69579932e-02]
+   [-4.58724760e-02]
+   [ 2.45473981e-02]
+   [ 6.12069294e-02]
+   [-6.07046187e-02]
+   [ 5.70511445e-02]
+   [ 6.23352602e-02]
+   [-5.31331897e-02]
+   [ 4.63219360e-02]
+   [-3.15359384e-02]
+   [-8.21960792e-02]
+   [ 6.99955747e-02]
+   [ 8.51914510e-02]
+   [-6.57387599e-02]
+   [ 8.48391578e-02]
+   [ 7.02935234e-02]
+   [ 8.02776217e-03]
+   [ 6.83248863e-02]
+   [-4.40501273e-02]]
+
+  [[ 7.63465837e-02]
+   [-4.71300036e-02]
+   [ 3.87191847e-02]
+   [ 7.29481354e-02]
+   [ 6.17212281e-02]
+   [-5.36872819e-02]
+   [-1.07590705e-02]
+   [-6.94553256e-02]
+   [ 7.12335929e-02]
+   [ 6.61447421e-02]
+   [ 8.58890191e-02]
+   [ 6.88499585e-02]
+   [ 1.13043189e-03]
+   [-6.41181618e-02]
+   [-6.86337426e-02]
+   [ 5.58914617e-02]
+   [-6.99188933e-02]
+   [ 1.09073743e-02]
+   [-7.15661794e-03]
+   [ 6.87330961e-04]
+   [-2.71056518e-02]
+   [ 8.12230185e-02]
+   [-7.29526803e-02]
+   [ 5.44276908e-02]
+   [-5.79739958e-02]
+   [ 2.08189338e-02]
+   [-6.30434602e-02]
+   [ 2.76548713e-02]
+   [-6.87931478e-02]
+   [-1.61372647e-02]
+   [ 4.67993692e-02]
+   [-5.49953096e-02]
+   [ 2.45383605e-02]
+   [ 1.58321932e-02]
+   [-8.11385363e-03]
+   [ 5.56182936e-02]
+   [-4.66895401e-02]
+   [-1.44399181e-02]
+   [ 3.09440568e-02]
+   [ 8.67815241e-02]
+   [-6.81921095e-02]
+   [ 8.02700445e-02]
+   [ 8.45934078e-02]
+   [ 5.72901294e-02]
+   [-8.60247687e-02]
+   [ 3.15106958e-02]
+   [ 8.32415894e-02]
+   [ 3.96219119e-02]
+   [-7.11471587e-03]
+   [-3.32982689e-02]
+   [ 2.64434516e-03]
+   [-2.67505050e-02]
+   [-5.19544557e-02]
+   [ 5.58182076e-02]
+   [-8.05996582e-02]
+   [-7.82816634e-02]
+   [-8.31748694e-02]
+   [ 1.10873505e-02]
+   [-4.10949886e-02]
+   [-8.40475559e-02]
+   [-6.33562356e-03]
+   [ 7.12214634e-02]
+   [ 3.45252231e-02]
+   [-7.73016661e-02]]
+
+  [[ 7.12903365e-02]
+   [-3.62162516e-02]
+   [-8.06124732e-02]
+   [-8.75543654e-02]
+   [-1.76760778e-02]
+   [-6.83215261e-02]
+   [ 1.32460892e-03]
+   [ 8.49492922e-02]
+   [-8.71402249e-02]
+   [ 7.41162673e-02]
+   [ 7.83768967e-02]
+   [ 4.96765003e-02]
+   [-7.97078758e-02]
+   [-5.37942201e-02]
+   [-5.14902584e-02]
+   [-8.08994919e-02]
+   [ 2.04322562e-02]
+   [ 1.86555609e-02]
+   [-7.59536996e-02]
+   [ 3.89549062e-02]
+   [ 4.64769378e-02]
+   [ 7.19592348e-02]
+   [-8.06096494e-02]
+   [-4.85896952e-02]
+   [ 2.32467726e-02]
+   [-1.46778598e-02]
+   [ 7.18338862e-02]
+   [ 7.19664916e-02]
+   [-3.07357274e-02]
+   [-5.97826429e-02]
+   [-2.39277482e-02]
+   [ 8.50753412e-02]
+   [ 1.46407261e-02]
+   [ 2.39967108e-02]
+   [-8.11797604e-02]
+   [ 8.02204236e-02]
+   [ 7.74678811e-02]
+   [ 8.51078704e-02]
+   [-6.65310919e-02]
+   [-7.14526698e-02]
+   [ 2.74074748e-02]
+   [-7.95083642e-02]
+   [ 2.96964869e-02]
+   [ 5.48081622e-02]
+   [-6.96456283e-02]
+   [ 1.76061094e-02]
+   [ 5.92644513e-03]
+   [ 3.11103016e-02]
+   [ 7.55913183e-02]
+   [ 6.46984801e-02]
+   [ 7.34568909e-02]
+   [ 6.48945943e-02]
+   [-1.11718699e-02]
+   [ 4.74824533e-02]
+   [-5.18570095e-02]
+   [-7.96829537e-02]
+   [-2.27856711e-02]
+   [-5.07454798e-02]
+   [ 6.15216792e-04]
+   [-7.69790336e-02]
+   [-5.87592945e-02]
+   [-6.75030351e-02]
+   [ 6.55078515e-02]
+   [ 8.57968405e-02]]]
+
+
+ [[[-5.89989312e-02]
+   [-5.76197878e-02]
+   [ 8.66006091e-02]
+   [-3.54631543e-02]
+   [ 8.34492669e-02]
+   [-3.24796364e-02]
+   [ 6.14985898e-02]
+   [ 7.47380182e-02]
+   [ 2.20475420e-02]
+   [-7.24653527e-02]
+   [-3.75397541e-02]
+   [ 1.84186175e-02]
+   [ 6.55383542e-02]
+   [ 3.31410840e-02]
+   [-1.57209337e-02]
+   [ 1.52882189e-03]
+   [ 3.67588401e-02]
+   [ 3.78731266e-02]
+   [ 4.39812019e-02]
+   [ 2.79346108e-03]
+   [-7.64307305e-02]
+   [ 5.65552711e-03]
+   [-4.58440147e-02]
+   [ 8.06954876e-02]
+   [-2.55699083e-02]
+   [-5.32178991e-02]
+   [-4.84198369e-02]
+   [ 5.46078607e-02]
+   [-3.19881514e-02]
+   [ 5.95501438e-02]
+   [-4.24478464e-02]
+   [-8.20794627e-02]
+   [-4.44067381e-02]
+   [ 3.19040716e-02]
+   [-2.46792585e-02]
+   [-7.05801696e-02]
+   [-6.66254014e-03]
+   [-8.24804455e-02]
+   [-2.78106965e-02]
+   [ 3.89279649e-02]
+   [ 5.42999282e-02]
+   [ 8.40757862e-02]
+   [-6.61004335e-02]
+   [ 1.28693804e-02]
+   [ 4.30009291e-02]
+   [ 6.32327050e-03]
+   [-2.65484639e-02]
+   [-6.33298680e-02]
+   [ 2.67718360e-02]
+   [-7.28794038e-02]
+   [-1.62047595e-02]
+   [ 5.09723797e-02]
+   [ 8.14864412e-02]
+   [ 1.05015561e-02]
+   [-1.59610063e-02]
+   [-6.00408465e-02]
+   [ 2.16387212e-02]
+   [ 5.48350289e-02]
+   [-2.20698938e-02]
+   [ 1.86851248e-02]
+   [-5.66398501e-02]
+   [-1.30015537e-02]
+   [-1.80613175e-02]
+   [-1.84246004e-02]]
+
+  [[-2.84545794e-02]
+   [-7.41362646e-02]
+   [-3.82784419e-02]
+   [-7.89821520e-02]
+   [ 1.84704363e-02]
+   [-7.13322684e-02]
+   [ 8.76815841e-02]
+   [-8.21413770e-02]
+   [ 2.74786577e-02]
+   [-8.66800249e-02]
+   [ 4.85212877e-02]
+   [ 3.41490805e-02]
+   [-5.01402020e-02]
+   [ 4.41611037e-02]
+   [ 6.20199367e-02]
+   [-4.93324213e-02]
+   [-8.67160559e-02]
+   [ 6.66572079e-02]
+   [ 7.17551187e-02]
+   [-5.14487289e-02]
+   [ 6.93572685e-02]
+   [-5.45998849e-02]
+   [-8.13453123e-02]
+   [ 1.52646825e-02]
+   [ 5.13071641e-02]
+   [ 7.80807808e-02]
+   [ 7.66737089e-02]
+   [ 6.38160631e-02]
+   [ 5.98378405e-02]
+   [ 3.77047434e-02]
+   [ 2.30133682e-02]
+   [ 1.92313343e-02]
+   [-1.53705329e-02]
+   [ 3.99826244e-02]
+   [ 3.38110849e-02]
+   [-8.26327503e-03]
+   [-6.92974702e-02]
+   [-2.90185809e-02]
+   [-1.77262872e-02]
+   [-6.48798943e-02]
+   [-1.23876184e-02]
+   [ 2.73254886e-02]
+   [ 7.40003809e-02]
+   [ 7.63673708e-02]
+   [-2.94560976e-02]
+   [ 8.28581378e-02]
+   [ 6.09140173e-02]
+   [ 2.02594474e-02]
+   [ 2.59231552e-02]
+   [-3.97297926e-02]
+   [-5.69449998e-02]
+   [-2.85027176e-03]
+   [ 1.62200257e-02]
+   [ 7.63650313e-02]
+   [ 8.36860910e-02]
+   [ 7.98106939e-03]
+   [-5.18999174e-02]
+   [-6.86085224e-02]
+   [-7.76776820e-02]
+   [-3.31927538e-02]
+   [ 3.01365331e-02]
+   [-7.26133585e-02]
+   [ 8.54584500e-02]
+   [ 5.77162728e-02]]
+
+  [[-4.52932268e-02]
+   [-1.53391212e-02]
+   [ 5.57209328e-02]
+   [-8.38059112e-02]
+   [-5.45332246e-02]
+   [-8.18406790e-03]
+   [-1.83064938e-02]
+   [-2.97017545e-02]
+   [ 4.38698307e-02]
+   [-2.47505009e-02]
+   [ 4.82697114e-02]
+   [ 2.82479376e-02]
+   [-6.01024516e-02]
+   [ 7.25678131e-02]
+   [ 3.29269171e-02]
+   [-2.06377655e-02]
+   [-3.45957167e-02]
+   [-3.10871303e-02]
+   [ 6.05511889e-02]
+   [-5.14986850e-02]
+   [-1.30504891e-02]
+   [ 1.83438212e-02]
+   [-6.55122399e-02]
+   [-2.90616378e-02]
+   [-3.30968797e-02]
+   [-6.58804178e-03]
+   [ 4.11841348e-02]
+   [-8.44953805e-02]
+   [-3.01852524e-02]
+   [-6.98282421e-02]
+   [-5.38644940e-03]
+   [-2.59991847e-02]
+   [ 6.05020151e-02]
+   [ 6.23106435e-02]
+   [ 2.95626968e-02]
+   [ 5.72518259e-03]
+   [-7.26481378e-02]
+   [ 3.73400748e-04]
+   [ 3.58346701e-02]
+   [ 3.01227495e-02]
+   [ 5.02841175e-03]
+   [ 6.29484877e-02]
+   [-8.30277801e-04]
+   [-4.01580222e-02]
+   [-3.47464196e-02]
+   [-2.56322213e-02]
+   [-3.08463648e-02]
+   [ 8.64307657e-02]
+   [ 3.26602831e-02]
+   [-4.61593494e-02]
+   [ 3.30889300e-02]
+   [-7.90867209e-02]
+   [ 7.36686811e-02]
+   [ 2.24004760e-02]
+   [ 3.87903526e-02]
+   [ 3.97016928e-02]
+   [ 5.15846834e-02]
+   [ 1.63514465e-02]
+   [ 4.65434715e-02]
+   [-7.88277462e-02]
+   [ 8.67909715e-02]
+   [-4.26920839e-02]
+   [ 4.51788083e-02]
+   [ 1.11471340e-02]]
+
+  [[-4.41614799e-02]
+   [ 8.40875134e-02]
+   [ 2.05146521e-03]
+   [-3.28646861e-02]
+   [ 5.03573790e-02]
+   [-1.29834935e-02]
+   [ 1.87870041e-02]
+   [-7.80706927e-02]
+   [-5.92855141e-02]
+   [ 4.08689007e-02]
+   [-9.84770060e-03]
+   [-6.42641410e-02]
+   [-3.53194028e-03]
+   [ 8.32292512e-02]
+   [-8.00144523e-02]
+   [ 5.09559736e-02]
+   [-3.72680612e-02]
+   [-5.44828065e-02]
+   [ 3.72504145e-02]
+   [ 3.59711796e-02]
+   [-7.43631870e-02]
+   [ 8.16126540e-02]
+   [-8.71676803e-02]
+   [ 6.88735023e-02]
+   [ 4.35889587e-02]
+   [ 5.28635904e-02]
+   [-6.44181073e-02]
+   [ 6.61835149e-02]
+   [-1.88292414e-02]
+   [-7.30422586e-02]
+   [-4.03949209e-02]
+   [-4.13176455e-02]
+   [ 3.58386040e-02]
+   [ 1.77112073e-02]
+   [ 3.80557850e-02]
+   [ 3.51918340e-02]
+   [-4.05903496e-02]
+   [-6.78770691e-02]
+   [ 2.17593089e-02]
+   [ 6.66823909e-02]
+   [ 1.51992068e-02]
+   [ 6.68284521e-02]
+   [-4.29068580e-02]
+   [ 3.50053981e-02]
+   [-3.61722969e-02]
+   [-8.53538439e-02]
+   [ 5.59055880e-02]
+   [ 4.84538749e-02]
+   [-6.55058622e-02]
+   [-5.94999492e-02]
+   [ 1.70888230e-02]
+   [ 6.11281022e-02]
+   [-6.89486787e-02]
+   [ 1.22653767e-02]
+   [ 3.22924033e-02]
+   [ 2.50572637e-02]
+   [-2.68625021e-02]
+   [ 4.73481491e-02]
+   [-2.22215801e-02]
+   [-2.27508917e-02]
+   [ 1.87404156e-02]
+   [-2.18992233e-02]
+   [-4.86505218e-02]
+   [ 6.35576770e-02]]]]>
+
+List of objects that could not be loaded:
+[<SeparableConv2D name=block2_sepconv1, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 54</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [54]; toolbar: false;">import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+
+
+
+
+
+
+@keras_export(['keras.applications.xception.Xception', 'keras.applications.Xception'])
+def Xception(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(71, 71, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='xception'):
+    
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    channel_axis = 1 if backend.image_data_format() == 'channels_first' else -1
+    
+    x = layers.Conv2D(
+        32, (3, 3), strides=2, use_bias=False, name='block1_conv1')(
+        img_input)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    x = layers.Conv2D(64, (3, 3), use_bias=False, name='block1_conv2')(x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    
+    residual = layers.Conv2D(
+        128, (1, 1), strides=2, padding='same', use_bias=False)(
+        x)
+    residual = layers.BatchNormalization(axis=channel_axis)(residual)
+    
+    x = layers.SeparableConv2D(
+        128, (3, 4), padding='same', use_bias=False, name='block2_sepconv1')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        128, (3, 3), padding='same', use_bias=False, name='block2_sepconv2')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    
+    x = layers.MaxPooling2D(
+        (3, 3), strides=2, padding='same')(
+        x)
+    x = layers.add([x, residual])
+    
+    residual = layers.Conv2D(
+        256, (1, 1), strides=2, padding='same', use_bias=False)(
+        x)
+    residual = layers.BatchNormalization(axis=channel_axis)(residual)
+    
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        256, (3, 3), padding='same', use_bias=False, name='block3_sepconv1')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        256, (3, 3), padding='same', use_bias=False, name='block3_sepconv2')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    
+    x = layers.MaxPooling2D(
+        (3, 3), strides=2, padding='same')(
+        x)
+    x = layers.add([x, residual])
+    
+    residual = layers.Conv2D(
+        728, (1, 1), strides=2, padding='same', use_bias=False)(
+        x)
+    residual = layers.BatchNormalization(axis=channel_axis)(residual)
+    
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        728, (3, 3), padding='same', use_bias=False, name='block4_sepconv1')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        728, (3, 3), padding='same', use_bias=False, name='block4_sepconv2')(
+        x)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    
+    x = layers.MaxPooling2D(
+        (3, 3), strides=2, padding='same')(
+        x)
+    x = layers.add([x, residual])
+    
+    for i in range(8):
+        residual = x
+        prefix = f'block{i + 5}'
+        
+        x = layers.Activation('relu')(x)
+        x = layers.SeparableConv2D(
+            728, 
+            (3, 3), 
+            padding='same', 
+            use_bias=False, 
+            name=f'{prefix}_sepconv1')(
+            x)
+        x = layers.BatchNormalization(
+            axis=channel_axis)(
+            x)
+        x = layers.Activation('relu')(x)
+        x = layers.SeparableConv2D(
+            728, 
+            (3, 3), 
+            padding='same', 
+            use_bias=False, 
+            name=f'{prefix}_sepconv2')(
+            x)
+        x = layers.BatchNormalization(
+            axis=channel_axis)(
+            x)
+        x = layers.Activation('relu')(x)
+        x = layers.SeparableConv2D(
+            728, 
+            (3, 3), 
+            padding='same', 
+            use_bias=False, 
+            name=f'{prefix}_sepconv3')(
+            x)
+        x = layers.BatchNormalization(
+            axis=channel_axis)(
+            x)
+        
+        x = layers.add([x, residual])
+    
+    residual = layers.Conv2D(
+        1024, (1, 1), strides=2, padding='same', use_bias=False)(
+        x)
+    residual = layers.BatchNormalization(axis=channel_axis)(residual)
+    
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        728, (3, 3), padding='same', use_bias=False, name='block13_sepconv1')(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    x = layers.Activation('relu')(x)
+    x = layers.SeparableConv2D(
+        1024, (3, 3), padding='same', use_bias=False, name='block13_sepconv2')(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    
+    x = layers.MaxPooling2D(
+        (3, 3), strides=2, padding='same')(
+        x)
+    x = layers.add([x, residual])
+    
+    x = layers.SeparableConv2D(
+        1536, (3, 3), padding='same', use_bias=False, name='block14_sepconv1')(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    x = layers.Activation('relu')(x)
+    
+    x = layers.SeparableConv2D(
+        2048, (3, 3), padding='same', use_bias=False, name='block14_sepconv2')(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    x = layers.Activation('relu')(x)
+    
+    x = layers.GlobalAveragePooling2D()(x)
+    imagenet_utils.validate_activation(classifier_activation, weights)
+    x = layers.Dense(
+        classes, activation=classifier_activation, name='predictions')(
+        x)
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(71, 71), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([71, 71, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = Xception(input_shape=(71, 71, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 1
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointXception'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'Xception_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(71, 71), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model(batch_imgs, training=False).numpy()
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

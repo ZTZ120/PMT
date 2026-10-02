@@ -1,0 +1,12 @@
+ Total params: 21,823,274 (83.25 MB)
+ Trainable params: 21,788,842 (83.12 MB)
+ Non-trainable params: 34,432 (134.50 KB)
+
+Sample 94: True Label = 3, Predicted = 8, Probabilities = [7.1464124e-04 2.5136140e-03 5.0650267e-03 1.0303269e-01 3.5033375e-03
+ 3.4528565e-01 6.5190722e-03 3.5102703e-04 5.3184038e-01 1.1745263e-03]
+Sample 195: True Label = 6, Predicted = 0, Probabilities = [9.9856180e-01 1.9686654e-07 8.5612237e-06 2.4784665e-06 1.3307351e-05
+ 8.6038018e-04 2.8291540e-04 5.2079195e-06 2.2318820e-05 2.4272606e-04]
+Sample 278: True Label = 9, Predicted = 8, Probabilities = [2.1283844e-04 2.4607274e-04 8.6700385e-03 4.4477392e-02 1.7147304e-02
+ 1.7769078e-02 1.7881562e-04 7.1431568e-04 8.5734278e-01 5.3241387e-02]
+Top-1 Accuracy on 300 samples: 0.9900
+Top-5 Accuracy on 300 samples: 1.0000

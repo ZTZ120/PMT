@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #191</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number193').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #191</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'MobileNet' from 'D:\\exp\\RQ1\\MobileNet\\MobileNet.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_MobileNet.DemoTest)</code></li>
+    
+    <li>duration - 1.431 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\MobileNet\test_MobileNet.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "MobileNet", line 209, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 1 objects could not be loaded. Example error message for object <Conv2D name=conv1, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(3, 3, 4, 32), Received: value.shape=(3, 3, 3, 32). Target variable: <Variable path=conv1/kernel, shape=(3, 3, 4, 32), dtype=float32, value=[[[[-0.06559194  0.09864555  0.11931753 ... -0.08551137 -0.11458562
+     0.06554818]
+   [ 0.00711271 -0.11709599 -0.1252696  ...  0.01236705 -0.13208692
+     0.08080152]
+   [-0.02403708 -0.1313697   0.04005398 ...  0.10608006 -0.0026225
+    -0.02112161]
+   [-0.01890758 -0.07848123 -0.07116068 ...  0.06906332 -0.00573534
+    -0.06379221]]
+
+  [[ 0.08631633  0.00964603  0.00891531 ...  0.08975257  0.05652651
+     0.09105551]
+   [ 0.13021347  0.03558196  0.12516397 ...  0.0761956   0.02458043
+    -0.01722001]
+   [ 0.0330821   0.05878522  0.13397908 ... -0.01125155  0.11891371
+    -0.06519985]
+   [ 0.12873432  0.05635378  0.09972571 ... -0.0784568  -0.00024849
+    -0.09632547]]
+
+  [[ 0.03884915  0.10578705 -0.00648342 ...  0.09488888 -0.1138658
+    -0.01498262]
+   [-0.05333772 -0.05891564  0.04824644 ...  0.13080221 -0.07859534
+    -0.06671722]
+   [ 0.11399952 -0.02534798  0.12742805 ...  0.06389998 -0.03693055
+    -0.10922784]
+   [ 0.12801749 -0.01446045 -0.01306362 ...  0.12740946 -0.11301685
+    -0.12768131]]]
+
+
+ [[[ 0.08983034 -0.04217063  0.04761361 ...  0.10348085  0.05299878
+     0.07323171]
+   [ 0.12751481 -0.06294329  0.10021354 ... -0.0128364  -0.07792601
+    -0.10941187]
+   [-0.10059117 -0.02201399 -0.02071251 ... -0.07042639  0.01455416
+     0.00370795]
+   [-0.00498337 -0.09114882  0.12757736 ... -0.1308936  -0.07800063
+    -0.09627836]]
+
+  [[ 0.05572069  0.0404821   0.07866007 ... -0.00163397 -0.00712566
+     0.03708068]
+   [-0.11327285  0.02795555  0.04646319 ...  0.11657757 -0.00578235
+    -0.04514182]
+   [ 0.03407919 -0.04138936  0.06977247 ... -0.04640277 -0.11489037
+    -0.11919893]
+   [-0.07922807 -0.0813036  -0.04752    ...  0.06222665  0.06162556
+    -0.01595034]]
+
+  [[-0.02163254 -0.11394551 -0.13130409 ...  0.08025751  0.12138218
+    -0.03301718]
+   [-0.06917701 -0.12297915 -0.01366761 ... -0.06216063  0.06467088
+    -0.04051047]
+   [ 0.00658906 -0.02943499 -0.02154689 ... -0.04903381  0.12347513
+    -0.05281689]
+   [-0.01324777 -0.11740639  0.02134518 ...  0.06932217  0.0834904
+    -0.02922303]]]
+
+
+ [[[-0.03689574 -0.06055656  0.08509067 ...  0.1323874  -0.03600741
+     0.04857513]
+   [-0.06526431 -0.10813922  0.02121748 ... -0.01564164  0.10582212
+    -0.10734248]
+   [-0.02044328 -0.00241038 -0.04950591 ... -0.11624137 -0.00410542
+    -0.09512301]
+   [-0.0421719   0.10899326  0.10609634 ...  0.08092093 -0.07415107
+    -0.01273713]]
+
+  [[-0.00246917  0.12916583  0.09408137 ... -0.03304651 -0.04967622
+    -0.12125348]
+   [-0.09682671  0.06414987  0.06434302 ... -0.05872522 -0.0170048
+    -0.06425402]
+   [-0.05337331  0.01939808 -0.03455606 ... -0.07283573 -0.05361334
+    -0.01740601]
+   [ 0.00922596 -0.09469032 -0.00406402 ... -0.09485316  0.13430312
+     0.11928171]]
+
+  [[ 0.0415435   0.03163497  0.07353368 ... -0.03327842 -0.03057325
+    -0.06397007]
+   [ 0.12592411 -0.00974806 -0.08900437 ... -0.02063678 -0.08099738
+    -0.10903122]
+   [ 0.00224112  0.01559122  0.09280828 ...  0.06840223 -0.06162976
+    -0.00833027]
+   [-0.12052805  0.0433096   0.07242459 ... -0.04584204  0.08922891
+     0.02747096]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=conv1, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 193</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [193]; toolbar: false;">import warnings
+import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+
+@keras_export(['keras.applications.mobilenet.MobileNet', 'keras.applications.MobileNet'])
+def MobileNet(input_shape=(32, 32, 3), \
+    alpha=1.0, \
+    depth_multiplier=1, \
+    dropout=0.001, \
+    include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name=None):
+    
+    
+    
+    if backend.image_data_format() == 'channels_last':
+        (row_axis, col_axis) = (0, 1)
+    else:
+        (row_axis, col_axis) = (1, 2)
+    rows = input_shape[row_axis]
+    cols = input_shape[col_axis]
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    x = _conv_block(img_input, 32, alpha, strides=(2, 2))
+    x = _depthwise_conv_block(x, 64, alpha, depth_multiplier, block_id=1)
+    
+    x = _depthwise_conv_block(
+        x, 128, alpha, depth_multiplier, strides=(2, 2), block_id=2)
+    
+    x = _depthwise_conv_block(x, 128, alpha, depth_multiplier, block_id=3)
+    
+    x = _depthwise_conv_block(
+        x, 256, alpha, depth_multiplier, strides=(2, 2), block_id=4)
+    
+    x = _depthwise_conv_block(x, 256, alpha, depth_multiplier, block_id=5)
+    
+    x = _depthwise_conv_block(
+        x, 512, alpha, depth_multiplier, strides=(2, 2), block_id=6)
+    
+    x = _depthwise_conv_block(x, 512, alpha, depth_multiplier, block_id=7)
+    x = _depthwise_conv_block(x, 512, alpha, depth_multiplier, block_id=8)
+    x = _depthwise_conv_block(x, 512, alpha, depth_multiplier, block_id=9)
+    x = _depthwise_conv_block(x, 512, alpha, depth_multiplier, block_id=10)
+    x = _depthwise_conv_block(x, 512, alpha, depth_multiplier, block_id=11)
+    
+    x = _depthwise_conv_block(
+        x, 1024, alpha, depth_multiplier, strides=(2, 2), block_id=12)
+    
+    x = _depthwise_conv_block(x, 1024, alpha, depth_multiplier, block_id=13)
+    
+    if include_top:
+        x = layers.GlobalAveragePooling2D(keepdims=True)(x)
+        x = layers.Dropout(dropout)(x)
+        x = layers.Conv2D(classes, (1, 1), padding='same', name='conv_preds')(x)
+        x = layers.Reshape((classes,))(x)
+        imagenet_utils.validate_activation(classifier_activation, weights)
+        x = layers.Activation(
+            activation=classifier_activation, name='predictions')(
+            x)
+    
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    
+    if name is None:
+        name = f'mobilenet_{alpha}_{rows}'
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def _conv_block(inputs, filters, alpha, kernel=(3, 3), strides=(1, 1)):
+    
+    channel_axis = 1 if backend.image_data_format() == 'channels_first' else -1
+    filters = int(filters * alpha)
+    x = layers.Conv2D(
+        filters, 
+        kernel, 
+        padding='same', 
+        use_bias=False, 
+        strides=strides, 
+        name='conv1')(
+        inputs)
+    x = layers.BatchNormalization(axis=channel_axis)(x)
+    return layers.ReLU(6.0)(x)
+
+def _depthwise_conv_block(\
+    inputs, \
+    pointwise_conv_filters, \
+    alpha, \
+    depth_multiplier=1, \
+    strides=(1, 1), \
+    block_id=1):
+    
+    
+    channel_axis = 1 if backend.image_data_format() == 'channels_first' else -1
+    pointwise_conv_filters = int(pointwise_conv_filters * alpha)
+    
+    if strides == (1, 1):
+        x = inputs
+    else:
+        x = layers.ZeroPadding2D(
+            ((0, 1), (0, 1)), name='conv_pad_%d' % block_id)(
+            inputs)
+    x = layers.DepthwiseConv2D(
+        (3, 3), 
+        padding='same' if strides == (1, 1) else 'valid', 
+        depth_multiplier=depth_multiplier, 
+        strides=strides, 
+        use_bias=False, 
+        name='conv_dw_%d' % block_id)(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    x = layers.ReLU(6.0)(x)
+    
+    x = layers.Conv2D(
+        pointwise_conv_filters, 
+        (1, 1), 
+        padding='same', 
+        use_bias=False, 
+        strides=(1, 1), 
+        name='conv_pw_%d' % block_id)(
+        x)
+    x = layers.BatchNormalization(
+        axis=channel_axis)(
+        x)
+    return layers.ReLU(6.0)(x)
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(32, 32), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([32, 32, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = MobileNet(input_shape=(32, 32, 4), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 2
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointMobileNet'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'MobileNet_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(32, 32), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model.predict(batch_imgs, batch_size=300)
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

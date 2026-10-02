@@ -1,0 +1,26 @@
+Incorrect Predictions:
+Image: /mnt/c/image/test/1/100237.png, True Label: 1, Predicted: 3
+Image: /mnt/c/image/test/1/133272.png, True Label: 1, Predicted: 3
+Image: /mnt/c/image/test/1/138239.png, True Label: 1, Predicted: 3
+Image: /mnt/c/image/test/1/155432.png, True Label: 1, Predicted: 3
+Image: /mnt/c/image/test/1/19878.png, True Label: 1, Predicted: 3
+Image: /mnt/c/image/test/1/215182.png, True Label: 1, Predicted: 3
+Image: /mnt/c/image/test/1/60430.png, True Label: 1, Predicted: 3
+Image: /mnt/c/image/test/1/67893.png, True Label: 1, Predicted: 2
+Image: /mnt/c/image/test/1/90892.png, True Label: 1, Predicted: 3
+Image: /mnt/c/image/test/1/95889.png, True Label: 1, Predicted: 3
+Image: /mnt/c/image/test/2/17700.png, True Label: 2, Predicted: 0
+Image: /mnt/c/image/test/2/195622.png, True Label: 2, Predicted: 0
+Image: /mnt/c/image/test/2/221116.png, True Label: 2, Predicted: 3
+Image: /mnt/c/image/test/2/7718.png, True Label: 2, Predicted: 0
+Image: /mnt/c/image/test/3/122420.png, True Label: 3, Predicted: 4
+Image: /mnt/c/image/test/3/8395.png, True Label: 3, Predicted: 0
+Image: /mnt/c/image/test/4/123130.png, True Label: 4, Predicted: 0
+Image: /mnt/c/image/test/4/123734.png, True Label: 4, Predicted: 2
+Image: /mnt/c/image/test/4/152218.png, True Label: 4, Predicted: 0
+Image: /mnt/c/image/test/4/222498.png, True Label: 4, Predicted: 0
+Image: /mnt/c/image/test/4/28447.png, True Label: 4, Predicted: 0
+Image: /mnt/c/image/test/4/54630.png, True Label: 4, Predicted: 0
+Image: /mnt/c/image/test/4/59002.png, True Label: 4, Predicted: 0
+Image: /mnt/c/image/test/4/9106.png, True Label: 4, Predicted: 2
+acc: 0.92 &acc1: 0.92 &acc5: 1.0

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #177</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number72').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #177</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'EfficientNet' from 'D:\\exp\\RQ1\\EfficientNet\\EfficientNet.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_EfficientNet.DemoTest)</code></li>
+    
+    <li>duration - 2.05 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\EfficientNet\test_EfficientNet.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "EfficientNet", line 414, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 4 objects could not be loaded. Example error message for object <DepthwiseConv2D name=block6a_dwconv, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(6, 6, 672, 1), Received: value.shape=(5, 5, 672, 1). Target variable: <Variable path=block6a_dwconv/kernel, shape=(6, 6, 672, 1), dtype=float32, value=[[[[-3.38536091e-02]
+   [ 1.71413779e-01]
+   [ 1.92474589e-01]
+   ...
+   [ 1.16141617e-01]
+   [-3.81388627e-02]
+   [ 1.60423771e-01]]
+
+  [[ 1.72028780e-01]
+   [ 5.05138636e-01]
+   [ 1.91929460e-01]
+   ...
+   [-3.48644465e-01]
+   [-3.69824648e-01]
+   [-3.23833972e-01]]
+
+  [[-5.10568917e-01]
+   [ 2.88304817e-02]
+   [ 2.08484247e-01]
+   ...
+   [ 2.69172639e-01]
+   [-2.51280516e-01]
+   [ 1.40944049e-01]]
+
+  [[ 5.00072539e-01]
+   [ 2.17424497e-01]
+   [-4.13801908e-01]
+   ...
+   [-1.18963204e-01]
+   [-1.19532108e-01]
+   [ 1.30705714e-01]]
+
+  [[-3.41596514e-01]
+   [-2.68766889e-03]
+   [-1.63135141e-01]
+   ...
+   [ 4.30923402e-02]
+   [-4.71054427e-02]
+   [-5.08091673e-02]]
+
+  [[-2.72549510e-01]
+   [-1.77985355e-01]
+   [-4.70260859e-01]
+   ...
+   [-5.04840948e-02]
+   [ 2.84206986e-01]
+   [-3.95345986e-01]]]
+
+
+ [[[-4.48355347e-01]
+   [-2.36301556e-01]
+   [ 1.42863812e-02]
+   ...
+   [ 3.68265919e-02]
+   [ 4.05132502e-01]
+   [-1.94084123e-01]]
+
+  [[ 3.37329805e-01]
+   [-7.05451965e-02]
+   [ 3.01932961e-01]
+   ...
+   [ 2.92228460e-01]
+   [ 1.81745626e-02]
+   [-2.07710236e-01]]
+
+  [[ 3.37947272e-02]
+   [-2.09271029e-01]
+   [ 2.82057792e-01]
+   ...
+   [ 1.35864750e-01]
+   [ 2.47914627e-01]
+   [-4.51569080e-01]]
+
+  [[-1.95739597e-01]
+   [ 2.11408824e-01]
+   [-2.75984854e-01]
+   ...
+   [-1.82183325e-01]
+   [ 4.09205228e-01]
+   [ 3.52361687e-02]]
+
+  [[-2.36977249e-01]
+   [ 9.14740264e-02]
+   [ 2.33888328e-02]
+   ...
+   [ 6.41377866e-02]
+   [-3.27917993e-01]
+   [-1.81197122e-01]]
+
+  [[-1.46566421e-01]
+   [ 8.28061476e-02]
+   [-1.06636107e-01]
+   ...
+   [ 1.80543408e-01]
+   [-1.04432076e-01]
+   [-2.39964262e-01]]]
+
+
+ [[[ 4.54677582e-01]
+   [ 7.43077993e-02]
+   [-4.18065488e-01]
+   ...
+   [ 4.47468609e-02]
+   [-1.97239459e-01]
+   [-2.07655832e-01]]
+
+  [[-5.08472860e-01]
+   [ 1.47892088e-01]
+   [ 7.25687817e-02]
+   ...
+   [ 4.62644696e-02]
+   [-1.30750299e-01]
+   [ 2.20397696e-01]]
+
+  [[ 1.32166758e-01]
+   [-1.64745420e-01]
+   [-8.81669521e-02]
+   ...
+   [-1.94060177e-01]
+   [ 2.48603880e-01]
+   [ 2.13128224e-01]]
+
+  [[-2.85280645e-01]
+   [ 2.08912998e-01]
+   [ 3.68713915e-01]
+   ...
+   [-9.68194902e-02]
+   [-1.50300235e-01]
+   [-1.22272432e-01]]
+
+  [[-4.76268947e-01]
+   [ 8.39050207e-03]
+   [-2.46586338e-01]
+   ...
+   [ 2.04919726e-02]
+   [-5.28617322e-01]
+   [ 2.14475691e-02]]
+
+  [[-6.90285638e-02]
+   [ 5.25087677e-02]
+   [ 2.74927884e-01]
+   ...
+   [ 8.62398967e-02]
+   [-1.42390341e-01]
+   [-1.55348092e-01]]]
+
+
+ [[[-7.54332989e-02]
+   [ 4.62172478e-02]
+   [ 1.62265301e-01]
+   ...
+   [-1.76164240e-01]
+   [-8.37430544e-03]
+   [ 4.69124839e-02]]
+
+  [[-2.70778954e-01]
+   [ 2.97385782e-01]
+   [-4.56195861e-01]
+   ...
+   [-2.86822081e-01]
+   [-1.97673172e-01]
+   [-9.48569775e-02]]
+
+  [[ 5.80366328e-02]
+   [-2.51453936e-01]
+   [-3.03718537e-01]
+   ...
+   [-1.82937160e-01]
+   [-5.47913611e-02]
+   [-5.93241416e-02]]
+
+  [[-9.63443518e-02]
+   [-7.20716193e-02]
+   [ 4.73140851e-02]
+   ...
+   [-7.92376250e-02]
+   [-4.33360875e-01]
+   [ 6.56698868e-02]]
+
+  [[ 1.44036999e-03]
+   [ 4.65283155e-01]
+   [ 1.54246762e-01]
+   ...
+   [ 4.31959122e-01]
+   [ 1.48159817e-01]
+   [-3.02955538e-01]]
+
+  [[-5.11474907e-01]
+   [ 5.12745231e-02]
+   [ 4.15014595e-01]
+   ...
+   [ 4.88402605e-01]
+   [-3.07706058e-01]
+   [ 2.31689051e-01]]]
+
+
+ [[[ 1.02472752e-01]
+   [ 1.07551590e-01]
+   [-2.94572413e-01]
+   ...
+   [-2.49492869e-01]
+   [ 2.42024153e-01]
+   [ 2.73195952e-02]]
+
+  [[-3.33875358e-01]
+   [-4.48923737e-01]
+   [-3.46225560e-01]
+   ...
+   [-8.84998217e-02]
+   [ 1.43087015e-01]
+   [-2.84612291e-02]]
+
+  [[ 1.84597820e-01]
+   [ 3.27585757e-01]
+   [ 2.71389242e-02]
+   ...
+   [ 2.31269494e-01]
+   [-1.54999197e-01]
+   [-3.26968938e-01]]
+
+  [[ 3.73422951e-02]
+   [ 3.56823295e-01]
+   [ 1.88842610e-01]
+   ...
+   [-4.22442444e-02]
+   [-1.64705634e-01]
+   [-2.36588269e-01]]
+
+  [[ 1.25779003e-01]
+   [-1.60546958e-01]
+   [-1.14535592e-01]
+   ...
+   [-4.11971539e-01]
+   [ 6.05245270e-02]
+   [ 8.13626871e-02]]
+
+  [[ 1.35723174e-01]
+   [-2.99034446e-01]
+   [ 2.23025203e-01]
+   ...
+   [ 6.88132122e-02]
+   [-1.36130854e-01]
+   [-4.32595015e-01]]]
+
+
+ [[[ 2.25077525e-01]
+   [ 3.77971306e-02]
+   [-1.16655530e-04]
+   ...
+   [-1.92460358e-01]
+   [-1.06192708e-01]
+   [ 3.28700095e-01]]
+
+  [[ 1.56956807e-01]
+   [-2.25055784e-01]
+   [ 1.26466766e-01]
+   ...
+   [ 1.83834255e-01]
+   [-2.32969716e-01]
+   [ 1.77193359e-01]]
+
+  [[ 2.63173319e-02]
+   [ 1.09919772e-01]
+   [-5.14351547e-01]
+   ...
+   [-2.56400615e-01]
+   [ 2.16486141e-01]
+   [-1.57329828e-01]]
+
+  [[-1.72738090e-01]
+   [ 3.89617622e-01]
+   [-2.01730624e-01]
+   ...
+   [ 4.71814513e-01]
+   [-4.78806496e-02]
+   [-4.47086811e-01]]
+
+  [[-1.42240133e-02]
+   [-1.83705494e-01]
+   [-3.73364806e-01]
+   ...
+   [ 1.47686880e-02]
+   [ 3.84304851e-01]
+   [ 7.76553228e-02]]
+
+  [[-4.43728209e-01]
+   [-5.13078928e-01]
+   [ 9.94870439e-02]
+   ...
+   [ 1.33436630e-02]
+   [ 1.43794611e-01]
+   [ 5.33742905e-01]]]]>
+
+List of objects that could not be loaded:
+[<DepthwiseConv2D name=block6a_dwconv, built=True>, <DepthwiseConv2D name=block6b_dwconv, built=True>, <DepthwiseConv2D name=block6c_dwconv, built=True>, <DepthwiseConv2D name=block6d_dwconv, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 72</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [72]; toolbar: false;">import copy
+import math
+import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+DEFAULT_BLOCKS_ARGS = [\
+    {\
+    'kernel_size': 3, \
+    'repeats': 1, \
+    'filters_in': 32, \
+    'filters_out': 16, \
+    'expand_ratio': 1, \
+    'id_skip': True, \
+    'strides': 1, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 3, \
+    'repeats': 2, \
+    'filters_in': 16, \
+    'filters_out': 24, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 5, \
+    'repeats': 2, \
+    'filters_in': 24, \
+    'filters_out': 40, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 3, \
+    'repeats': 3, \
+    'filters_in': 40, \
+    'filters_out': 80, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 5, \
+    'repeats': 3, \
+    'filters_in': 80, \
+    'filters_out': 112, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 1, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 6, \
+    'repeats': 4, \
+    'filters_in': 112, \
+    'filters_out': 192, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 3, \
+    'repeats': 1, \
+    'filters_in': 192, \
+    'filters_out': 320, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 1, \
+    'se_ratio': 0.25}]
+
+
+
+CONV_KERNEL_INITIALIZER = {\
+    'class_name': 'VarianceScaling', \
+    'config': {\
+    'scale': 2.0, \
+    'mode': 'fan_out', \
+    'distribution': 'truncated_normal'}}
+
+
+
+DENSE_KERNEL_INITIALIZER = {\
+    'class_name': 'VarianceScaling', \
+    'config': {\
+    'scale': 1.0 / 3.0, \
+    'mode': 'fan_out', \
+    'distribution': 'uniform'}}
+
+
+
+IMAGENET_STDDEV_RGB = [0.229, 0.224, 0.225]
+
+def EfficientNet(\
+    width_coefficient, \
+    depth_coefficient, \
+    default_size, \
+    dropout_rate=0.2, \
+    drop_connect_rate=0.2, \
+    depth_divisor=8, \
+    activation='swish', \
+    blocks_args='default', \
+    name='efficientnet', \
+    include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=None, \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax'):
+    
+    
+    if blocks_args == 'default':
+        blocks_args = DEFAULT_BLOCKS_ARGS
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    
+    def round_filters(filters, divisor=depth_divisor):
+        '''Round number of filters based on depth multiplier.'''
+        filters *= width_coefficient
+        new_filters = max(
+            divisor, (int(filters + (divisor / 2)) // divisor) * divisor)
+        
+        
+        if new_filters < 0.9 * filters:
+            new_filters += divisor
+        return int(new_filters)
+    
+    def round_repeats(repeats):
+        '''Round number of repeats based on depth multiplier.'''
+        return int(math.ceil(depth_coefficient * repeats))
+    
+    
+    x = img_input
+    x = layers.Rescaling(1.0 / 255.0)(x)
+    x = layers.Normalization(axis=bn_axis)(x)
+    
+    x = layers.ZeroPadding2D(
+        padding=imagenet_utils.correct_pad(x, 3), name='stem_conv_pad')(
+        x)
+    x = layers.Conv2D(
+        round_filters(32), 
+        3, 
+        strides=2, 
+        padding='valid', 
+        use_bias=False, 
+        kernel_initializer=CONV_KERNEL_INITIALIZER, 
+        name='stem_conv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    x = layers.Activation(activation)(x)
+    
+    
+    blocks_args = copy.deepcopy(blocks_args)
+    
+    b = 0
+    blocks = float(sum((round_repeats(args['repeats']) for args in blocks_args)))
+    for (i, args) in enumerate(blocks_args):
+        assert args['repeats'] > 0
+        
+        args['filters_in'] = round_filters(args['filters_in'])
+        args['filters_out'] = round_filters(args['filters_out'])
+        
+        for j in range(round_repeats(args.pop('repeats'))):
+            
+            
+            if j > 0:
+                args['strides'] = 1
+                args['filters_in'] = args['filters_out']
+            x = block(
+                x, 
+                activation, 
+                (drop_connect_rate * b) / blocks, 
+                name=f'block{i + 1}{chr(j + 97)}_', 
+                **args)
+            
+            b += 1
+    
+    
+    x = layers.Conv2D(
+        round_filters(1280), 
+        1, 
+        padding='same', 
+        use_bias=False, 
+        kernel_initializer=CONV_KERNEL_INITIALIZER, 
+        name='top_conv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    x = layers.Activation(activation)(x)
+    if include_top:
+        x = layers.GlobalAveragePooling2D(name='avg_pool')(x)
+        if dropout_rate > 0:
+            x = layers.Dropout(dropout_rate)(x)
+        imagenet_utils.validate_activation(classifier_activation, weights)
+        x = layers.Dense(
+            classes, 
+            activation=classifier_activation, 
+            kernel_initializer=DENSE_KERNEL_INITIALIZER, 
+            name='predictions')(
+            x)
+    
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def block(\
+    inputs, \
+    activation='swish', \
+    drop_rate=0.0, \
+    name='', \
+    filters_in=32, \
+    filters_out=16, \
+    kernel_size=3, \
+    strides=1, \
+    expand_ratio=1, \
+    se_ratio=0.0, \
+    id_skip=True):
+    
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    
+    
+    filters = filters_in * expand_ratio
+    if expand_ratio != 1:
+        x = layers.Conv2D(
+            filters, 
+            1, 
+            padding='same', 
+            use_bias=False, 
+            kernel_initializer=CONV_KERNEL_INITIALIZER, 
+            name=f'{name}expand_conv')(
+            inputs)
+        x = layers.BatchNormalization(axis=bn_axis)(x)
+        x = layers.Activation(activation)(x)
+    else:
+        x = inputs
+    
+    
+    if strides == 2:
+        x = layers.ZeroPadding2D(
+            padding=imagenet_utils.correct_pad(x, kernel_size), 
+            name=f'{name}dwconv_pad')(
+            x)
+        conv_pad = 'valid'
+    else:
+        conv_pad = 'same'
+    x = layers.DepthwiseConv2D(
+        kernel_size, 
+        strides=strides, 
+        padding=conv_pad, 
+        use_bias=False, 
+        depthwise_initializer=CONV_KERNEL_INITIALIZER, 
+        name=f'{name}dwconv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    x = layers.Activation(activation)(x)
+    
+    
+    if 0 < se_ratio <= 1:
+        filters_se = max(1, int(filters_in * se_ratio))
+        se = layers.GlobalAveragePooling2D(name=f'{name}se_squeeze')(x)
+        if bn_axis == 1:
+            se_shape = (filters, 1, 1)
+        else:
+            se_shape = (1, 1, filters)
+        se = layers.Reshape(se_shape, name=f'{name}se_reshape')(se)
+        se = layers.Conv2D(
+            filters_se, 
+            1, 
+            padding='same', 
+            activation=activation, 
+            kernel_initializer=CONV_KERNEL_INITIALIZER, 
+            name=f'{name}se_reduce')(
+            se)
+        se = layers.Conv2D(
+            filters, 
+            1, 
+            padding='same', 
+            activation='sigmoid', 
+            kernel_initializer=CONV_KERNEL_INITIALIZER, 
+            name=f'{name}se_expand')(
+            se)
+        x = layers.multiply([x, se], name=f'{name}se_excite')
+    
+    
+    x = layers.Conv2D(
+        filters_out, 
+        1, 
+        padding='same', 
+        use_bias=False, 
+        kernel_initializer=CONV_KERNEL_INITIALIZER, 
+        name=f'{name}project_conv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    if (id_skip and strides == 1 and filters_in == filters_out):
+        if drop_rate > 0:
+            x = layers.Dropout(
+                drop_rate, noise_shape=(None, 1, 1, 1))(
+                x)
+        x = layers.add([x, inputs], name=f'{name}add')
+    return x
+
+
+@keras_export(['keras.applications.efficientnet.EfficientNetB0', 'keras.applications.EfficientNetB0'])
+def EfficientNetB0(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(32, 32, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='efficientnetb0'):
+    
+    return EfficientNet(
+        1.0, 
+        1.0, 
+        224, 
+        0.2, 
+        name=name, 
+        include_top=include_top, 
+        weights=weights, 
+        input_tensor=input_tensor, 
+        input_shape=input_shape, 
+        pooling=pooling, 
+        classes=classes, 
+        classifier_activation=classifier_activation)
+
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(32, 32), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([32, 32, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = EfficientNetB0(input_shape=(32, 32, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 2
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointEfficientNet'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'EfficientNet_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(32, 32), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model.predict(batch_imgs, batch_size=300)
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

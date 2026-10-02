@@ -1,0 +1,40 @@
+ Total params: 44,426 (173.54 KB)
+ Trainable params: 44,426 (173.54 KB)
+ Non-trainable params: 0 (0.00 B)
+
+Sample 59: Path = /mnt/c/data/MNIST/test/1/96.png, True Label = 1, Predicted = 8, Probabilities = [1.3643435e-06 3.1653413e-01 1.3703968e-03 3.6923256e-02 1.2969859e-01
+ 2.1883177e-02 2.2544582e-06 1.1649773e-01 3.4880012e-01 2.8288931e-02]
+Sample 64: Path = /mnt/c/data/MNIST/test/2/149.png, True Label = 2, Predicted = 4, Probabilities = [0.01022469 0.04577952 0.12107048 0.13955419 0.2782388  0.00158042
+ 0.00582694 0.15088636 0.06200434 0.1848342 ]
+Sample 75: Path = /mnt/c/data/MNIST/test/2/244.png, True Label = 2, Predicted = 7, Probabilities = [2.47938209e-03 2.18716592e-01 3.04048896e-01 3.11628580e-02
+ 1.75173249e-04 1.06606085e-05 2.42407896e-06 4.39498007e-01
+ 2.28960980e-05 3.88318021e-03]
+Sample 88: Path = /mnt/c/data/MNIST/test/2/77.png, True Label = 2, Predicted = 7, Probabilities = [7.4996467e-04 1.7871941e-02 4.4142529e-01 1.7321050e-03 2.0820076e-05
+ 1.2134379e-05 2.2123830e-05 5.3074443e-01 2.9047331e-04 7.1307099e-03]
+Sample 102: Path = /mnt/c/data/MNIST/test/3/245.png, True Label = 3, Predicted = 5, Probabilities = [1.6407055e-03 7.7198475e-04 1.6064576e-03 1.7682505e-01 1.6426459e-04
+ 8.0336255e-01 1.2738012e-02 2.8950768e-04 2.5427404e-03 5.8755526e-05]
+Sample 139: Path = /mnt/c/data/MNIST/test/4/33.png, True Label = 4, Predicted = 6, Probabilities = [9.5705586e-03 8.1325351e-04 3.4031391e-01 1.4864698e-04 8.7710567e-02
+ 2.0145362e-02 5.3741884e-01 2.5144438e-03 2.7795804e-05 1.3365853e-03]
+Sample 193: Path = /mnt/c/data/MNIST/test/6/217.png, True Label = 6, Predicted = 5, Probabilities = [2.2443545e-03 3.9431948e-06 9.3205948e-04 7.9418223e-06 1.2739105e-04
+ 9.1461051e-01 8.0917597e-02 1.7820790e-08 1.1011016e-03 5.5172397e-05]
+Sample 195: Path = /mnt/c/data/MNIST/test/6/259.png, True Label = 6, Predicted = 0, Probabilities = [8.7684923e-01 9.9915042e-07 2.9519497e-06 1.8352432e-05 1.2243919e-07
+ 3.2363988e-02 9.0657659e-02 6.0936886e-06 9.4733528e-05 5.8163523e-06]
+Sample 250: Path = /mnt/c/data/MNIST/test/8/233.png, True Label = 8, Predicted = 9, Probabilities = [1.57279705e-04 2.40630579e-05 8.99088103e-03 1.08012676e-01
+ 3.01248401e-05 2.74501130e-04 6.46945892e-08 1.89212605e-01
+ 2.63694543e-02 6.66928411e-01]
+Sample 251: Path = /mnt/c/data/MNIST/test/8/242.png, True Label = 8, Predicted = 9, Probabilities = [2.8479713e-01 9.9730445e-05 4.1962050e-02 1.4072472e-04 4.2766421e-03
+ 5.2645855e-04 1.7449423e-03 8.0778629e-02 2.7515525e-02 5.5815822e-01]
+Sample 274: Path = /mnt/c/data/MNIST/test/9/118.png, True Label = 9, Predicted = 4, Probabilities = [1.0939239e-05 1.4007810e-04 7.8708872e-06 3.5791705e-05 5.2602732e-01
+ 1.0370362e-04 2.1349645e-06 2.3724092e-02 9.3191709e-05 4.4985485e-01]
+Sample 281: Path = /mnt/c/data/MNIST/test/9/193.png, True Label = 9, Predicted = 3, Probabilities = [1.3961869e-05 1.6585302e-03 8.7880107e-05 4.6951979e-01 3.3856380e-01
+ 9.6148375e-04 7.7859120e-08 9.0582810e-02 1.0749131e-02 8.7862641e-02]
+Sample 288: Path = /mnt/c/data/MNIST/test/9/241.png, True Label = 9, Predicted = 8, Probabilities = [1.90207084e-05 5.66551171e-06 5.36086177e-03 1.29881352e-01
+ 3.37964833e-01 1.06672058e-02 4.97777080e-07 1.22791884e-04
+ 3.99047822e-01 1.16929986e-01]
+Sample 295: Path = /mnt/c/data/MNIST/test/9/73.png, True Label = 9, Predicted = 7, Probabilities = [2.62128218e-04 3.80199752e-03 5.99873951e-04 1.54822068e-02
+ 1.04537597e-02 4.07892658e-04 4.00861336e-06 6.56230032e-01
+ 1.98743105e-01 1.14014976e-01]
+Sample 298: Path = /mnt/c/data/MNIST/test/9/92.png, True Label = 9, Predicted = 4, Probabilities = [1.5729214e-03 1.2752273e-03 1.5510155e-03 1.2834634e-02 7.4729657e-01
+ 3.3251874e-03 1.9125227e-04 7.7718556e-02 8.8755204e-04 1.5334706e-01]
+Top-1 Accuracy on 300 samples: 0.9500
+Top-5 Accuracy on 300 samples: 1.0000

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #172</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number187').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #172</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'DenseNet121' from 'D:\\exp\\RQ1\\DenseNet121\\DenseNet121.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_DenseNet121.DemoTest)</code></li>
+    
+    <li>duration - 2.58 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\DenseNet121\test_DenseNet121.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "DenseNet121", line 203, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 1 objects could not be loaded. Example error message for object <Conv2D name=conv1_conv, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(7, 7, 4, 64), Received: value.shape=(7, 7, 3, 64). Target variable: <Variable path=conv1_conv/kernel, shape=(7, 7, 4, 64), dtype=float32, value=[[[[-2.62532011e-03  1.59550719e-02 -3.66156958e-02 ...  3.78749520e-02
+     4.08330560e-02 -3.72713841e-02]
+   [ 2.54325718e-02  3.12161893e-02  2.81151980e-02 ...  2.31820196e-02
+    -3.18863690e-02 -7.37379864e-03]
+   [-3.39664370e-02  3.90666127e-02  1.38002746e-02 ... -1.05655566e-03
+     6.39552996e-03  4.20571119e-02]
+   [-2.58636810e-02  3.08354050e-02 -4.16873880e-02 ...  3.08020413e-02
+     3.70860398e-02  1.29007399e-02]]
+
+  [[-4.02763486e-03  2.14468762e-02 -3.36933322e-02 ... -5.46363741e-03
+     3.74553874e-02  3.34825590e-02]
+   [ 1.57296285e-02 -2.34423447e-02  1.99978799e-03 ...  2.40925401e-02
+     2.15088725e-02 -3.64167690e-02]
+   [ 3.02419960e-02  5.83600253e-03 -7.14515895e-03 ...  3.47627103e-02
+     2.47659758e-02 -2.56213006e-02]
+   [-3.97765711e-02  4.20886278e-02  2.72256956e-02 ...  2.86218971e-02
+    -3.69910970e-02 -2.10448354e-03]]
+
+  [[ 6.21015951e-03  3.86449620e-02  1.43173784e-02 ... -1.81475449e-02
+    -5.12192771e-03  1.12707056e-02]
+   [ 3.79341766e-02  4.09949869e-02 -2.17745136e-02 ... -4.21307869e-02
+    -4.48421389e-03 -2.83371806e-02]
+   [-2.61720549e-02  3.14726457e-02 -2.15920191e-02 ... -2.69415751e-02
+     1.69625878e-02  1.97583735e-02]
+   [ 8.31704214e-03  1.79566815e-02  4.79608774e-04 ... -3.58493924e-02
+     8.32519680e-03 -2.45132577e-02]]
+
+  ...
+
+  [[ 2.51478702e-02  3.14081460e-02 -7.92378187e-03 ... -3.13074887e-02
+     3.01875994e-02  4.13475335e-02]
+   [-7.92032108e-03 -2.83528827e-02  2.78254375e-02 ...  1.67577341e-02
+    -3.43103223e-02 -1.34063605e-02]
+   [-1.74544808e-02 -1.55436322e-02 -2.12422945e-02 ... -7.19173625e-03
+     2.40441486e-02  3.15988362e-02]
+   [-3.36665101e-02 -4.04340737e-02  1.13471225e-03 ... -2.24699136e-02
+    -3.73438336e-02  1.25326142e-02]]
+
+  [[-2.66525745e-02  3.59412879e-02 -3.01382318e-03 ... -3.64218578e-02
+    -6.99468330e-03 -3.44375968e-02]
+   [ 2.70944759e-02  3.61151323e-02  2.32472569e-02 ...  2.89466009e-02
+    -2.04879418e-02 -4.20383662e-02]
+   [-3.03452462e-02  4.13088128e-02  4.49307263e-05 ...  1.00831911e-02
+     1.30218416e-02 -3.74808609e-02]
+   [ 3.90252098e-02 -4.19671461e-03 -1.71638113e-02 ... -9.58786905e-03
+     3.32781971e-02  3.65914330e-02]]
+
+  [[ 2.62991041e-02 -1.70547888e-02 -3.31848897e-02 ...  2.49625370e-03
+    -3.09456252e-02  3.90243828e-02]
+   [ 2.49990448e-02  6.87041506e-03  9.33837891e-03 ... -3.06498352e-02
+     3.54629457e-02 -2.06651445e-02]
+   [ 5.12411073e-03  1.59418806e-02 -3.41079161e-02 ...  3.16471979e-02
+     3.92604470e-02  1.83293410e-02]
+   [-1.24287289e-02 -1.75638087e-02 -3.73397991e-02 ... -5.72345778e-03
+    -6.21682778e-03  3.73414084e-02]]]
+
+
+ [[[ 9.52085480e-03 -1.14962459e-03 -3.65042612e-02 ... -2.09388770e-02
+    -1.56291854e-02 -3.00265625e-02]
+   [-1.92145016e-02 -2.49150861e-02 -1.14299823e-02 ... -4.78475913e-03
+     3.11601609e-02  2.53882259e-02]
+   [-2.19586883e-02  2.54720598e-02  1.18254982e-02 ...  5.43956831e-03
+     2.18578205e-02 -1.05742738e-03]
+   [ 1.72386207e-02 -4.00414914e-02  5.13213500e-03 ... -9.28465649e-03
+     1.60549991e-02 -3.50432582e-02]]
+
+  [[-3.36299762e-02 -3.31303962e-02  3.07989642e-02 ...  3.11777666e-02
+    -2.65345965e-02 -2.28817277e-02]
+   [ 1.96902975e-02  1.19051002e-02  3.35371122e-02 ... -3.73160839e-02
+     3.57726812e-02 -2.07918026e-02]
+   [ 3.90687212e-03 -1.21091343e-02  2.76224688e-03 ...  1.89231336e-02
+     1.81174949e-02 -2.18780432e-02]
+   [-7.10440427e-03 -2.78401002e-03 -1.02808625e-02 ... -2.24758219e-02
+     1.51490197e-02  1.60793588e-03]]
+
+  [[ 9.26725566e-03 -9.31289420e-03 -1.69277955e-02 ... -1.91499833e-02
+    -4.18744683e-02 -1.83940213e-02]
+   [-1.04199164e-02  4.77556139e-04 -2.46922635e-02 ...  6.46280870e-03
+    -2.29804404e-02  2.29803622e-02]
+   [-2.31055319e-02  3.81544307e-02  3.50496545e-02 ... -2.87873670e-03
+    -2.89000124e-02 -2.89991330e-02]
+   [-1.52587518e-03 -3.45618576e-02 -1.39340162e-02 ... -1.75042581e-02
+     3.85143682e-02  1.74574554e-03]]
+
+  ...
+
+  [[ 1.36058219e-02 -3.34935263e-03 -8.38781148e-03 ...  1.41971968e-02
+    -3.58805843e-02  2.30620503e-02]
+   [ 1.80747993e-02 -2.59709228e-02 -9.95269045e-03 ...  6.71715662e-03
+    -3.93308960e-02 -3.19629051e-02]
+   [ 1.21132433e-02 -1.62176788e-03  1.00710206e-02 ... -3.76336724e-02
+     3.24011371e-02  2.42417902e-02]
+   [ 1.49411596e-02  3.64867374e-02  1.00904480e-02 ...  1.89320669e-02
+    -1.45164672e-02 -3.45480070e-02]]
+
+  [[ 2.51232386e-02 -4.12407517e-02 -4.04341854e-02 ... -3.75861935e-02
+     1.98035501e-02  2.00151615e-02]
+   [ 1.71837024e-02 -2.97114383e-02  2.01160237e-02 ...  2.74016038e-02
+     4.23596799e-02  7.07391277e-03]
+   [ 3.72143313e-02 -2.21806318e-02 -3.97168174e-02 ...  2.80992836e-02
+     3.43409777e-02 -3.01912911e-02]
+   [-1.91352423e-02  1.09716393e-02 -7.51449913e-03 ... -1.33500267e-02
+    -3.25571224e-02  3.11500430e-02]]
+
+  [[-6.20909780e-03  3.63649353e-02 -4.10962850e-04 ...  2.52604708e-02
+    -7.79386610e-03  2.34405845e-02]
+   [-3.18684727e-02  1.60124153e-02 -1.39549784e-02 ...  3.54342908e-02
+     3.97781879e-02 -1.16714723e-02]
+   [ 3.08974087e-03  2.56096199e-03 -3.78960446e-02 ...  2.11060345e-02
+    -1.80117786e-03 -1.48851909e-02]
+   [-2.12814286e-02  4.14430052e-02 -1.40952691e-03 ...  2.94579491e-02
+     1.41261332e-02 -2.30508372e-02]]]
+
+
+ [[[ 2.59190947e-02  4.09588665e-02  8.39151442e-03 ...  2.09789500e-02
+     1.16449557e-02  4.19520587e-03]
+   [-1.04426369e-02  1.77333727e-02 -1.53318271e-02 ... -2.50986125e-02
+     1.43307857e-02 -2.67823692e-02]
+   [-2.00732742e-02  3.43748182e-02  2.25744322e-02 ... -1.42170265e-02
+    -7.06312805e-03 -9.64515656e-03]
+   [-2.29608268e-03 -3.92913371e-02  9.38214734e-03 ...  1.74141042e-02
+     3.47977355e-02  2.17319131e-02]]
+
+  [[ 2.00875625e-02  1.36373490e-02 -7.68010691e-03 ... -1.96250100e-02
+     1.35242045e-02  1.38557181e-02]
+   [ 1.28413402e-02  9.54228267e-03  3.61178517e-02 ...  2.38215178e-03
+     1.40739977e-02 -6.85094669e-03]
+   [-3.68934125e-02  6.74508512e-04 -1.64714083e-03 ...  2.26186514e-02
+    -7.38285482e-03 -4.23552915e-02]
+   [-2.07228940e-02 -2.61280350e-02 -1.85110271e-02 ...  4.81117517e-04
+     2.57889330e-02  2.61082724e-02]]
+
+  [[-2.80594602e-02  2.76636109e-02  3.17456797e-02 ... -1.03628263e-03
+    -1.67003199e-02  1.49045363e-02]
+   [ 3.10282633e-02  8.13839212e-03 -7.08656758e-03 ...  7.36626238e-03
+     5.28179109e-03 -1.05431229e-02]
+   [-2.09301468e-02  1.13715865e-02  1.55073106e-02 ... -2.50835270e-02
+    -1.26369931e-02  4.05855402e-02]
+   [ 3.34514156e-02  1.92393586e-02 -6.72461465e-03 ... -3.88143808e-02
+     3.03532109e-02 -4.07041833e-02]]
+
+  ...
+
+  [[-3.03967111e-02 -1.93919577e-02 -1.40405707e-02 ... -4.16756421e-02
+    -4.20199744e-02 -8.94078985e-03]
+   [ 1.34133697e-02  1.10436156e-02  1.97049156e-02 ...  4.70364839e-03
+    -1.00219622e-03  2.14458629e-03]
+   [-3.03716622e-02  3.76259238e-02 -2.02705711e-02 ... -2.78766938e-02
+    -7.38735497e-03 -8.30240175e-03]
+   [-4.19052057e-02  2.73723081e-02  1.14169717e-02 ...  1.91181451e-02
+     1.40851066e-02 -1.45265236e-02]]
+
+  [[-1.08908936e-02 -1.50565170e-02 -4.04242873e-02 ...  9.56039876e-04
+    -3.27687263e-02  3.52448225e-03]
+   [-3.60380597e-02 -3.94162536e-02  3.26147303e-03 ... -2.13001557e-02
+    -3.28006670e-02 -2.91709453e-02]
+   [ 5.04514575e-03 -2.58568004e-02 -2.87956242e-02 ...  8.54950398e-03
+     3.47203389e-02  1.10226497e-03]
+   [-1.78189203e-03 -1.58732627e-02  2.28254348e-02 ... -1.89988408e-02
+     1.57138966e-02  2.66561061e-02]]
+
+  [[ 6.82117417e-03  1.57403313e-02 -1.83028840e-02 ...  1.15320235e-02
+    -1.62109975e-02 -4.77144495e-03]
+   [-2.66604144e-02  4.11650687e-02  1.49100088e-02 ...  4.40028310e-03
+     2.64303684e-02 -2.66792029e-02]
+   [ 1.84085704e-02 -1.90806761e-03 -3.72656435e-03 ...  3.52761373e-02
+    -7.70719349e-03 -1.75913796e-03]
+   [ 7.70264119e-03 -1.28306970e-02  1.89545788e-02 ... -3.63835134e-02
+     2.59762183e-02 -1.35346372e-02]]]
+
+
+ ...
+
+
+ [[[ 1.54618137e-02 -2.77539492e-02  1.99858025e-02 ...  1.74335092e-02
+    -2.04285122e-02  3.88179272e-02]
+   [ 2.72062495e-02  1.36780366e-03 -4.22754884e-03 ...  3.14779952e-02
+    -3.49103287e-03  3.99150774e-02]
+   [ 1.64902434e-02 -2.21213941e-02  2.62611285e-02 ...  3.00947651e-02
+     2.06017494e-02 -1.81385204e-02]
+   [-2.43069474e-02  1.50830746e-02 -2.47569010e-02 ... -3.09973229e-02
+     4.05997783e-03  1.09955296e-03]]
+
+  [[-2.11046599e-02  2.38292590e-02  2.67380476e-02 ...  8.18287581e-03
+     8.02979991e-03 -2.22508349e-02]
+   [-1.87476799e-02  1.34886540e-02 -4.03770432e-02 ... -1.13741048e-02
+     2.89371982e-02 -7.94600695e-04]
+   [ 2.08966583e-02 -1.48454681e-03  3.53315622e-02 ... -1.87785178e-02
+     2.87823007e-03  3.22192982e-02]
+   [-2.31101252e-02 -2.18880400e-02 -2.47362833e-02 ... -1.23125110e-02
+     4.80587408e-03 -4.31022048e-03]]
+
+  [[-2.36209854e-03  3.15876454e-02  1.11748651e-02 ...  2.62618363e-02
+     1.18566267e-02  3.81495506e-02]
+   [-3.23883668e-02 -1.02372877e-02 -1.75774470e-02 ...  1.88590698e-02
+     2.45117471e-02 -4.22607139e-02]
+   [-2.51090731e-02  9.40221921e-03 -2.16093399e-02 ...  1.21888779e-02
+    -1.98373497e-02  1.00255944e-02]
+   [ 1.22312717e-02  6.75819442e-03  1.00473762e-02 ...  3.94062772e-02
+     3.84655073e-02  8.48865137e-03]]
+
+  ...
+
+  [[ 2.83958465e-02 -2.80861296e-02  2.86878273e-03 ... -1.33812297e-02
+    -4.23881710e-02 -1.23673975e-02]
+   [ 1.42937899e-03 -5.92272729e-03  2.20798105e-02 ... -4.57663834e-03
+     2.25955993e-02  3.49277258e-03]
+   [ 1.12315416e-02  2.14907452e-02 -4.01565880e-02 ...  2.92646810e-02
+     1.77439153e-02  3.72033343e-02]
+   [ 1.84713490e-02 -3.52379978e-02  1.52187757e-02 ... -2.01163646e-02
+    -1.57367717e-02  1.58537552e-03]]
+
+  [[ 3.45121399e-02  2.10551545e-02  2.12324411e-02 ... -2.67970990e-02
+     2.95646861e-02 -1.02831684e-02]
+   [ 2.19615549e-03  2.47062743e-03  1.43399201e-02 ... -5.66823781e-03
+     3.39358523e-02  5.66030666e-03]
+   [ 3.70804965e-03  9.36504826e-03  3.16969305e-02 ... -1.38317812e-02
+     2.95719504e-03  3.92264128e-02]
+   [ 4.07764837e-02  4.08487469e-02 -3.86405438e-02 ... -9.94991884e-03
+     2.31758654e-02  3.41710672e-02]]
+
+  [[-3.85611355e-02 -2.96377540e-02  9.68975201e-03 ... -2.24702787e-02
+     5.06902486e-03 -6.11355156e-03]
+   [ 2.64321417e-02 -3.12316380e-02  5.63332438e-03 ... -8.79105553e-03
+     3.00180167e-04  6.08357415e-03]
+   [-2.13129129e-02  3.53606418e-03 -1.78624708e-02 ... -2.35938411e-02
+    -1.80102512e-03  1.44588910e-02]
+   [-2.79916450e-02 -2.02818420e-02  1.53398290e-02 ... -2.66855657e-02
+     5.12159243e-03 -9.31395590e-03]]]
+
+
+ [[[-1.47530995e-02 -2.11656056e-02 -2.19636653e-02 ... -7.03434274e-03
+     4.14100140e-02  2.63688937e-02]
+   [-2.77020037e-03 -8.18784535e-03  2.71817073e-02 ... -1.74432918e-02
+    -1.27653293e-02  3.58530208e-02]
+   [ 3.05325910e-03 -4.15775366e-02  2.93576270e-02 ... -2.21452415e-02
+     1.72370411e-02 -3.44469249e-02]
+   [-3.92416492e-03 -5.76095283e-03  3.77269685e-02 ... -5.71871549e-03
+     1.37613453e-02 -3.16276029e-03]]
+
+  [[-3.16921473e-02  2.31410637e-02 -8.50651413e-04 ... -2.75693201e-02
+     6.78835064e-03 -1.87333841e-02]
+   [-3.93186957e-02 -4.16865610e-02  1.96048059e-02 ... -3.38537097e-02
+     2.42171362e-02 -3.74328867e-02]
+   [-2.00480837e-02 -1.94764771e-02 -2.11283546e-02 ...  1.48160681e-02
+     2.30355635e-02 -8.91402364e-04]
+   [-3.41898277e-02  5.41711971e-03 -3.31621766e-02 ...  4.09860164e-02
+     1.36000440e-02  2.92376950e-02]]
+
+  [[-1.80926174e-03 -2.44139675e-02 -3.67417336e-02 ...  2.11153105e-02
+    -4.29066271e-03 -8.13083351e-03]
+   [ 2.89860219e-02 -3.31059955e-02 -2.36547068e-02 ...  2.33039707e-02
+    -2.32755020e-02  2.51343474e-02]
+   [ 7.22627714e-03 -1.22255031e-02 -9.82694328e-03 ...  1.84514783e-02
+    -4.14312705e-02  3.86869609e-02]
+   [-3.08022313e-02  1.35728791e-02 -2.01005004e-02 ... -3.14275622e-02
+    -3.56209241e-02 -1.83186382e-02]]
+
+  ...
+
+  [[ 2.82225832e-02 -2.96994001e-02 -2.39952281e-03 ...  2.59537250e-03
+     3.22305858e-02  8.12956691e-03]
+   [ 9.32066515e-03 -3.35234106e-02  1.16400383e-02 ...  1.05337799e-03
+    -1.37543846e-02 -3.07531729e-02]
+   [-1.08297765e-02  3.22206840e-02 -1.21300258e-02 ...  2.77451202e-02
+    -1.85711943e-02  2.07105950e-02]
+   [ 3.00317109e-02  7.63084739e-03 -2.53766552e-02 ...  2.25052536e-02
+     2.19802111e-02 -5.98513335e-03]]
+
+  [[ 1.95023566e-02 -7.03749061e-03  1.77869834e-02 ...  3.11298817e-02
+     2.53136829e-02 -2.08072718e-02]
+   [-2.85731554e-02  1.66977607e-02 -2.43019387e-02 ... -1.40202753e-02
+    -1.26649067e-03  2.50668377e-02]
+   [-3.90047953e-02  4.23790887e-03  3.75541002e-02 ...  3.62315401e-03
+    -3.80718522e-02  1.51766092e-02]
+   [-3.48054916e-02  1.44838393e-02 -4.91651520e-03 ...  3.29718068e-02
+     1.44132599e-02 -3.43833119e-03]]
+
+  [[-9.62990895e-03 -1.16584301e-02 -1.18106250e-02 ... -7.66791776e-03
+     2.66775861e-02 -1.18710138e-02]
+   [ 3.37140635e-03 -3.11050527e-02  2.73151323e-02 ...  4.33391333e-03
+    -6.45655766e-03  1.71723291e-02]
+   [-2.73697469e-02  2.31580883e-02  1.67094246e-02 ...  9.70312580e-03
+    -6.65105134e-03 -3.84194404e-02]
+   [ 3.13416123e-02 -3.76287363e-02 -9.45551693e-03 ... -2.43992265e-02
+    -1.97946057e-02 -1.23271104e-02]]]
+
+
+ [[[-5.69534302e-03  1.58624724e-03  6.28419966e-03 ...  2.68601105e-02
+    -2.40056589e-03  3.09121981e-02]
+   [ 2.74669752e-03  2.44160593e-02 -2.53234059e-03 ... -1.94677338e-03
+     2.18555927e-02  3.75010893e-02]
+   [ 3.63121629e-02 -1.85943395e-03 -4.02074456e-02 ... -2.14852095e-02
+     1.97121799e-02  7.92305544e-03]
+   [-7.06687197e-03 -3.35365757e-02 -2.27292906e-02 ...  2.31163055e-02
+    -3.86098474e-02  5.90644777e-04]]
+
+  [[-7.59961456e-03  2.65222266e-02 -1.50269028e-02 ...  2.00898573e-03
+     5.54557890e-04 -1.50787439e-02]
+   [ 4.44052741e-03  6.80940598e-03  4.20303419e-02 ...  7.70965219e-03
+    -2.61570811e-02 -3.17211226e-02]
+   [-1.61878392e-02  6.87351078e-03 -1.91854648e-02 ... -4.39443439e-03
+    -3.60480323e-03 -3.19505408e-02]
+   [-8.26721266e-03  2.43879035e-02 -3.48292366e-02 ... -7.48120248e-04
+    -2.65759360e-02  4.01844382e-02]]
+
+  [[ 4.65472043e-03 -1.49037968e-02 -1.45608727e-02 ... -3.89689393e-02
+    -1.70525219e-02  2.33677477e-02]
+   [-3.21968980e-02 -3.39196771e-02 -2.55323574e-03 ... -2.60771550e-02
+     1.39091387e-02  1.38983428e-02]
+   [ 7.76579231e-03  1.71296038e-02  3.44044715e-03 ...  1.65316239e-02
+    -1.91816501e-02  2.04494074e-02]
+   [-2.64937337e-02  2.39942148e-02 -7.35241175e-03 ... -2.63289642e-02
+     3.22959721e-02  7.92369246e-03]]
+
+  ...
+
+  [[ 2.69195065e-03  2.20617801e-02  3.22412327e-02 ...  2.96204165e-03
+     2.92444527e-02 -2.45621037e-02]
+   [ 7.43187964e-03 -1.62012875e-03 -6.82393461e-03 ...  3.54391783e-02
+    -2.79852711e-02 -1.07062981e-03]
+   [-1.56769995e-02  8.09362158e-03 -3.06851342e-02 ... -2.98240632e-02
+     1.16483942e-02  2.60833055e-02]
+   [-3.73927094e-02 -2.43552458e-02 -1.90052968e-02 ...  2.08701193e-02
+     2.32453197e-02  3.78650874e-02]]
+
+  [[-1.06818117e-02 -1.95097737e-02  3.96224037e-02 ...  2.28302404e-02
+     3.42857093e-02 -1.41439699e-02]
+   [-3.63738909e-02 -1.68670733e-02 -2.26901677e-02 ... -1.81125477e-03
+    -3.82359661e-02  3.89265195e-02]
+   [-2.99954899e-02 -2.58468948e-02  9.22009721e-03 ... -1.54175404e-02
+    -3.20411921e-02 -1.81709230e-03]
+   [-2.46522482e-02  2.73357332e-02  3.68439704e-02 ...  7.36865774e-03
+     3.06835994e-02  3.50137502e-02]]
+
+  [[ 2.75716856e-02 -2.91638449e-03  3.92950401e-02 ... -3.45997587e-02
+     3.34897190e-02  5.51573932e-04]
+   [-6.04480505e-03 -2.08630599e-02 -5.55064529e-04 ... -2.58523189e-02
+     2.08254158e-02  4.34736907e-03]
+   [ 4.04515937e-02 -1.27547365e-02 -1.69833191e-02 ... -2.53477711e-02
+     1.24433972e-02 -1.74016990e-02]
+   [-5.78260422e-03  8.66862759e-03 -4.13962342e-02 ...  2.20019370e-02
+    -3.66055779e-02 -2.67174263e-02]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=conv1_conv, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 187</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [187]; toolbar: false;">import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+def dense_block(x, blocks, name):
+    
+    for i in range(blocks):
+        x = conv_block(x, 32, name=f'{name}_block{i + 1}')
+    return x
+
+def transition_block(x, reduction, name):
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    x = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x)
+    x = layers.Activation('relu')(x)
+    x = layers.Conv2D(
+        int(x.shape[bn_axis] * reduction), 
+        1, 
+        use_bias=False, 
+        name=f'{name}_conv')(
+        x)
+    x = layers.AveragePooling2D(2, strides=2)(x)
+    return x
+
+def conv_block(x, growth_rate, name):
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    x1 = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x)
+    x1 = layers.Activation('relu')(x1)
+    x1 = layers.Conv2D(
+        4 * growth_rate, 1, use_bias=False, name=f'{name}_1_conv')(
+        x1)
+    x1 = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x1)
+    x1 = layers.Activation('relu')(x1)
+    x1 = layers.Conv2D(
+        growth_rate, 3, padding='same', use_bias=False, name=f'{name}_2_conv')(
+        x1)
+    x = layers.Concatenate(axis=bn_axis)([x, x1])
+    return x
+
+def DenseNet(\
+    blocks, \
+    include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(32, 32, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='densenet'):
+    
+    
+    
+    input_shape = imagenet_utils.obtain_input_shape(
+        input_shape, 
+        default_size=224, 
+        min_size=32, 
+        data_format=backend.image_data_format(), 
+        require_flatten=include_top, 
+        weights=weights)
+    
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    
+    x = layers.ZeroPadding2D(padding=((3, 3), (3, 3)))(img_input)
+    x = layers.Conv2D(64, 7, strides=2, use_bias=False, name='conv1_conv')(x)
+    x = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x)
+    x = layers.Activation('relu')(x)
+    x = layers.ZeroPadding2D(padding=((1, 1), (1, 1)))(x)
+    x = layers.MaxPooling2D(3, strides=2, name='pool1')(x)
+    
+    x = dense_block(x, blocks[0], name='conv2')
+    x = transition_block(x, 0.5, name='pool2')
+    x = dense_block(x, blocks[1], name='conv3')
+    x = transition_block(x, 0.5, name='pool3')
+    x = dense_block(x, blocks[2], name='conv4')
+    x = transition_block(x, 0.5, name='pool4')
+    x = dense_block(x, blocks[3], name='conv5')
+    
+    x = layers.BatchNormalization(axis=bn_axis, epsilon=1.001e-05)(x)
+    x = layers.Activation('relu')(x)
+    
+    x = layers.GlobalAveragePooling2D()(x)
+    
+    imagenet_utils.validate_activation(classifier_activation, weights)
+    x = layers.Dense(
+        classes, activation=classifier_activation, name='predictions')(
+        x)
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+
+@keras_export(['keras.applications.densenet.DenseNet121', 'keras.applications.DenseNet121'])
+def DenseNet121(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=None, \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='densenet121'):
+    
+    '''Instantiates the Densenet121 architecture.'''
+    return DenseNet(
+        [6, 12, 24, 16], 
+        include_top, 
+        weights, 
+        input_tensor, 
+        input_shape, 
+        pooling, 
+        classes, 
+        classifier_activation, 
+        name=name)
+
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(32, 32), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([32, 32, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = DenseNet121(input_shape=(32, 32, 4), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 1
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointDenseNet121'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'DenseNet121_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(32, 32), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model(batch_imgs, training=False).numpy()
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

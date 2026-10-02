@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #9</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number143').attr('title', 'AOR');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #9</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'EfficientNet' from 'D:\\exp\\RQ1\\EfficientNet\\EfficientNet.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_EfficientNet.DemoTest)</code></li>
+    
+    <li>duration - 2.084 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\EfficientNet\test_EfficientNet.py", line 13, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "EfficientNet", line 414, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 124 objects could not be loaded. Example error message for object <Conv2D name=stem_conv, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(3, 3, 3, 16), Received: value.shape=(3, 3, 3, 32). Target variable: <Variable path=stem_conv/kernel, shape=(3, 3, 3, 16), dtype=float32, value=[[[[-1.67508215e-01  1.42968938e-01  3.98090035e-02 -2.64148153e-02
+    -8.25702846e-02 -9.22060907e-02 -6.62784576e-02 -7.05827698e-02
+     4.62902896e-02 -1.52540624e-01 -1.07823759e-01  1.52167112e-01
+    -7.69518316e-02 -2.01483041e-01  6.71041086e-02 -5.46854641e-03]
+   [ 8.93889442e-02  4.30584811e-02 -6.18163235e-02  2.10829619e-02
+    -8.70004587e-04 -1.26594499e-01  4.27970104e-03  2.04640403e-01
+     2.25497577e-02 -8.44599977e-02 -4.94655333e-02  9.76518467e-02
+    -9.96685475e-02  1.33726513e-02 -3.82527448e-02 -7.45975180e-03]
+   [ 3.86762805e-02 -1.10237397e-01 -1.69407248e-01  3.94765586e-02
+     6.08086772e-02 -5.07236198e-02  1.20185740e-01  1.22456498e-01
+    -1.42087519e-01  4.39714119e-02  7.75854066e-02 -2.74117999e-02
+    -9.38602909e-02 -1.43860221e-01 -1.09330311e-01 -1.90632984e-01]]
+
+  [[-1.30718872e-01 -2.56611984e-02 -5.69595955e-02  7.10819662e-02
+    -1.21359535e-01 -1.04876034e-01 -1.71511456e-01  2.83334833e-02
+     7.51923621e-02 -1.69772077e-02 -2.51211405e-01  2.95669362e-02
+    -1.13300167e-01 -6.63058013e-02 -2.16686483e-02 -3.31035182e-02]
+   [-2.24060401e-01 -9.04010758e-02  6.42339932e-03  2.36705288e-01
+    -1.03727812e-02 -1.58551812e-01  1.02778487e-01  3.11203599e-02
+     1.42457500e-01 -1.30408987e-01 -1.52981237e-01  3.19375955e-02
+     8.36120080e-03 -5.38960211e-02  2.53109992e-01 -1.03047892e-01]
+   [ 1.68545991e-01  2.07539946e-01 -1.13213219e-01 -9.38650370e-02
+    -1.43093377e-01  3.91433686e-02 -3.95351611e-02 -4.25580554e-02
+     3.17361355e-02  5.54618351e-02  1.06499203e-01 -2.35820888e-03
+    -6.87840488e-03  1.13499509e-02  1.31615415e-01  2.28259638e-02]]
+
+  [[-5.60085438e-02 -3.62048894e-02  2.23528985e-02  9.88225788e-02
+    -1.39172211e-01  5.11619858e-02  1.63347438e-01  9.41287056e-02
+     7.52403364e-02 -2.20915422e-01 -1.69938460e-01  5.12958579e-02
+     3.65251936e-02  1.33707926e-01  8.28345120e-02 -2.21210346e-01]
+   [-2.03217342e-01 -5.25216619e-03  6.29358515e-02 -1.12314476e-02
+    -1.67760681e-02  8.41772780e-02  8.50661322e-02 -2.58457977e-02
+    -6.72707036e-02 -6.69593289e-02 -1.78923681e-01 -7.83974081e-02
+    -3.27729769e-02 -2.33689055e-01 -1.43828019e-01 -4.87229824e-02]
+   [ 1.19547322e-02 -4.40441109e-02  5.89045733e-02 -1.36384755e-01
+     4.44763117e-02  1.39666349e-01  7.65117332e-02 -1.01672366e-01
+     1.95956796e-01 -3.42444479e-02 -1.96331382e-01 -5.81536144e-02
+    -1.18414588e-01  1.13338418e-01 -1.39041469e-01 -1.83352485e-01]]]
+
+
+ [[[ 1.75830230e-01  3.61155942e-02  8.56246874e-02 -3.54373083e-02
+     7.81703293e-02  1.36210784e-01  1.38054058e-01 -5.92453443e-02
+    -4.13029641e-02  2.13773578e-01  9.33508500e-02  8.25731456e-02
+    -1.18779190e-01 -1.75063238e-01 -1.04700170e-01 -2.72912625e-02]
+   [ 4.89798933e-02 -2.11025506e-01  1.78745717e-01 -1.08357340e-01
+     5.91498129e-02 -1.38238415e-01 -5.47184572e-02 -4.59617302e-02
+     7.12472433e-03  6.38224045e-03 -3.38828973e-02 -1.85844615e-01
+    -3.77840772e-02 -1.53946862e-01  1.09826051e-01 -1.43021882e-01]
+   [-1.58692822e-02  3.02111078e-02 -5.86481616e-02  1.64861530e-01
+     1.08837888e-01  9.20102298e-02 -1.67637631e-01 -1.04458228e-01
+     1.65894866e-01  1.37621528e-02  1.55801445e-01 -3.41514423e-02
+     1.98034104e-02  1.54288426e-01  6.52850121e-02 -4.52806614e-02]]
+
+  [[ 1.06518596e-01 -1.86824441e-01 -1.45387784e-01  3.81697826e-02
+     2.14932919e-01 -1.58663243e-01 -2.51632839e-01 -8.32455698e-03
+     2.43997891e-02 -1.68054655e-01 -1.59296170e-01  7.49511495e-02
+    -1.00415073e-01  2.16525793e-02 -1.67789031e-02  1.13740921e-01]
+   [ 3.56018692e-02  1.18352555e-01 -2.69499626e-02  2.05418199e-01
+    -2.53382176e-02 -1.55416310e-01 -1.25526875e-01 -1.08474888e-01
+    -1.17957741e-01 -1.01947673e-01 -3.96209173e-02  1.76530927e-01
+     8.44241760e-04 -1.62016541e-01  6.93224296e-02 -1.83781996e-01]
+   [ 3.19757462e-02  1.22470811e-01 -9.81942266e-02  1.83066383e-01
+     1.63528875e-01  2.18279511e-01  1.20902590e-01 -1.15957744e-01
+     3.06772236e-02 -1.97013780e-01  1.71314627e-01 -6.67490363e-02
+    -1.52603313e-02  1.26544520e-01 -2.50086814e-01  3.47103812e-02]]
+
+  [[-5.12967855e-02 -8.34310651e-02 -1.29842207e-01  2.25982860e-01
+    -1.08709298e-01 -2.28153616e-02  2.00527153e-04  1.20595157e-01
+     4.71727178e-02  6.16808869e-02  9.92944371e-03 -6.85657337e-02
+    -1.37211427e-01  1.60578221e-01 -2.68419244e-04 -5.15029430e-02]
+   [ 8.23096484e-02  1.43855229e-01  1.23301268e-01 -1.06910892e-01
+    -9.27448347e-02  2.31221437e-01 -1.01999290e-01 -9.47491080e-02
+     1.28709048e-01  2.64287479e-02 -8.30322504e-02  3.40750925e-02
+    -1.90963119e-01 -1.30205005e-01  8.35849270e-02  1.19842939e-01]
+   [-2.74438411e-02  8.80052373e-02 -1.39211461e-01  6.19792677e-02
+    -2.27967933e-01 -3.19624618e-02  2.74615008e-02 -9.48561803e-02
+     1.23411693e-01 -7.58219510e-02 -6.31317943e-02 -4.78715375e-02
+     7.17305019e-02 -2.41029203e-01  3.35761905e-02  8.74817893e-02]]]
+
+
+ [[[ 1.16955534e-01 -1.87360898e-01  3.23865488e-02  1.99204665e-02
+     1.54243618e-01 -1.07246667e-01 -1.53643623e-01 -1.05773978e-01
+     5.52616902e-02 -1.41474858e-01  2.13201672e-01 -8.21085200e-02
+    -1.21046580e-01  2.08689854e-01  4.70552519e-02 -9.46542770e-02]
+   [ 1.64229363e-01  1.81852896e-02  1.47875383e-01 -1.05569750e-01
+    -1.70733616e-01 -2.59873986e-01 -7.58099928e-02  1.76576659e-01
+    -2.59025723e-01 -1.30845988e-02  1.14235297e-01 -1.68044150e-01
+     6.76363856e-02 -7.94674456e-02  1.36632785e-01 -1.88033387e-01]
+   [-1.02047659e-01 -2.05135737e-02 -1.04982704e-01  1.38401881e-01
+    -6.96972385e-02  4.96296883e-02  1.05358958e-01 -2.88185533e-02
+     1.01827748e-01  1.52643383e-01 -7.96766132e-02  3.22924927e-02
+     4.58473749e-02  1.03752889e-01 -5.03721535e-02  3.75625910e-03]]
+
+  [[ 7.57127926e-02  1.07688326e-02  1.96235608e-02  1.01612829e-01
+     1.51175931e-01 -6.14860132e-02  8.75185356e-02 -3.97307388e-02
+    -1.51073664e-01 -1.57636143e-02 -1.38159484e-01  2.26625390e-02
+    -3.35075259e-02  1.60182908e-01 -1.08965524e-01  1.27410620e-01]
+   [ 1.23090763e-02 -2.07810789e-01 -1.29017103e-02  2.61819791e-02
+     1.37709633e-01  4.17141877e-02  1.02580696e-01  1.12621494e-01
+     1.58497065e-01 -7.48997703e-02 -1.35721356e-01  2.50741005e-01
+     8.56010336e-03 -7.76163936e-02  2.11952001e-01  1.82278961e-01]
+   [ 2.96830758e-02  6.22397959e-02 -1.28064662e-01 -2.09437966e-01
+    -7.28917122e-02 -1.18430723e-02  4.03176248e-02 -7.08331168e-02
+     1.30518526e-01 -9.32818949e-02  6.21827785e-03 -4.86203143e-03
+    -9.10696946e-03 -6.04607202e-02 -2.29774322e-02  1.10423110e-01]]
+
+  [[ 2.45085105e-01  1.12527840e-01 -1.10056713e-01  6.29008114e-02
+     8.17722976e-02  1.02905445e-01 -2.24560080e-03  1.59972668e-01
+    -2.94410829e-02  2.30915099e-01  4.95599471e-02  1.52091846e-01
+     6.76892623e-02  1.95677921e-01 -7.36432895e-02 -3.10585089e-02]
+   [ 1.13819614e-02 -2.12282926e-01  2.35306829e-01 -2.60249197e-01
+     4.09619100e-02  4.65903208e-02  4.75023640e-03  2.04299510e-01
+    -1.93502784e-01  6.51645362e-02  8.15302692e-03 -1.29483357e-01
+     7.43540153e-02  9.38129947e-02  6.60696700e-02 -8.40817615e-02]
+   [-1.38326108e-01  1.86710600e-02  1.74723454e-02  1.98064279e-02
+     1.60648689e-01 -5.65510541e-02  8.20689872e-02  2.40302190e-01
+    -1.98925614e-01 -1.27551422e-01  1.03552125e-01 -5.14678657e-02
+    -1.40927747e-01 -1.43905535e-01  3.67147140e-02  8.09009224e-02]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=stem_conv, built=True>, <BatchNormalization name=batch_normalization, built=True>, <DepthwiseConv2D name=block1a_dwconv, built=True>, <BatchNormalization name=batch_normalization_1, built=True>, <Conv2D name=block1a_se_reduce, built=True>, <Conv2D name=block1a_se_expand, built=True>, <Conv2D name=block1a_project_conv, built=True>, <Conv2D name=block2a_project_conv, built=True>, <BatchNormalization name=batch_normalization_5, built=True>, <Conv2D name=block2b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_6, built=True>, <DepthwiseConv2D name=block2b_dwconv, built=True>, <BatchNormalization name=batch_normalization_7, built=True>, <Conv2D name=block2b_se_reduce, built=True>, <Conv2D name=block2b_se_expand, built=True>, <Conv2D name=block2b_project_conv, built=True>, <BatchNormalization name=batch_normalization_8, built=True>, <Conv2D name=block3a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_9, built=True>, <DepthwiseConv2D name=block3a_dwconv, built=True>, <BatchNormalization name=batch_normalization_10, built=True>, <Conv2D name=block3a_se_reduce, built=True>, <Conv2D name=block3a_se_expand, built=True>, <Conv2D name=block3a_project_conv, built=True>, <BatchNormalization name=batch_normalization_11, built=True>, <Conv2D name=block3b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_12, built=True>, <DepthwiseConv2D name=block3b_dwconv, built=True>, <BatchNormalization name=batch_normalization_13, built=True>, <Conv2D name=block3b_se_reduce, built=True>, <Conv2D name=block3b_se_expand, built=True>, <Conv2D name=block3b_project_conv, built=True>, <BatchNormalization name=batch_normalization_14, built=True>, <Conv2D name=block4a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_15, built=True>, <DepthwiseConv2D name=block4a_dwconv, built=True>, <BatchNormalization name=batch_normalization_16, built=True>, <Conv2D name=block4a_se_reduce, built=True>, <Conv2D name=block4a_se_expand, built=True>, <Conv2D name=block4a_project_conv, built=True>, <BatchNormalization name=batch_normalization_17, built=True>, <Conv2D name=block4b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_18, built=True>, <DepthwiseConv2D name=block4b_dwconv, built=True>, <BatchNormalization name=batch_normalization_19, built=True>, <Conv2D name=block4b_se_reduce, built=True>, <Conv2D name=block4b_se_expand, built=True>, <Conv2D name=block4b_project_conv, built=True>, <BatchNormalization name=batch_normalization_20, built=True>, <Conv2D name=block4c_expand_conv, built=True>, <BatchNormalization name=batch_normalization_21, built=True>, <DepthwiseConv2D name=block4c_dwconv, built=True>, <BatchNormalization name=batch_normalization_22, built=True>, <Conv2D name=block4c_se_reduce, built=True>, <Conv2D name=block4c_se_expand, built=True>, <Conv2D name=block4c_project_conv, built=True>, <BatchNormalization name=batch_normalization_23, built=True>, <Conv2D name=block5a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_24, built=True>, <DepthwiseConv2D name=block5a_dwconv, built=True>, <BatchNormalization name=batch_normalization_25, built=True>, <Conv2D name=block5a_se_reduce, built=True>, <Conv2D name=block5a_se_expand, built=True>, <Conv2D name=block5a_project_conv, built=True>, <BatchNormalization name=batch_normalization_26, built=True>, <Conv2D name=block5b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_27, built=True>, <DepthwiseConv2D name=block5b_dwconv, built=True>, <BatchNormalization name=batch_normalization_28, built=True>, <Conv2D name=block5b_se_reduce, built=True>, <Conv2D name=block5b_se_expand, built=True>, <Conv2D name=block5b_project_conv, built=True>, <BatchNormalization name=batch_normalization_29, built=True>, <Conv2D name=block5c_expand_conv, built=True>, <BatchNormalization name=batch_normalization_30, built=True>, <DepthwiseConv2D name=block5c_dwconv, built=True>, <BatchNormalization name=batch_normalization_31, built=True>, <Conv2D name=block5c_se_reduce, built=True>, <Conv2D name=block5c_se_expand, built=True>, <Conv2D name=block5c_project_conv, built=True>, <BatchNormalization name=batch_normalization_32, built=True>, <Conv2D name=block6a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_33, built=True>, <DepthwiseConv2D name=block6a_dwconv, built=True>, <BatchNormalization name=batch_normalization_34, built=True>, <Conv2D name=block6a_se_reduce, built=True>, <Conv2D name=block6a_se_expand, built=True>, <Conv2D name=block6a_project_conv, built=True>, <BatchNormalization name=batch_normalization_35, built=True>, <Conv2D name=block6b_expand_conv, built=True>, <BatchNormalization name=batch_normalization_36, built=True>, <DepthwiseConv2D name=block6b_dwconv, built=True>, <BatchNormalization name=batch_normalization_37, built=True>, <Conv2D name=block6b_se_reduce, built=True>, <Conv2D name=block6b_se_expand, built=True>, <Conv2D name=block6b_project_conv, built=True>, <BatchNormalization name=batch_normalization_38, built=True>, <Conv2D name=block6c_expand_conv, built=True>, <BatchNormalization name=batch_normalization_39, built=True>, <DepthwiseConv2D name=block6c_dwconv, built=True>, <BatchNormalization name=batch_normalization_40, built=True>, <Conv2D name=block6c_se_reduce, built=True>, <Conv2D name=block6c_se_expand, built=True>, <Conv2D name=block6c_project_conv, built=True>, <BatchNormalization name=batch_normalization_41, built=True>, <Conv2D name=block6d_expand_conv, built=True>, <BatchNormalization name=batch_normalization_42, built=True>, <DepthwiseConv2D name=block6d_dwconv, built=True>, <BatchNormalization name=batch_normalization_43, built=True>, <Conv2D name=block6d_se_reduce, built=True>, <Conv2D name=block6d_se_expand, built=True>, <Conv2D name=block6d_project_conv, built=True>, <BatchNormalization name=batch_normalization_44, built=True>, <Conv2D name=block7a_expand_conv, built=True>, <BatchNormalization name=batch_normalization_45, built=True>, <DepthwiseConv2D name=block7a_dwconv, built=True>, <BatchNormalization name=batch_normalization_46, built=True>, <Conv2D name=block7a_se_reduce, built=True>, <Conv2D name=block7a_se_expand, built=True>, <Conv2D name=block7a_project_conv, built=True>, <BatchNormalization name=batch_normalization_47, built=True>, <Conv2D name=top_conv, built=True>, <BatchNormalization name=batch_normalization_48, built=True>, <Dense name=predictions, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>AOR - line 143</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [143]; toolbar: false;">import copy
+import math
+import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+DEFAULT_BLOCKS_ARGS = [\
+    {\
+    'kernel_size': 3, \
+    'repeats': 1, \
+    'filters_in': 32, \
+    'filters_out': 16, \
+    'expand_ratio': 1, \
+    'id_skip': True, \
+    'strides': 1, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 3, \
+    'repeats': 2, \
+    'filters_in': 16, \
+    'filters_out': 24, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 5, \
+    'repeats': 2, \
+    'filters_in': 24, \
+    'filters_out': 40, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 3, \
+    'repeats': 3, \
+    'filters_in': 40, \
+    'filters_out': 80, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 5, \
+    'repeats': 3, \
+    'filters_in': 80, \
+    'filters_out': 112, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 1, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 5, \
+    'repeats': 4, \
+    'filters_in': 112, \
+    'filters_out': 192, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 2, \
+    'se_ratio': 0.25}, \
+    \
+    {\
+    'kernel_size': 3, \
+    'repeats': 1, \
+    'filters_in': 192, \
+    'filters_out': 320, \
+    'expand_ratio': 6, \
+    'id_skip': True, \
+    'strides': 1, \
+    'se_ratio': 0.25}]
+
+
+
+CONV_KERNEL_INITIALIZER = {\
+    'class_name': 'VarianceScaling', \
+    'config': {\
+    'scale': 2.0, \
+    'mode': 'fan_out', \
+    'distribution': 'truncated_normal'}}
+
+
+
+DENSE_KERNEL_INITIALIZER = {\
+    'class_name': 'VarianceScaling', \
+    'config': {\
+    'scale': 1.0 / 3.0, \
+    'mode': 'fan_out', \
+    'distribution': 'uniform'}}
+
+
+
+IMAGENET_STDDEV_RGB = [0.229, 0.224, 0.225]
+
+def EfficientNet(\
+    width_coefficient, \
+    depth_coefficient, \
+    default_size, \
+    dropout_rate=0.2, \
+    drop_connect_rate=0.2, \
+    depth_divisor=8, \
+    activation='swish', \
+    blocks_args='default', \
+    name='efficientnet', \
+    include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=None, \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax'):
+    
+    
+    if blocks_args == 'default':
+        blocks_args = DEFAULT_BLOCKS_ARGS
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    
+    def round_filters(filters, divisor=depth_divisor):
+        '''Round number of filters based on depth multiplier.'''
+        filters *= width_coefficient
+        new_filters = max(
+            divisor, (int(filters + (divisor / 2)) // divisor) // divisor)
+        
+        
+        if new_filters < 0.9 * filters:
+            new_filters += divisor
+        return int(new_filters)
+    
+    def round_repeats(repeats):
+        '''Round number of repeats based on depth multiplier.'''
+        return int(math.ceil(depth_coefficient * repeats))
+    
+    
+    x = img_input
+    x = layers.Rescaling(1.0 / 255.0)(x)
+    x = layers.Normalization(axis=bn_axis)(x)
+    
+    x = layers.ZeroPadding2D(
+        padding=imagenet_utils.correct_pad(x, 3), name='stem_conv_pad')(
+        x)
+    x = layers.Conv2D(
+        round_filters(32), 
+        3, 
+        strides=2, 
+        padding='valid', 
+        use_bias=False, 
+        kernel_initializer=CONV_KERNEL_INITIALIZER, 
+        name='stem_conv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    x = layers.Activation(activation)(x)
+    
+    
+    blocks_args = copy.deepcopy(blocks_args)
+    
+    b = 0
+    blocks = float(sum((round_repeats(args['repeats']) for args in blocks_args)))
+    for (i, args) in enumerate(blocks_args):
+        assert args['repeats'] > 0
+        
+        args['filters_in'] = round_filters(args['filters_in'])
+        args['filters_out'] = round_filters(args['filters_out'])
+        
+        for j in range(round_repeats(args.pop('repeats'))):
+            
+            
+            if j > 0:
+                args['strides'] = 1
+                args['filters_in'] = args['filters_out']
+            x = block(
+                x, 
+                activation, 
+                (drop_connect_rate * b) / blocks, 
+                name=f'block{i + 1}{chr(j + 97)}_', 
+                **args)
+            
+            b += 1
+    
+    
+    x = layers.Conv2D(
+        round_filters(1280), 
+        1, 
+        padding='same', 
+        use_bias=False, 
+        kernel_initializer=CONV_KERNEL_INITIALIZER, 
+        name='top_conv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    x = layers.Activation(activation)(x)
+    if include_top:
+        x = layers.GlobalAveragePooling2D(name='avg_pool')(x)
+        if dropout_rate > 0:
+            x = layers.Dropout(dropout_rate)(x)
+        imagenet_utils.validate_activation(classifier_activation, weights)
+        x = layers.Dense(
+            classes, 
+            activation=classifier_activation, 
+            kernel_initializer=DENSE_KERNEL_INITIALIZER, 
+            name='predictions')(
+            x)
+    
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def block(\
+    inputs, \
+    activation='swish', \
+    drop_rate=0.0, \
+    name='', \
+    filters_in=32, \
+    filters_out=16, \
+    kernel_size=3, \
+    strides=1, \
+    expand_ratio=1, \
+    se_ratio=0.0, \
+    id_skip=True):
+    
+    
+    bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+    
+    
+    filters = filters_in * expand_ratio
+    if expand_ratio != 1:
+        x = layers.Conv2D(
+            filters, 
+            1, 
+            padding='same', 
+            use_bias=False, 
+            kernel_initializer=CONV_KERNEL_INITIALIZER, 
+            name=f'{name}expand_conv')(
+            inputs)
+        x = layers.BatchNormalization(axis=bn_axis)(x)
+        x = layers.Activation(activation)(x)
+    else:
+        x = inputs
+    
+    
+    if strides == 2:
+        x = layers.ZeroPadding2D(
+            padding=imagenet_utils.correct_pad(x, kernel_size), 
+            name=f'{name}dwconv_pad')(
+            x)
+        conv_pad = 'valid'
+    else:
+        conv_pad = 'same'
+    x = layers.DepthwiseConv2D(
+        kernel_size, 
+        strides=strides, 
+        padding=conv_pad, 
+        use_bias=False, 
+        depthwise_initializer=CONV_KERNEL_INITIALIZER, 
+        name=f'{name}dwconv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    x = layers.Activation(activation)(x)
+    
+    
+    if 0 < se_ratio <= 1:
+        filters_se = max(1, int(filters_in * se_ratio))
+        se = layers.GlobalAveragePooling2D(name=f'{name}se_squeeze')(x)
+        if bn_axis == 1:
+            se_shape = (filters, 1, 1)
+        else:
+            se_shape = (1, 1, filters)
+        se = layers.Reshape(se_shape, name=f'{name}se_reshape')(se)
+        se = layers.Conv2D(
+            filters_se, 
+            1, 
+            padding='same', 
+            activation=activation, 
+            kernel_initializer=CONV_KERNEL_INITIALIZER, 
+            name=f'{name}se_reduce')(
+            se)
+        se = layers.Conv2D(
+            filters, 
+            1, 
+            padding='same', 
+            activation='sigmoid', 
+            kernel_initializer=CONV_KERNEL_INITIALIZER, 
+            name=f'{name}se_expand')(
+            se)
+        x = layers.multiply([x, se], name=f'{name}se_excite')
+    
+    
+    x = layers.Conv2D(
+        filters_out, 
+        1, 
+        padding='same', 
+        use_bias=False, 
+        kernel_initializer=CONV_KERNEL_INITIALIZER, 
+        name=f'{name}project_conv')(
+        x)
+    x = layers.BatchNormalization(axis=bn_axis)(x)
+    if (id_skip and strides == 1 and filters_in == filters_out):
+        if drop_rate > 0:
+            x = layers.Dropout(
+                drop_rate, noise_shape=(None, 1, 1, 1))(
+                x)
+        x = layers.add([x, inputs], name=f'{name}add')
+    return x
+
+
+@keras_export(['keras.applications.efficientnet.EfficientNetB0', 'keras.applications.EfficientNetB0'])
+def EfficientNetB0(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(32, 32, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='efficientnetb0'):
+    
+    return EfficientNet(
+        1.0, 
+        1.0, 
+        224, 
+        0.2, 
+        name=name, 
+        include_top=include_top, 
+        weights=weights, 
+        input_tensor=input_tensor, 
+        input_shape=input_shape, 
+        pooling=pooling, 
+        classes=classes, 
+        classifier_activation=classifier_activation)
+
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(32, 32), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([32, 32, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = EfficientNetB0(input_shape=(32, 32, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    
+    epochs = 2
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointEfficientNet'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'EfficientNet_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(32, 32), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model.predict(batch_imgs, batch_size=300)
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>

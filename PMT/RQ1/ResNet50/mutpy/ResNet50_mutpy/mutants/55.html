@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MutPy mutation report - mutation #55</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all();
+    window.setTimeout(function () {
+        
+        $('.line.number84').attr('title', 'CRP');
+        
+    }, 0);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        
+<div class="page-header">
+    <h1>Mutation #55</h1>
+</div>
+<h3>Details</h3>
+<ul>
+    <li>module - <code><module 'ResNet50' from 'D:\\exp\\RQ1\\ResNet50\\ResNet50.py'></code></li>
+    <li><span class="label label-success">killed</span> by <code>test_testAPI (test_ResNet50.DemoTest)</code></li>
+    
+    <li>duration - 2.233 s</li>
+    
+    
+    <li>tests run - 1</li>
+    
+</ul>
+
+<h3>Exception traceback</h3>
+<pre>Traceback (most recent call last):
+  File "D:\exp\RQ1\ResNet50\test_ResNet50.py", line 12, in test_testAPI
+    result = testAPI(["D:\\data\\MNIST\\test\\4\\4.png"])
+  File "ResNet50", line 229, in testAPI
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\95311\.conda\envs\tensorflow\lib\site-packages\keras\src\saving\saving_lib.py", line 650, in _raise_loading_failure
+    raise ValueError(msg)
+ValueError: A total of 16 objects could not be loaded. Example error message for object <Conv2D name=conv2_block1_2_conv, built=True>:
+
+The shape of the target variable and the shape of the target value in `variable.assign(value)` must match. variable.shape=(4, 4, 64, 64), Received: value.shape=(3, 3, 64, 64). Target variable: <Variable path=conv2_block1_2_conv/kernel, shape=(4, 4, 64, 64), dtype=float32, value=[[[[-1.43437833e-03 -5.33611141e-02 -3.02483868e-02 ...  1.39133669e-02
+     6.02462515e-03 -2.66695172e-02]
+   [-4.43886966e-04  1.15059949e-02  1.82769783e-02 ... -4.18499112e-05
+     3.09592895e-02  3.68618704e-02]
+   [ 1.39466114e-02 -3.90617363e-02 -1.47182010e-02 ... -4.87000719e-02
+     2.51506232e-02  4.86754142e-02]
+   ...
+   [ 3.42456810e-02  2.99943723e-02 -2.19167247e-02 ... -4.40125763e-02
+    -5.27925678e-02 -8.06681812e-03]
+   [-4.31850590e-02 -6.96578249e-03 -6.98685646e-03 ...  7.00400770e-03
+     4.40958776e-02  1.53779052e-02]
+   [ 3.87581065e-03  1.62349530e-02 -3.98513526e-02 ...  3.71649154e-02
+    -1.34318657e-02  3.53912376e-02]]
+
+  [[-2.28896663e-02 -6.48204610e-03 -2.38423757e-02 ... -4.92797829e-02
+     2.11243667e-02 -1.01663917e-03]
+   [-3.31557840e-02 -1.36289373e-02  1.43001601e-03 ...  5.29734157e-02
+     3.91854309e-02  5.35491891e-02]
+   [-1.79853439e-02 -3.62933762e-02  8.38217512e-03 ... -3.54839489e-02
+    -1.92078948e-02  2.01039650e-02]
+   ...
+   [ 6.46210834e-03 -5.02416939e-02  3.58566530e-02 ... -3.41543034e-02
+     3.54818217e-02 -1.30372904e-02]
+   [-1.45748444e-02  1.24835707e-02 -2.65888870e-03 ...  4.11675610e-02
+     3.85142006e-02  6.02017343e-03]
+   [ 3.97361256e-02  1.14029236e-02  2.91738287e-03 ...  2.56165154e-02
+    -3.30355912e-02  3.58154736e-02]]
+
+  [[ 4.81004156e-02  4.32462804e-02 -1.14691146e-02 ...  2.83709727e-02
+     5.04850410e-02  3.75818796e-02]
+   [ 4.02352959e-03  7.65803456e-03  4.28259708e-02 ... -6.30021095e-05
+    -5.72044402e-03  6.37137517e-03]
+   [ 2.40888447e-03 -2.89073586e-03 -4.59766090e-02 ... -1.38868243e-02
+     3.28743085e-03 -2.18245834e-02]
+   ...
+   [-3.12565491e-02 -2.87464000e-02  1.00049861e-02 ...  5.21419235e-02
+     1.57853626e-02  4.28181998e-02]
+   [-3.45183983e-02  9.08121467e-04  4.73122038e-02 ... -1.32074654e-02
+    -1.98459439e-02  5.10565378e-02]
+   [-1.31110102e-03 -1.76260881e-02  3.71428989e-02 ... -4.67006713e-02
+     4.25424911e-02  1.50483102e-04]]
+
+  [[ 3.56676094e-02 -1.22427307e-02  4.04066853e-02 ...  1.41322203e-02
+     3.51935141e-02  3.07226740e-02]
+   [ 2.19313093e-02 -3.97124961e-02 -3.59855965e-02 ... -6.57685846e-03
+    -2.69323234e-02  1.05434656e-03]
+   [ 2.05838643e-02  7.69830868e-03 -1.58735178e-02 ...  3.50162573e-02
+    -1.53742954e-02  2.16143541e-02]
+   ...
+   [-1.59924328e-02  5.12792878e-02  4.18268144e-04 ... -5.31219766e-02
+     4.95299809e-02  3.42607871e-03]
+   [-1.53515302e-02  2.48348974e-02 -2.36932486e-02 ... -4.93092835e-02
+     4.85869534e-02 -1.87303536e-02]
+   [-5.06870896e-02  1.54079609e-02 -1.78931914e-02 ... -1.11832097e-02
+     4.84926812e-02  2.04729475e-02]]]
+
+
+ [[[-3.17016467e-02  5.03632426e-03  7.68332928e-03 ... -1.62969753e-02
+    -1.15446188e-02 -4.00181599e-02]
+   [ 4.52953391e-02 -4.19734418e-03  2.79600359e-02 ...  5.32593839e-02
+    -5.36370166e-02  1.00723393e-02]
+   [-4.70929258e-02  3.37403156e-02  4.59440909e-02 ...  4.11152504e-02
+     4.24642116e-03 -2.69245021e-02]
+   ...
+   [ 2.42498703e-02 -3.88896093e-03  5.05915247e-02 ...  4.48265634e-02
+    -4.09481972e-02  5.09980507e-02]
+   [-6.43553957e-03 -4.49589640e-02  4.55632694e-02 ...  3.33806984e-02
+    -7.31744990e-03  3.91231850e-03]
+   [ 2.81093307e-02 -5.22052310e-02 -3.02089117e-02 ... -3.44372280e-02
+     1.48259103e-03 -2.24814489e-02]]
+
+  [[-8.84016231e-03  1.08576976e-02 -2.77322643e-02 ...  1.99769177e-02
+    -1.95991248e-03  2.04769149e-03]
+   [-5.39085604e-02 -1.32878125e-03  4.81996499e-02 ... -1.43853612e-02
+     4.58532237e-02 -3.93792987e-02]
+   [-5.34530729e-04 -4.66176271e-02  1.95031576e-02 ...  2.50253342e-02
+     2.78462656e-02 -1.08572207e-02]
+   ...
+   [-1.46505162e-02  2.55824812e-02 -3.89925912e-02 ... -4.20792364e-02
+     2.42078938e-02  3.64834256e-02]
+   [ 2.03271993e-02 -1.80046260e-03 -1.55474991e-04 ...  4.61359434e-02
+    -4.28380370e-02  4.74640392e-02]
+   [ 2.40110122e-02  4.98279929e-04  1.92215107e-02 ... -1.28957890e-02
+    -4.81361225e-02 -3.53801325e-02]]
+
+  [[-4.32079136e-02  4.68888097e-02 -1.43845379e-02 ...  2.33590640e-02
+    -4.02444080e-02 -2.08150819e-02]
+   [-2.21623145e-02  3.85020263e-02 -2.05773860e-02 ... -2.53454335e-02
+     1.26337595e-02 -2.68255547e-03]
+   [ 3.13099213e-02  7.14695454e-03 -9.29082558e-03 ...  1.77712925e-02
+     5.97226992e-03 -2.87446063e-02]
+   ...
+   [ 4.43529524e-02  3.61579284e-03  3.69590521e-03 ... -6.55137002e-04
+    -4.43201512e-02  1.01276226e-02]
+   [-2.72350311e-02 -2.49802154e-02  2.63758264e-02 ...  4.25487123e-02
+    -1.21258385e-02  2.58668512e-03]
+   [ 7.08908960e-03 -3.57034057e-03  4.60128970e-02 ... -9.75839049e-03
+     4.14388217e-02  2.25760825e-02]]
+
+  [[ 5.15813269e-02  2.23561339e-02  1.50968693e-02 ...  2.27002986e-02
+    -4.05473635e-03 -3.34170386e-02]
+   [ 3.96890230e-02 -3.55172940e-02 -3.84836532e-02 ... -1.56625882e-02
+     3.80572416e-02  2.91114487e-02]
+   [ 5.39127700e-02  5.12907319e-02 -4.69014160e-02 ... -4.26469557e-02
+    -3.99436504e-02  3.01846154e-02]
+   ...
+   [-2.16042213e-02 -1.05652884e-02 -3.40498388e-02 ... -3.35659608e-02
+    -4.52290215e-02 -4.64144424e-02]
+   [ 4.98708971e-02  4.76824380e-02 -2.60547549e-03 ...  5.36673889e-03
+    -1.63463093e-02 -2.84478739e-02]
+   [-3.65366563e-02  4.46457006e-02  2.88551338e-02 ... -1.14807263e-02
+     4.98473756e-02  1.64443962e-02]]]
+
+
+ [[[-4.96687330e-02 -3.73548456e-02 -2.43576635e-02 ... -6.84214383e-03
+     2.79190578e-02 -1.68976672e-02]
+   [-4.17193770e-03  1.58498473e-02  3.10392193e-02 ...  7.42728263e-03
+     2.88299806e-02 -5.16710393e-02]
+   [ 3.68903950e-03 -9.98824835e-05  3.98515202e-02 ...  4.66241352e-02
+    -3.74042839e-02 -5.39347306e-02]
+   ...
+   [-1.00651011e-03 -3.05046886e-02 -2.79001892e-04 ...  4.54070531e-02
+     2.56121866e-02 -6.33805618e-03]
+   [-4.70347777e-02 -4.95574400e-02 -3.28547545e-02 ... -5.19523770e-02
+    -3.61719429e-02 -1.38275921e-02]
+   [-4.75332998e-02 -5.09740524e-02 -4.39732969e-02 ... -4.41145375e-02
+     2.75540464e-02  4.62300740e-02]]
+
+  [[-7.25976750e-03 -4.85704578e-02  1.88048929e-04 ... -3.07120830e-02
+     5.21314703e-02 -8.21820647e-03]
+   [-4.09125127e-02  5.17243706e-02 -2.75913700e-02 ...  5.15105836e-02
+    -4.14545015e-02  7.56315887e-03]
+   [ 2.95140035e-02  2.38610767e-02 -4.99354601e-02 ... -3.42176408e-02
+    -2.59318538e-02 -1.29849724e-02]
+   ...
+   [ 3.30968834e-02 -2.72786226e-02  4.32812013e-02 ...  3.00494619e-02
+     5.25392704e-02  1.70989297e-02]
+   [-3.64272743e-02 -9.58018750e-03  3.72748710e-02 ...  5.32581843e-02
+     4.23367508e-02 -3.20043676e-02]
+   [-2.70504784e-02 -3.96346822e-02 -4.41514328e-02 ... -1.09895989e-02
+    -5.19079305e-02 -3.65913361e-02]]
+
+  [[-4.07270975e-02 -2.72390302e-02  3.48553695e-02 ... -4.19156924e-02
+     3.82417105e-02  1.14494935e-03]
+   [-7.06660748e-03  4.70534898e-02 -6.74049184e-03 ... -9.30473208e-04
+    -3.48966904e-02 -3.11260037e-02]
+   [-2.02970579e-02 -2.59834863e-02  9.92712006e-03 ... -4.81404960e-02
+     4.16635834e-02 -2.70214677e-03]
+   ...
+   [ 4.34667356e-02 -3.20203044e-02  1.67096071e-02 ... -9.18499380e-03
+     1.57681108e-03 -3.42965014e-02]
+   [ 1.15957074e-02  4.18907069e-02 -1.95196718e-02 ...  2.74006240e-02
+    -2.12326944e-02  2.49600299e-02]
+   [-2.99336910e-02  4.72006314e-02 -3.00388131e-02 ...  1.25358216e-02
+    -3.48928347e-02  3.02703269e-02]]
+
+  [[-2.00858712e-02  4.80155908e-02  5.12064435e-02 ...  3.52798365e-02
+     1.75478198e-02  5.06051518e-02]
+   [ 4.86077257e-02 -2.63441093e-02  1.34115554e-02 ...  2.27217004e-03
+    -2.19079368e-02  2.01524310e-02]
+   [ 4.24246453e-02  3.58374380e-02 -1.69625506e-03 ...  4.84289564e-02
+     1.09920390e-02 -4.86398861e-02]
+   ...
+   [ 5.37433662e-02  4.63505276e-02 -2.91027259e-02 ...  4.51452844e-02
+     1.00061856e-02  1.10303797e-02]
+   [ 4.13177125e-02 -1.89483128e-02 -2.43876539e-02 ...  4.56210338e-02
+     3.47955190e-02  1.20748915e-02]
+   [-2.92789936e-02 -1.62617043e-02 -2.62845028e-02 ... -5.14640585e-02
+     4.93494011e-02  4.61424626e-02]]]
+
+
+ [[[ 2.39623673e-02  3.41433845e-02  1.89085640e-02 ...  5.37935905e-02
+     1.29771270e-02  3.37035023e-02]
+   [ 2.71460898e-02 -5.02091348e-02  2.62307748e-03 ... -4.90411855e-02
+    -3.14035341e-02 -4.43485528e-02]
+   [ 7.16047734e-03  1.72425844e-02  4.49747704e-02 ... -4.23820317e-03
+    -1.38021559e-02 -4.14706767e-04]
+   ...
+   [ 1.79262944e-02 -3.69201489e-02  1.05804615e-02 ...  5.33993542e-03
+     5.00662886e-02 -4.77262773e-02]
+   [-5.37484884e-04  1.29452907e-02  1.14552118e-02 ...  4.32565250e-02
+    -4.53491025e-02 -4.91901450e-02]
+   [-8.13072547e-03  5.07549196e-03  2.33855434e-02 ... -3.51597667e-02
+     2.74625309e-02  3.66808102e-03]]
+
+  [[ 2.77155749e-02 -7.69367814e-03 -1.16499737e-02 ...  4.06101160e-02
+     2.99452990e-03  4.77279536e-02]
+   [-4.80283909e-02 -4.89491373e-02  5.11885323e-02 ... -2.37328261e-02
+    -2.28827894e-02  5.03556542e-02]
+   [-3.13862674e-02  2.10867785e-02  3.79005112e-02 ... -2.69513056e-02
+     4.69605252e-03 -3.22648510e-02]
+   ...
+   [ 2.78901048e-02 -2.69810259e-02  2.92460509e-02 ... -2.55951937e-02
+     3.72444056e-02  1.09266080e-02]
+   [ 6.01131842e-03  3.57416458e-02  2.94018500e-02 ... -1.88708194e-02
+     3.56259383e-02 -2.96205822e-02]
+   [ 9.31285694e-03  4.53003310e-02 -2.55833343e-02 ...  3.39468606e-02
+    -9.09526646e-03 -3.07283029e-02]]
+
+  [[-5.06243184e-02 -8.82875547e-03  2.19448693e-02 ...  3.74598615e-02
+    -2.26139650e-03  3.49499322e-02]
+   [ 2.56655999e-02 -3.66917327e-02 -4.57949340e-02 ...  2.67209820e-02
+     1.93799771e-02 -1.64385140e-03]
+   [ 2.24769115e-03  3.81900854e-02 -6.21590018e-03 ... -4.31677289e-02
+     3.23174112e-02 -2.32265722e-02]
+   ...
+   [-3.55330780e-02  4.61040474e-02 -1.91038661e-02 ... -3.77370194e-02
+     2.22509839e-02 -2.73562223e-03]
+   [ 8.96881148e-03  3.98683138e-02 -3.68948057e-02 ... -2.07733586e-02
+    -2.74945833e-02  1.93435736e-02]
+   [-2.48853005e-02  2.67747045e-03 -3.59109566e-02 ...  1.70602649e-03
+     3.23547162e-02 -3.25143002e-02]]
+
+  [[-5.07502556e-02  5.02027832e-02 -5.21231070e-02 ...  4.90890853e-02
+    -1.36404485e-02  4.47556488e-02]
+   [-4.63960692e-03  4.94750477e-02  3.09611596e-02 ... -5.12093306e-02
+     1.91377588e-02 -5.37811965e-03]
+   [ 2.52178051e-02 -2.60650050e-02  1.44939683e-02 ... -2.01903097e-02
+    -4.34093960e-02  2.27490328e-02]
+   ...
+   [ 1.06568597e-02  2.30235569e-02 -4.59422842e-02 ...  2.88220458e-02
+    -1.26875564e-02 -3.89334112e-02]
+   [ 9.16793570e-03 -1.79151818e-03 -3.32277641e-02 ...  3.30486707e-02
+     5.39548695e-04 -4.67923656e-03]
+   [-6.31548464e-05  5.15610613e-02  8.69599357e-03 ...  2.01296024e-02
+     1.41460188e-02 -4.02233973e-02]]]]>
+
+List of objects that could not be loaded:
+[<Conv2D name=conv2_block1_2_conv, built=True>, <Conv2D name=conv2_block2_2_conv, built=True>, <Conv2D name=conv2_block3_2_conv, built=True>, <Conv2D name=conv3_block1_2_conv, built=True>, <Conv2D name=conv3_block2_2_conv, built=True>, <Conv2D name=conv3_block3_2_conv, built=True>, <Conv2D name=conv3_block4_2_conv, built=True>, <Conv2D name=conv4_block1_2_conv, built=True>, <Conv2D name=conv4_block2_2_conv, built=True>, <Conv2D name=conv4_block3_2_conv, built=True>, <Conv2D name=conv4_block4_2_conv, built=True>, <Conv2D name=conv4_block5_2_conv, built=True>, <Conv2D name=conv4_block6_2_conv, built=True>, <Conv2D name=conv5_block1_2_conv, built=True>, <Conv2D name=conv5_block2_2_conv, built=True>, <Conv2D name=conv5_block3_2_conv, built=True>]
+</pre>
+
+<h3>Mutations</h3>
+<ul>
+    
+    <li>CRP - line 84</li>
+    
+</ul>
+<h3>Mutant</h3>
+<pre class="brush: python; first-line: 1; highlight: [84]; toolbar: false;">import os
+import glob
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from keras.preprocessing import image
+from keras.src import backend
+from keras.src import layers
+from keras.src.api_export import keras_export
+from keras.src.applications import imagenet_utils
+from keras.src.models import Functional
+from keras.src.ops import operation_utils
+from keras.src.utils import file_utils
+from keras import backend as K
+import shutil
+import random
+
+def ResNet(\
+    stack_fn, \
+    preact, \
+    use_bias, \
+    include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(32, 32, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='resnet', \
+    weights_name=None):
+    
+    
+    img_input = layers.Input(shape=input_shape)
+    
+    if backend.image_data_format() == 'channels_last':
+        bn_axis = 3
+    else:
+        bn_axis = 1
+    
+    x = layers.ZeroPadding2D(padding=((3, 3), (3, 3)))(
+        img_input)
+    
+    x = layers.Conv2D(64, 7, strides=2, use_bias=use_bias, name='conv1_conv')(x)
+    
+    if not preact:
+        x = layers.BatchNormalization(
+            axis=bn_axis, epsilon=1.001e-05)(
+            x)
+        x = layers.Activation('relu')(x)
+    
+    x = layers.ZeroPadding2D(padding=((1, 1), (1, 1)))(x)
+    x = layers.MaxPooling2D(3, strides=2, name='pool1_pool')(x)
+    
+    x = stack_fn(x)
+    
+    if preact:
+        x = layers.BatchNormalization(
+            axis=bn_axis, epsilon=1.001e-05)(
+            x)
+        x = layers.Activation('relu')(x)
+    
+    x = layers.GlobalAveragePooling2D(name='avg_pool')(x)
+    
+    
+    imagenet_utils.validate_activation(classifier_activation, weights)
+    
+    x = layers.Dense(
+        classes, activation=classifier_activation, name='predictions')(
+        x)
+    
+    
+    
+    if input_tensor is not None:
+        inputs = operation_utils.get_source_inputs(input_tensor)
+    else:
+        inputs = img_input
+    
+    
+    model = Functional(inputs, x, name=name)
+    
+    return model
+
+def residual_block_v1(\
+    x, filters, kernel_size=4, stride=1, conv_shortcut=True, name=None):
+    
+    
+    if backend.image_data_format() == 'channels_last':
+        bn_axis = 3
+    else:
+        bn_axis = 1
+    
+    if conv_shortcut:
+        shortcut = layers.Conv2D(
+            4 * filters, 1, strides=stride, name=f'{name}_0_conv')(
+            x)
+        shortcut = layers.BatchNormalization(
+            axis=bn_axis, epsilon=1.001e-05)(
+            shortcut)
+    else:
+        shortcut = x
+    
+    x = layers.Conv2D(filters, 1, strides=stride, name=f'{name}_1_conv')(x)
+    x = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x)
+    x = layers.Activation('relu')(x)
+    
+    x = layers.Conv2D(
+        filters, kernel_size, padding='SAME', name=f'{name}_2_conv')(
+        x)
+    x = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x)
+    x = layers.Activation('relu')(x)
+    
+    x = layers.Conv2D(4 * filters, 1, name=f'{name}_3_conv')(x)
+    x = layers.BatchNormalization(
+        axis=bn_axis, epsilon=1.001e-05)(
+        x)
+    
+    x = layers.Add()([shortcut, x])
+    x = layers.Activation('relu')(x)
+    return x
+
+def stack_residual_blocks_v1(x, filters, blocks, stride1=2, name=None):
+    
+    x = residual_block_v1(x, filters, stride=stride1, name=f'{name}_block1')
+    for i in range(2, blocks + 1):
+        x = residual_block_v1(
+            x, filters, conv_shortcut=False, name=f'{name}_block{i}')
+    
+    return x
+
+
+
+
+
+
+
+
+@keras_export(['keras.applications.resnet50.ResNet50', 'keras.applications.resnet.ResNet50', 'keras.applications.ResNet50'])
+def ResNet50(include_top=True, \
+    weights=None, \
+    input_tensor=None, \
+    input_shape=(32, 32, 3), \
+    pooling=None, \
+    classes=10, \
+    classifier_activation='softmax', \
+    name='resnet50'):
+    
+    '''Instantiates the ResNet50 architecture.'''
+    
+    def stack_fn(x):
+        x = stack_residual_blocks_v1(x, 64, 3, stride1=1, name='conv2')
+        x = stack_residual_blocks_v1(x, 128, 4, name='conv3')
+        x = stack_residual_blocks_v1(x, 256, 6, name='conv4')
+        return stack_residual_blocks_v1(x, 512, 3, name='conv5')
+    
+    return ResNet(
+        stack_fn, 
+        preact=False, 
+        use_bias=True, 
+        weights_name=None, 
+        name=name, 
+        include_top=include_top, 
+        weights=weights, 
+        input_tensor=input_tensor, 
+        input_shape=input_shape, 
+        pooling=pooling, 
+        classes=classes, 
+        classifier_activation=classifier_activation)
+
+
+def testAPI(teststr):
+    K.clear_session()
+    
+    tf.random.set_seed(1)
+    np.random.seed(1)
+    random.seed(1)
+    
+    
+    train = 'D:\\data\\MNIST\\train'
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    n_classes = len(classes)
+    
+    def preprocess_img(img_path, label):
+        def py_load_img(img_path):
+            img = image.load_img(img_path.numpy().decode('utf-8'), target_size=(32, 32), color_mode='rgb')
+            img = img.point((lambda i: (255 - i)))
+            arr = np.divide(np.array(img, dtype=np.float32), 255.0)
+            return arr
+        img = tf.py_function(py_load_img, [img_path], tf.float32)
+        img.set_shape([32, 32, 3])
+        return (img, label)
+    
+    img_paths = []
+    labels = []
+    for (index, class_) in enumerate(classes):
+        class_dir = os.path.join(train, class_)
+        files = glob.glob(os.path.join(class_dir, '*.png'))
+        label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        label[index] = 1
+        for img_path in files:
+            img_paths.append(img_path)
+            labels.append(label.copy())
+    batch_size_train = 16
+    
+    dataset = tf.data.Dataset.from_tensor_slices((img_paths, labels))
+    dataset = dataset.shuffle(buffer_size=len(img_paths), seed=1)
+    dataset = dataset.map(preprocess_img, num_parallel_calls=tf.data.AUTOTUNE)
+    dataset = dataset.batch(batch_size_train).prefetch(tf.data.AUTOTUNE)
+    
+    
+    model = ResNet50(input_shape=(32, 32, 3), classes=n_classes)
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
+        loss='categorical_crossentropy', 
+        metrics=['accuracy'])
+    epochs = 2
+    
+    
+    
+    
+    
+    
+    ck_dir = 'checkpointResNet50'
+    os.makedirs(ck_dir, exist_ok=True)
+    weights_path = os.path.join(ck_dir, 'ResNet50_model.weights.h5')
+    
+    model.load_weights(weights_path)
+    
+    
+    test_paths = teststr
+    result = []
+    batch_imgs = []
+    for img_path in test_paths:
+        label_test = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        img_test = image.load_img(img_path, target_size=(32, 32), color_mode='rgb')
+        img_test = img_test.point((lambda i: (255 - i)))
+        image_test = np.divide(np.array(img_test, dtype=np.float32), 255.0)
+        batch_imgs.append(image_test)
+    batch_imgs = np.array(batch_imgs)
+    
+    preds = model.predict(batch_imgs, batch_size=300)
+    result.extend(preds)
+    return result</pre>
+
+    </div>
+</body>
+</html>
